@@ -1,0 +1,22 @@
+<mat-card class="response-panel">
+  <mat-card-content>
+    <h3>{{ 'rate.title' | translate }}</h3>
+    <p>{{ 'rate.subtitle' | translate }}</p>
+
+    <div class="star-rating">
+      <button
+        *ngFor="let star of [1, 2, 3, 4, 5]; let i = index"
+        mat-icon-button
+        [color]="rating >= star ? 'accent' : ''"
+        (click)="rate(star)"
+        aria-label="Rate {{ star }} stars">
+        <mat-icon>{{ rating >= star ? 'star' : 'star_border' }}</mat-icon>
+      </button>
+    </div>
+    <button
+      (click)="onRate.emit(rating)"
+      mat-raised-button>
+      Send
+    </button>
+  </mat-card-content>
+</mat-card>

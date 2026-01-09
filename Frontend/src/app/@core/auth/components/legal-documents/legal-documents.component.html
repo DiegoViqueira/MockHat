@@ -1,0 +1,65 @@
+<mat-dialog-content>
+  <mat-card-content>
+    <!-- Terms of Use -->
+    <mat-card
+      class="document-card"
+      style="margin-top: 1rem">
+      <mat-card-header>
+        <mat-card-title>{{ 'termsOfUse.title' | translate }}</mat-card-title>
+        <mat-card-subtitle>{{ 'termsOfUse.lastUpdate' | translate }}</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <p>{{ 'termsOfUse.content' | translate }}</p>
+        <h3>{{ 'termsOfUse.sections.use' | translate }}</h3>
+        <p>{{ 'termsOfUse.sections.useDetails' | translate }}</p>
+        <h3>{{ 'termsOfUse.sections.account' | translate }}</h3>
+        <p>{{ 'termsOfUse.sections.accountDetails' | translate }}</p>
+        <h3>{{ 'termsOfUse.sections.prohibitions' | translate }}</h3>
+        <p>{{ 'termsOfUse.sections.prohibitionsDetails' | translate }}</p>
+        <h3>{{ 'termsOfUse.sections.intellectual' | translate }}</h3>
+        <p>{{ 'termsOfUse.sections.intellectualDetails' | translate }}</p>
+        <h3>{{ 'termsOfUse.sections.modifications' | translate }}</h3>
+        <p>{{ 'termsOfUse.sections.modificationsDetails' | translate }}</p>
+        <h3>{{ 'termsOfUse.sections.liability' | translate }}</h3>
+        <p>{{ 'termsOfUse.sections.liabilityDetails' | translate }}</p>
+      </mat-card-content>
+    </mat-card>
+
+    <!-- Privacy Policy -->
+    <mat-card
+      class="document-card"
+      style="margin-top: 1rem">
+      <mat-card-header>
+        <mat-card-title>{{ 'privacyPolicy.title' | translate }}</mat-card-title>
+        <mat-card-subtitle>{{ 'privacyPolicy.lastUpdate' | translate }}</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <p>{{ 'privacyPolicy.content' | translate }}</p>
+        <h3>{{ 'privacyPolicy.sections.data' | translate }}</h3>
+        <p>{{ 'privacyPolicy.sections.dataDetails' | translate }}</p>
+        <h3>{{ 'privacyPolicy.sections.usage' | translate }}</h3>
+        <p>{{ 'privacyPolicy.sections.usageDetails' | translate }}</p>
+        <h3>{{ 'privacyPolicy.sections.retention' | translate }}</h3>
+        <p>{{ 'privacyPolicy.sections.retentionDetails' | translate }}</p>
+        <h3>{{ 'privacyPolicy.sections.security' | translate }}</h3>
+        <p>{{ 'privacyPolicy.sections.securityDetails' | translate }}</p>
+        <h3>{{ 'privacyPolicy.sections.rights' | translate }}</h3>
+        <p>{{ 'privacyPolicy.sections.rightsDetails' | translate }}</p>
+        <h3>{{ 'privacyPolicy.sections.cookies' | translate }}</h3>
+        <p>{{ 'privacyPolicy.sections.cookiesDetails' | translate }}</p>
+        <h3>{{ 'privacyPolicy.sections.changes' | translate }}</h3>
+        <p>{{ 'privacyPolicy.sections.changesDetails' | translate }}</p>
+      </mat-card-content>
+    </mat-card>
+  </mat-card-content>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button
+    style="margin-top: 1rem"
+    mat-button
+    color="primary"
+    [mat-dialog-close]="true"
+    cdkFocusInitial>
+    {{ 'common.close' | translate }}
+  </button>
+</mat-dialog-actions>

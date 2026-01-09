@@ -1,0 +1,26 @@
+{
+  "assigned_task": "Your English teacher has asked you to write a story. Your story must begin with this sentence: As the plane flew lower, Lou saw the golden beaches of the island below. Write your story.",
+  "task_answer": "As the plane flew lower, Lou saw the golden beaches of the island below. He was surprised and a bit afraid of this fact. The plane sat on the beach and Lou stood on the beach. Everything was made of gold including palms and stones on the island. He wanted to take some stones with him to be rich but as he got one of them the stones started getting gray. Lou got nervous and he decided to put the stone on the beach again. The stones turned to gold. Then he entered deeper to the beach. He saw some golden fruits, but he didn’t picked because he knew the result. He took some photos of the beach and showed them to the scientists after he arrived home. He became an explorer. Lou became rich and after that he had a beautiful life.",
+  "ai_answer": [
+    {
+      "criteria": "Content",
+      "score": 5.0,
+      "feedback": "All content is relevant to the task. The target reader is fully informed, and the story follows on logically from the prompt sentence."
+    },
+    {
+      "criteria": "Communicative Achievement",
+      "score": 4.0,
+      "feedback": "The conventions of story writing, such as the use of a consistent register, are used generally appropriately to communicate simple ideas, Lou; surprised; afraid; gold; golden; gray; nervous; beautiful life."
+    },
+    {
+      "criteria": "Organisation",
+      "score": 4.0,
+      "feedback": "The conventions of a story, such as narrative tenses, surprising elements, and descriptive language, are used generally appropriately to communicate straightforward ideas and hold the target reader’s attention. Examples include: He was surprised and a bit afraid; Everything was made of gold; Lou got nervous; after he arrived home; Lou became rich and after that he had a beautiful life."
+    },
+    {
+      "criteria": "Language",
+      "score": 4.0,
+      "feedback": "A range of everyday vocabulary, suitable for the topic, is used generally appropriately, surprised; afraid; gold; golden; gray; nervous; beautiful life. Simple grammatical forms, such as the present simple, are used with some degree of control, although there is not much variety in terms of tenses, Lou; surprised; afraid; gold; golden; gray; nervous; beautiful life."
+    }
+  ]
+}

@@ -1,0 +1,163 @@
+<div class="container">
+  <wlk-back></wlk-back>
+  <mat-card *ngIf="writing">
+    <mat-card-header class="card-header">
+      <mat-card-title>
+        {{ 'assessments.writing.student' | translate }}: {{ writing?.student?.name }}
+        {{ writing?.student?.last_name }}
+
+        <mat-chip-listbox>
+          <mat-chip>{{ writing?.institution }}</mat-chip>
+          <mat-chip>{{ writing?.exam_type }}</mat-chip>
+          <mat-chip>{{ writing?.level }}</mat-chip>
+          <mat-chip>{{ writing?.task }}</mat-chip>
+        </mat-chip-listbox>
+      </mat-card-title>
+      <mat-card-subtitle>
+        {{ 'assessments.writing.score' | translate }}:
+        {{ calculateScore(writing?.ai_feedback) }}
+        / {{ calculateMaxScore(writing?.ai_feedback) }}
+      </mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="assessment-container">
+        <!-- Botón para abrir/cerrar el panel lateral -->
+
+        <div class="text-assessment">
+          <mat-toolbar>
+            <mat-card-title>{{ 'assessments.writing.assessment' | translate }}</mat-card-title>
+          </mat-toolbar>
+          <mat-card-subtitle>{{ assessment()?.image_text }}</mat-card-subtitle>
+        </div>
+        <div class="text-student">
+          <mat-toolbar>
+            <mat-card-title>
+              {{ 'assessments.writing.student_answer' | translate }} [{{
+                writing?.student_response_word_count
+              }}
+              {{ 'assessments.writing.student_response_word_count' | translate }}]
+            </mat-card-title>
+          </mat-toolbar>
+          <mat-card-subtitle
+            wlkHighlight
+            (openTooltip)="openTooltip($event)"
+            [highlightText]="writing?.student_response_text"
+            [grammarErrors]="grammarErrors">
+            {{ writing?.student_response_text }}
+          </mat-card-subtitle>
+        </div>
+
+        <div class="scores-section-container">
+          <mat-toolbar>
+            <mat-card-title>{{ 'assessments.writing.ai_feedback' | translate }}</mat-card-title>
+          </mat-toolbar>
+          <div
+            class="scores-section"
+            style="padding: 16px">
+            <!-- Puntuaciones por criterio (mostrar en lista) -->
+            <h3>{{ 'assessments.writing.criteria_scores' | translate }}</h3>
+            <mat-accordion multi>
+              <mat-expansion-panel *ngFor="let crit of writing?.ai_feedback.criterias">
+                <mat-expansion-panel-header>
+                  <mat-panel-title>
+                    {{ crit.criteria }} [ {{ crit.score }} / {{ crit.max_score }} ]
+                  </mat-panel-title>
+                </mat-expansion-panel-header>
+
+                <div class="scores-section-content">
+                  <div class="scores-section-content-score">
+                    <mat-form-field appearance="outline">
+                      <mat-label>Score</mat-label>
+                      <input
+                        matInput
+                        [(ngModel)]="crit.score"
+                        name="score-{{ crit.criteria }}"
+                        type="number"
+                        min="0"
+                        max="100" />
+                    </mat-form-field>
+                    <button
+                      mat-raised-button
+                      color="primary"
+                      (click)="updateAIFeedback()">
+                      <mat-icon>save</mat-icon>
+                      {{ 'assessments.writing.update_changes' | translate }}
+                    </button>
+                  </div>
+
+                  <mat-form-field appearance="outline">
+                    <mat-label>Feedback</mat-label>
+                    <textarea
+                      matInput
+                      [(ngModel)]="crit.feedback"
+                      name="feedback-{{ crit.criteria }}"
+                      rows="10"></textarea>
+                  </mat-form-field>
+                </div>
+              </mat-expansion-panel>
+            </mat-accordion>
+            <!-- Comentario general adicional -->
+          </div>
+
+          <div
+            class="scores-section"
+            style="padding: 16px">
+            <!-- Puntuaciones por criterio (mostrar en lista) -->
+            <h3>{{ 'assessments.writing.error_feedback' | translate }}</h3>
+            <mat-accordion multi>
+              <mat-expansion-panel
+                *ngFor="let error of grammarErrors"
+                [expanded]="highlightedError?.error_text === error.error_text">
+                <mat-expansion-panel-header>
+                  <mat-panel-title> {{ error.error_text.substring(0, 15) }} ... </mat-panel-title>
+                </mat-expansion-panel-header>
+                <mat-card-subtitle>
+                  <strong>{{ 'assessments.writing.error_text' | translate }}</strong>
+                  {{ error.error_text }}
+                </mat-card-subtitle>
+                <mat-card-subtitle>
+                  <strong>{{ 'assessments.writing.corrected_text' | translate }}</strong>
+                  {{ error.corrected_text }}
+                </mat-card-subtitle>
+                <mat-card-subtitle>
+                  <strong>{{ 'assessments.writing.correction_explanation' | translate }}:</strong>
+                  {{ error.correction_explanation }}
+                </mat-card-subtitle>
+                <mat-card-actions align="end">
+                  <button
+                    mat-mini-fab
+                    color="primary"
+                    style="box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1)"
+                    (click)="removeError(error)">
+                    <mat-icon>remove</mat-icon>
+                  </button>
+                </mat-card-actions>
+              </mat-expansion-panel>
+            </mat-accordion>
+          </div>
+        </div>
+      </div>
+      <div class="text-ai-feedback">
+        <mat-card-subtitle
+          style="text-align: center; justify-content: center; padding-bottom: 1rem">
+          <mat-icon svgIcon="ai"></mat-icon>
+          {{ 'ai_generated' | translate }}
+        </mat-card-subtitle>
+      </div>
+
+      <!-- Panel lateral derecho -->
+    </mat-card-content>
+  </mat-card>
+  <mat-card
+    class="class-card"
+    *ngIf="!writing">
+    <mat-card-header>
+      <mat-card-title>{{ 'assessments.writing.no_writing' | translate }}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <mat-card-subtitle>{{
+        'assessments.writing.no_writing_subtitle' | translate
+      }}</mat-card-subtitle>
+    </mat-card-content>
+  </mat-card>
+</div>

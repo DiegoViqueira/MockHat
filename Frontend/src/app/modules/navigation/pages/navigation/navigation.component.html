@@ -1,0 +1,60 @@
+<div class="app-container">
+  <div class="sidenav-wrapper">
+    <mat-drawer-container
+      hasBackdrop="false"
+      autosize>
+      <hrt-header [snav]="snav" />
+      <!-- <mat-drawer
+        class="side-nav-custom"
+        [mode]="isMobile() ? 'side' : 'side'"
+        fixedTopGap="56"
+        #snav
+        [opened]="!isMobile()"
+        > -->
+
+      <mat-drawer
+        class="side-nav-custom"
+        [mode]="isMobile() ? 'side' : 'side'"
+        fixedTopGap="56"
+        #snav
+        [opened]="false">
+        <div class="mockhat-title-container">
+          <img
+            src="assets/icons/icon-mockhat.svg"
+            width="50"
+            height="50" />
+          <span class="mockhat-title">MockHat</span>
+        </div>
+        <mat-divider></mat-divider>
+        <mat-selection-list *ngFor="let menuItem of navItems">
+          @if (menuItem.Name === 'menu.logout') {
+            <mat-divider></mat-divider>
+          }
+
+          <mat-list-item
+            [routerLink]="menuItem.RoutingPath"
+            [routerLinkActive]="'active-nav-item'"
+            [routerLinkActiveOptions]="{ exact: menuItem.exactMatch || false }">
+            <mat-icon
+              matListItemIcon
+              *ngIf="menuItem.Icon">
+              {{ menuItem.Icon }}
+            </mat-icon>
+            <mat-icon
+              matListItemIcon
+              *ngIf="menuItem.svgIcon"
+              svgIcon="{{ menuItem.svgIcon }}"></mat-icon>
+
+            <span matListItemTitle>
+              {{ menuItem.Name | translate }}
+            </span>
+          </mat-list-item>
+        </mat-selection-list>
+      </mat-drawer>
+
+      <div class="main-content">
+        <router-outlet></router-outlet>
+      </div>
+    </mat-drawer-container>
+  </div>
+</div>

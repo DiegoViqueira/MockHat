@@ -1,0 +1,149 @@
+.container {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+}
+
+mat-card {
+  display: flex;
+  flex-direction: column; // Asegura dirección vertical
+  width: 100%;
+  height: 100%;
+  border: none;
+  box-shadow: none;
+}
+
+.card-header {
+  gap: 1rem;
+  display: flex;
+
+  mat-card-title {
+    color: var(--mockhat-black);
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  mat-card-subtitle {
+    color: var(--mockhat-black);
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-left: 0.5rem;
+    margin-bottom: 0.3rem;
+  }
+}
+
+.assessment-container {
+  width: 100%;
+  height: 100%; // Asegura que el contenedor ocupe toda la altura
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-rows: 1fr; // Importante: hace que las filas ocupen todo el espacio
+  gap: 1rem;
+  overflow: auto; // Permite scroll si el contenido es muy largo
+
+  .text-assessment,
+  .text-student {
+    margin-bottom: 24px;
+    display: flex;
+    flex-direction: column;
+    height: 100%; // Ocupa toda la altura disponible
+    margin-bottom: 24px;
+
+    mat-toolbar {
+      padding: 1rem;
+      flex-shrink: 0; // Evita que el toolbar se encoja
+    }
+
+    mat-card-subtitle {
+      flex: 1; // Permite que el contenido crezca
+      white-space: pre-line; // Mejor manejo de saltos de línea
+      word-break: break-word; // Mejor manejo de palabras largas
+      line-height: 1.6; // Mejor espaciado entre líneas
+      padding: 16px;
+      margin: 0;
+      border-radius: 4px;
+      font-size: 16px;
+      color: rgba(0, 0, 0, 0.87); // Mejor contraste
+      overflow-y: auto; // Scroll si el contenido es muy largo
+
+      &[wlkHighlight] {
+        position: relative; // Para el highlighting
+      }
+    }
+  }
+}
+
+.pastel-box {
+  background: linear-gradient(
+    135deg,
+    rgba(177, 173, 230, 0.938),
+    rgba(208, 233, 209, 0.664),
+    rgba(211, 211, 162, 0.973)
+  );
+  backdrop-filter: blur(4px);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.class-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  mat-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    color: var(--mockhat-primary);
+    border-radius: 10px;
+    gap: 1rem;
+    padding: 1rem;
+    min-height: 50px;
+    margin: 0.5rem 0.5rem 0 0.5rem;
+
+    mat-card-title {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--mockhat-primary);
+    }
+
+    mat-card-subtitle {
+      font-size: 1rem;
+      font-weight: 400;
+      color: var(--mockhat-primary);
+    }
+  }
+}
+
+mat-accordion {
+  background-color: var(--mockhat-primary) !important;
+}
+mat-expansion-panel {
+  background-color: var(--mockhat-white) !important;
+  mat-expansion-panel-header {
+    background-color: var(--mockhat-secondary) !important;
+  }
+}
+
+.no-writing-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.scores-section-content {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem !important;
+}
+
+.scores-section-content-score {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+// Mover fuera del anidamiento
+:host ::ng-deep .highlight {
+  background-color: #f3d7cf !important;
+}

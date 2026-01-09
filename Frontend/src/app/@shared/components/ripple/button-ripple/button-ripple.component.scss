@@ -1,0 +1,48 @@
+.example-ripple-container {
+  display: flex;
+  cursor: pointer;
+  text-align: center;
+
+  width: 300px;
+  height: 300px;
+  line-height: 300px;
+
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+
+  -webkit-user-drag: none;
+  -webkit-tap-highlight-color: transparent;
+  border-radius: 16px; /* Adjust the value as needed */
+}
+
+.svg-icon{
+  fill: red !important;
+}
+mat-card{
+  display: flex;
+  width: 100%; /* Ensure the card takes the full width of the container */
+  height: 100%; /* Ensure the card takes the full height of the container */
+
+}
+
+mat-card-content, mat-card-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 16px;
+
+}
+/** Styles to make the demo look better. */
+.example-ripple-checkbox {
+  margin: 6px 12px 6px 0;
+}
+
+.example-ripple-form-field {
+  margin: 0 12px 0 0;
+}
+
+
+

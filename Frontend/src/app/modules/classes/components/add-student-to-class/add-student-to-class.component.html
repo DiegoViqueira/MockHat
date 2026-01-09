@@ -1,0 +1,49 @@
+<div class="search-container">
+  <mat-form-field
+    class="search-field"
+    appearance="outline">
+    <mat-label>{{ 'classes.filter.title' | translate }}</mat-label>
+    <input
+      matInput
+      (keyup)="applyFilter($event)"
+      placeholder="{{ 'classes.filter.placeholder' | translate }}"
+      #input />
+  </mat-form-field>
+  @if (!isMobile()) {
+    <button
+      (click)="addStudent()"
+      mat-raised-button
+      color="primary">
+      {{ 'class.students.create' | translate }}
+    </button>
+  } @else {
+    <button
+      (click)="addStudent()"
+      mat-mini-fab
+      style="box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1)"
+      matTooltip="{{ 'class.students.create' | translate }}"
+      color="primary">
+      <mat-icon>add</mat-icon>
+    </button>
+  }
+</div>
+<mat-card>
+  <mat-card-content>
+    <mat-selection-list
+      #studentsList
+      (selectionChange)="onSelectionChange($event)">
+      <mat-list-option
+        class="student-item"
+        *ngFor="let user of filteredUsers()"
+        [value]="user"
+        [selected]="user.selected">
+        <div
+          matListItemIcon
+          class="avatar">
+          {{ user.avatar | uppercase }}
+        </div>
+        <div matListItemTitle>{{ user.name }}</div>
+      </mat-list-option>
+    </mat-selection-list>
+  </mat-card-content>
+</mat-card>

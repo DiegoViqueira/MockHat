@@ -1,0 +1,30 @@
+.filter-container {
+  padding: 1rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1rem;
+
+  .filter-input {
+    width: 300px;
+  }
+
+  button {
+    margin-left: auto;
+  }
+}
+
+.user-avatar {
+  background-color: var(--mockhat-secondary); // o el color que prefieras
+  color: var(--mockhat-primary); // texto
+  font-weight: 600;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 8px;
+  font-size: 14px;
+  flex-shrink: 0;
+}

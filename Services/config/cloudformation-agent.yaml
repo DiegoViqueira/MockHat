@@ -1,0 +1,276 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: "CloudFormation para desplegar el servicio SQS Consumer en ECR y ECS"
+
+Parameters:
+  ProjectName:
+    Type: String
+    Default: mockhat-ai-agent
+    Description: Nombre del proyecto para etiquetar recursos
+
+  ContainerPort:
+    Type: Number
+    Default: 8001
+    Description: Puerto expuesto por el contenedor
+
+  DesiredCount:
+    Type: Number
+    Default: 1
+    Description: Número deseado de instancias del servicio
+
+  MaxCount:
+    Type: Number
+    Default: 3
+    Description: Número máximo de instancias del servicio
+
+  TaskCpu:
+    Type: Number
+    Default: 256
+    Description: Unidades de CPU para la tarea (1 vCPU = 1024)
+
+  TaskMemory:
+    Type: Number
+    Default: 512
+    Description: Memoria para la tarea en MiB
+
+  VpcId:
+    Type: AWS::EC2::VPC::Id
+    Description: VPC donde se desplegará el servicio
+
+  SubnetIds:
+    Type: List<AWS::EC2::Subnet::Id>
+    Description: Subredes donde se desplegará el servicio
+
+  SQSQueueName:
+    Type: String
+    Default: mockhat-assessments-writings
+    Description: Nombre de la cola SQS a consumir
+
+  SQSQueueARN:
+    Type: String
+    Description: ARN de la cola SQS existente
+
+  ImageTag:
+    Type: String
+    Description: Tag de la imagen Docker
+
+Resources:
+  # Rol de ejecución para la tarea ECS
+  ECSTaskExecutionRole:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service: ecs-tasks.amazonaws.com
+            Action: sts:AssumeRole
+      ManagedPolicyArns:
+        - arn:aws:iam::aws:policy/service-role/AmazonECSTaskExecutionRolePolicy
+      Tags:
+        - Key: Project
+          Value: !Ref ProjectName
+
+  # Rol de tarea para el servicio
+  ECSTaskRole:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service: ecs-tasks.amazonaws.com
+            Action: sts:AssumeRole
+      Tags:
+        - Key: Project
+          Value: !Ref ProjectName
+
+  # Política para permitir acceso a SQS
+  SQSAccessPolicy:
+    Type: AWS::IAM::Policy
+    Properties:
+      PolicyName: !Sub ${ProjectName}-sqs-access
+      PolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Effect: Allow
+            Action:
+              - sqs:ReceiveMessage
+              - sqs:DeleteMessage
+              - sqs:GetQueueAttributes
+              - sqs:GetQueueUrl
+              - sqs:ChangeMessageVisibility
+            Resource: !Ref SQSQueueARN
+      Roles:
+        - !Ref ECSTaskRole
+
+  # Política para permitir acceso a CloudWatch Metrics
+  CloudWatchMetricsPolicy:
+    Type: AWS::IAM::Policy
+    Properties:
+      PolicyName: !Sub ${ProjectName}-cloudwatch-metrics
+      PolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Effect: Allow
+            Action:
+              - cloudwatch:GetMetricStatistics
+              - cloudwatch:ListMetrics
+              - cloudwatch:PutMetricData
+            Resource: "*"
+      Roles:
+        - !Ref ECSTaskRole
+
+  # Grupo de seguridad para el servicio
+  ServiceSecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: !Sub ${ProjectName} service security group
+      VpcId: !Ref VpcId
+      SecurityGroupIngress:
+        - IpProtocol: tcp
+          FromPort: !Ref ContainerPort
+          ToPort: !Ref ContainerPort
+          CidrIp: 0.0.0.0/0
+      Tags:
+        - Key: Project
+          Value: !Ref ProjectName
+
+  # Definición de tarea ECS
+  TaskDefinition:
+    Type: AWS::ECS::TaskDefinition
+    Properties:
+      Family: !Ref ProjectName
+      Cpu: !Ref TaskCpu
+      Memory: !Ref TaskMemory
+      NetworkMode: awsvpc
+      RequiresCompatibilities:
+        - FARGATE
+      ExecutionRoleArn: !GetAtt ECSTaskExecutionRole.Arn
+      TaskRoleArn: !GetAtt ECSTaskRole.Arn
+      ContainerDefinitions:
+        - Name: !Ref ProjectName
+          Image: !Sub ${AWS::AccountId}.dkr.ecr.${AWS::Region}.amazonaws.com/${ProjectName}:${ImageTag}
+          Essential: true
+          PortMappings:
+            - ContainerPort: !Ref ContainerPort
+              HostPort: !Ref ContainerPort
+              Protocol: tcp
+          LogConfiguration:
+            LogDriver: awslogs
+            Options:
+              awslogs-group: !Ref LogGroup
+              awslogs-region: !Ref AWS::Region
+              awslogs-stream-prefix: ecs
+          Environment:
+            - Name: AWS_REGION
+              Value: !Ref AWS::Region
+            - Name: SQS_QUEUE_URL
+              Value: !Sub "https://sqs.${AWS::Region}.amazonaws.com/${AWS::AccountId}/${SQSQueueName}"
+            - Name: SQS_FIFO_QUEUE
+              Value: "true"
+            - Name: SQS_MESSAGE_GROUP_ID
+              Value: "default"
+            - Name: SQS_VISIBILITY_TIMEOUT
+              Value: "30"
+            - Name: SQS_WAIT_TIME
+              Value: "20"
+            - Name: PROCESSING_THREADS
+              Value: "5"
+      Tags:
+        - Key: Project
+          Value: !Ref ProjectName
+
+  # Grupo de logs para el servicio
+  LogGroup:
+    Type: AWS::Logs::LogGroup
+    Properties:
+      LogGroupName: !Sub /ecs/${ProjectName}
+      RetentionInDays: 30
+      Tags:
+        - Key: Project
+          Value: !Ref ProjectName
+
+  # Clúster ECS
+  ECSCluster:
+    Type: AWS::ECS::Cluster
+    Properties:
+      ClusterName: !Ref ProjectName
+      Tags:
+        - Key: Project
+          Value: !Ref ProjectName
+
+  # Servicio ECS
+  ECSService:
+    Type: AWS::ECS::Service
+    Properties:
+      ServiceName: !Ref ProjectName
+      Cluster: !Ref ECSCluster
+      TaskDefinition: !Ref TaskDefinition
+      DesiredCount: !Ref DesiredCount
+      LaunchType: FARGATE
+      NetworkConfiguration:
+        AwsvpcConfiguration:
+          AssignPublicIp: ENABLED
+          SecurityGroups:
+            - !Ref ServiceSecurityGroup
+          Subnets: !Ref SubnetIds
+      DeploymentConfiguration:
+        MaximumPercent: 200
+        MinimumHealthyPercent: 100
+      Tags:
+        - Key: Project
+          Value: !Ref ProjectName
+
+  # Auto Scaling para el servicio
+  ScalableTarget:
+    Type: AWS::ApplicationAutoScaling::ScalableTarget
+    Properties:
+      MaxCapacity: !Ref MaxCount
+      MinCapacity: !Ref DesiredCount
+      ResourceId: !Sub service/${ECSCluster}/${ECSService.Name}
+      ScalableDimension: ecs:service:DesiredCount
+      ServiceNamespace: ecs
+      RoleARN: !Sub arn:aws:iam::${AWS::AccountId}:role/aws-service-role/ecs.application-autoscaling.amazonaws.com/AWSServiceRoleForApplicationAutoScaling_ECSService
+
+  # Política de escalado basada en mensajes SQS
+  ScalingPolicySQS:
+    Type: AWS::ApplicationAutoScaling::ScalingPolicy
+    Properties:
+      PolicyName: !Sub ${ProjectName}-sqs-scaling
+      PolicyType: TargetTrackingScaling
+      ScalingTargetId: !Ref ScalableTarget
+      TargetTrackingScalingPolicyConfiguration:
+        CustomizedMetricSpecification:
+          MetricName: ApproximateNumberOfMessagesVisible
+          Namespace: AWS/SQS
+          Dimensions:
+            - Name: QueueName
+              Value: !Ref SQSQueueName
+          Statistic: Average
+        TargetValue: 100.0 # Escalar por cada 100 mensajes
+        ScaleInCooldown: 300
+        ScaleOutCooldown: 120
+        DisableScaleIn: false
+
+Outputs:
+  ECRRepositoryURL:
+    Description: URL del repositorio ECR
+    Value: !Sub ${AWS::AccountId}.dkr.ecr.${AWS::Region}.amazonaws.com/${ProjectName}
+
+  SQSQueueURL:
+    Description: URL de la cola SQS
+    Value: !Sub "https://sqs.${AWS::Region}.amazonaws.com/${AWS::AccountId}/${SQSQueueName}"
+
+  SQSQueueARN:
+    Description: ARN de la cola SQS
+    Value: !Ref SQSQueueARN
+
+  ECSClusterName:
+    Description: Nombre del clúster ECS
+    Value: !Ref ECSCluster
+
+  ECSServiceName:
+    Description: Nombre del servicio ECS
+    Value: !Ref ECSService

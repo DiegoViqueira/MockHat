@@ -1,0 +1,278 @@
+# English translations for app package.
+# Copyright (C) 2023 THE app'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the app package.
+msgid ""
+msgstr ""
+"Project-Id-Version: app\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-10-15 12:00+0200\n"
+"PO-Revision-Date: 2023-10-15 12:00+0200\n"
+"Last-Translator: Your Name <your@email.com>\n"
+"Language-Team: English\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "Incorrect email or password"
+msgstr "Incorrect email or password"
+
+msgid "User not found"
+msgstr "User not found"
+
+msgid "User already exists"
+msgstr "User already exists"
+
+msgid "Account not found"
+msgstr "Account not found"
+
+msgid "Internal server error"
+msgstr "Internal server error"
+
+msgid "Invalid token type"
+msgstr "Invalid token type"
+
+msgid "Token validation failed"
+msgstr "Token validation failed"
+
+msgid "Authorization header missing"
+msgstr "Authorization header missing"
+
+msgid "Not authenticated"
+msgstr "Not authenticated"
+
+msgid "Classroom ID is required"
+msgstr "Classroom ID is required"
+
+
+msgid "Assessment already exists"
+msgstr "Assessment already exist"
+
+
+msgid "Assessment not found"
+msgstr "Assessment not found"
+
+msgid "You are not allowed to create a writing for this assessment"
+msgstr "You are not allowed to create a writing for this assessment"
+
+msgid "Assessment is not in the pending state"
+msgstr "Assessment is not in the pending state"
+
+msgid "Student not found in classroom"
+msgstr "Student not found in classroom"
+
+msgid "Teacher not found in classroom"
+msgstr "Teacher not found in classroom"
+
+msgid "User not verified"
+msgstr "User not verified"
+
+msgid "Email already exists"
+msgstr "Email already exists"
+
+msgid "Invalid user"
+msgstr "Invalid user"
+
+msgid "Invalid image"
+msgstr "Invalid image"
+
+
+msgid "You are not allowed to create a class"
+msgstr "You are not allowed to create a class"
+
+msgid "Error creating class"
+msgstr "Error creating class"
+
+msgid "Class not found"
+msgstr "Class not found"
+
+msgid "Error getting class"
+msgstr "Error getting class"
+
+msgid "Class already exists"
+msgstr "Class already exists"
+
+msgid "Error listing classes"
+msgstr "Error listing classes"
+
+msgid "Error you are not allowed to create a student"
+msgstr "Error you are not allowed to create a student"
+
+msgid "Error listing students"
+msgstr "Error listing students"
+
+msgid "Error creating student"
+msgstr "Error creating student"
+
+msgid "Error updating student"
+msgstr "Error updating student"
+
+msgid "Student already exists"
+msgstr "Student already exist"
+
+
+msgid "User does not exist"
+msgstr "User does not exist"
+
+msgid "User already exists"
+msgstr "User already exists"
+
+msgid "User is not an admin"
+msgstr "User is not an admin"
+
+msgid "Account not found"
+msgstr "Account not found"
+
+msgid "Only Business accounts can have multiple users"
+msgstr "Only Business accounts can have multiple users"
+
+msgid "Account has no users"
+msgstr "Account has no users"
+
+msgid "Error removing user from account"
+msgstr "Error removing user from account"
+
+msgid "Role not authorized"
+msgstr "Role not authorized"
+
+msgid "Role not found"
+msgstr "Role not found"
+
+msgid "Could not validate credentials"
+msgstr "Could not validate credentials"
+
+msgid "Error creating user  "
+msgstr "Error creating user"
+
+msgid "Error updating user"
+msgstr "Error updating user"
+
+msgid "Error creating assessment"
+msgstr "Error creating assessment"
+
+msgid "Error transcribing assessment"
+msgstr "Error transcribing assessment"
+
+msgid "Error sending email"
+msgstr "Error sending email"
+
+msgid "Error sending forgot password email"
+msgstr "Error sending forgot password email"
+
+msgid "Error sending verification email"
+msgstr "Error sending verification email"
+
+msgid "Error creating user"
+msgstr "Error creating user"
+
+msgid "Error deleting user"
+msgstr "Error deleting user"
+
+msgid "Error updating user"
+msgstr "Error updating user"
+
+msgid "Error listing users"
+msgstr "Error listing users"
+
+msgid "Error creating account"
+msgstr "Error creating account"
+
+msgid "Error getting account"
+msgstr "Error getting account"
+
+msgid "Error updating account"
+msgstr "Error updating account"
+
+msgid "Error adding user to account"
+msgstr "Error adding user to account"
+
+msgid "Error transcribing answer"
+msgstr "Error transcribing answer"
+
+msgid "Error removing user from account"
+msgstr "Error removing user from account"
+
+msgid "Error changing password"
+msgstr "Error changing password"
+
+msgid "Error getting users by account"
+msgstr "Error getting users by account"
+
+msgid "Error creating user and account"
+msgstr "Error creating user and account"
+
+msgid "Subscription not found"
+msgstr "Subscription not found"
+
+msgid "Error generating image URL"
+msgstr "Error generating image URL"
+
+msgid "Error uploading file"
+msgstr "Error uploading file"
+
+msgid "Error sending message to queue"
+msgstr "Error sending message to queue"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

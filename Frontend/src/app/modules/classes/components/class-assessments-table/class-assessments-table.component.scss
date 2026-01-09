@@ -1,0 +1,27 @@
+.filter-container {
+  padding: 1rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1rem;
+
+  .filter-input {
+    width: 300px;
+  }
+
+  button {
+    margin-left: auto;
+  }
+}
+
+mat-chip {
+  padding: 0 8px; // ajusta el padding horizontal
+
+  mat-icon {
+    line-height: 24px;
+    vertical-align: middle; // alineación vertical
+    margin: -4px 0; // ajuste fino para centrar
+    display: inline-flex;
+    align-items: center;
+  }
+}

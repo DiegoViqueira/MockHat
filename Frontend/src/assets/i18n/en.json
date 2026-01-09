@@ -1,0 +1,441 @@
+{
+  "ai_generated": "This content was generated using artificial intelligence and may contain errors. Please verify before using it.",
+  "assessments": {
+    "no_assessment": "No assessment selected",
+    "no_assessment_subtitle": "Please go back and select an assessment to see the details",
+    "createAssessment": "Create assessment",
+    "add_more_writings": "Add more writings",
+    "list": "List old assessments",
+    "start": "Start new assessment",
+    "view": "View assessment",
+    "perform": "Perform assessment",
+    "start_assessment": "Start assessment",
+    "title": "Title",
+    "state": "State",
+    "actions": "Actions",
+    "student_review_writings": "Review writings",
+    "assessment_already_started": "Assessment already started",
+    "assessment_already_started_description": "The assessment has already started. You will receive an email when it finishes.",
+    "image": "Image",
+    "image_text": "Image transcription",
+    "students_answers_upload": "Upload students answers",
+    "writing": {
+      "state": "State",
+      "review": "Review",
+      "status": "Status",
+      "name": "Name",
+      "score": "Score",
+      "percentage": "Percentage",
+      "actions": "Actions",
+      "image_preview": "Image Preview",
+      "student": "Student",
+      "assessment": "Assessment",
+      "grammar": "Grammar",
+      "grammar_errors": "Grammar Errors",
+      "corrected_text": "Corrected Text",
+      "display_grammar_errors": "Display Grammar Errors",
+      "student_answer": "Student Answer",
+      "grammar_feedback": "Grammar Feedback",
+      "error_text": "Error Text",
+      "correction_explanation": "Correction Explanation",
+      "ai_feedback": "AI Feedback",
+      "student_response_text": "Student Response Text",
+      "student_response_image_url": "Student Response Image URL",
+      "student_response_word_count": "Words",
+      "writing_state": "Writing State",
+      "level": "Level",
+      "institution": "Institution",
+      "certification": "Certification",
+      "exam_type": "Exam Type",
+      "task": "Task",
+      "update_changes": "Update Changes",
+      "criteria_scores": "Criteria Scores",
+      "error_feedback": "Error Feedback",
+      "no_writing": "No Writing selected",
+      "no_writing_subtitle": "Please go back and select a writing to see the details"
+    },
+    "form": {
+      "name": "Name",
+      "create": "Create Assessment",
+      "upload_image": "Upload Image",
+      "take_photo": "Take Photo",
+      "exam_type": "Exam Type",
+      "task": "Task"
+    }
+  },
+  "auth": {
+    "actions": {
+      "accept_terms_and_conditions": "I've read and agree with the Terms of Service and Privacy Policy",
+      "already_have_account": "Already have an account?",
+      "back_to_login": "Login",
+      "register": "Sign up"
+    },
+    "invite_user_to_account": {
+      "title": "Invite User to Account",
+      "subtitle": "You are invited to join the account "
+    },
+
+    "register": {
+      "title": "Create your account"
+    },
+    "validation": {
+      "required": "This field is required",
+      "password_mismatch": "Passwords do not match"
+    }
+  },
+  "CANNOT_REFRESH_AUTH": "Session expired, please login again",
+  "UNKNOWN_ERROR": "An unknown error occurred",
+  "class": {
+    "toggle_class": "Change Class State",
+    "name": "Class",
+    "members": "Members",
+    "level": "Level",
+    "institution": "Institution",
+    "assessments": "Assessments",
+    "no_class": "No class selected",
+    "no_class_subtitle": "Please go back and select a class to see the details",
+    "metrics": {
+      "average_score": "Average Score",
+      "pass_rate": "Pass Rate",
+      "avg_grammar_errors": "Average Grammar Errors"
+    },
+    "tables": {
+      "members": {
+        "name": "Name",
+        "last_name": "Last Name",
+        "email": "Email",
+        "role": "Role"
+      },
+      "assessments": {
+        "title": "Title",
+        "state": "State",
+        "actions": "Actions"
+      }
+    },
+    "buttons": {
+      "addMember": "Add Member",
+      "addAssessment": "Add Assessment",
+      "disable": "Disable Class",
+      "class_analysis": "Class Analysis"
+    },
+    "filter": {
+      "name": "Name",
+      "placeholder": "Type a name",
+      "title": "Title",
+      "placeholder_title": "Type a Title"
+    },
+    "students": {
+      "save": "Save changes",
+      "create": "Create new Student"
+    },
+    "teachers": {
+      "save": "Save changes"
+    }
+  },
+  "role": {
+    "student": "Student",
+    "teacher": "Teacher"
+  },
+  "classes": {
+    "title": "Classes",
+    "buttons": {
+      "create": "Create new class",
+      "more": "Enter to see more details",
+      "view_metrics": "View Metrics",
+      "class_analysis": "AI Class Insight Analysis"
+    },
+
+    "students_analysis_table": {
+      "title": "Metric by student",
+
+      "filter": {
+        "title": "Filter",
+        "placeholder": "Type a name"
+      },
+      "fields": {
+        "name": "Name",
+        "total_writings": "Total Writings",
+        "avg_score": "Average Score",
+        "evolution": "Evolution",
+        "pass_rate": "Pass Rate",
+        "avg_grammar_errors": "Average Grammar Errors"
+      }
+    },
+    "metrics": {
+      "global_metrics": "Global Metrics"
+    },
+    "table": {
+      "name": "Name",
+      "institution": "Institution",
+      "level": "Level",
+      "members": "Members"
+    },
+    "tabs": {
+      "active": "Active",
+      "inactive": "Inactive"
+    },
+    "filter": {
+      "title": "Filter",
+      "placeholder": "Type a name"
+    },
+    "addAssessment": "Add Assessment",
+    "addMemberToClass": "Add Members to the Class",
+    "addMembersToClassTooltip": "Select one or more members",
+    "no-aulas": "You haven't created any classes yet",
+    "tooltip-active": "Show only active classes",
+    "tooltip-analytics": "Analytics details",
+    "tooltip-inactive": "Show only inactive classes",
+    "tooltip-settings": "Settings details",
+    "tooltip-students": "Students details",
+    "tooltip-tasks": "Tasks details",
+    "active": "Active",
+    "inactive": "Inactive",
+    "form": {
+      "name": "Name",
+      "description": "Description",
+      "institution": "Institution",
+      "level": "Level"
+    },
+    "students": "Students",
+    "teachers": "Teachers",
+    "assessments": "Assessments"
+  },
+  "common": {
+    "camera": "Camera",
+    "upload": "Files",
+    "are_you_sure": "Are you sure?",
+    "are_you_sure_message": "Are you sure you want to change the class state?",
+    "optional": "Optional",
+    "download": "Download PDF",
+    "ok": "OK",
+    "add": "Add",
+    "save_changes": "Save Changes",
+    "dateTime": "Date and Time",
+    "actions": "Actions",
+    "edit": "Edit",
+    "delete": "Delete",
+    "state": "State",
+    "active": "Active",
+    "inactive": "Inactive",
+    "cancel": "Cancel",
+    "create": "Create",
+    "close": "Close",
+    "confirm": "Confirm",
+    "email": "Email",
+    "password": "Password",
+    "confirm_password": "Confirm Password",
+    "save": "Save",
+    "send": "Send",
+    "yes": "Yes",
+    "no": "No",
+    "upload_image": "Please click on the button to upload an image",
+    "image_size": "Maximum image size: 10MB",
+    "validation": {
+      "email": "Must be a valid email",
+      "pattern": "Must be a valid password (minimum 8 characters, one uppercase, one lowercase, one number and one symbol)",
+      "required": "This field is required"
+    }
+  },
+  "header": {
+    "logout": "Log out",
+    "account": "Account",
+    "students": "Students"
+  },
+
+  "login": {
+    "errorPassword": "Password cannot be empty",
+    "errorUsername": "Enter a valid email",
+    "forgot_password": "Forgot Password?",
+    "name": "Login",
+    "no_account": "Don't have an account?",
+    "signup": "Sign up",
+    "with_account": "Welcome back!"
+  },
+  "mail-sent": {
+    "contact_support": "Contact us",
+    "need_help": "Did not receive the email?",
+    "subtitle": "We have sent you a link to your email to continue the process, please verify that the email is not in spam.",
+    "title": "Mail Sent"
+  },
+  "menu": {
+    "home": "Home",
+    "billing": "Billing",
+    "assessments": "Assessments",
+    "administration": "Administration",
+    "classes": "Classes",
+    "settings": "Settings",
+    "students": "Students",
+    "users": "Users",
+    "writing": "Writing",
+    "payments": "Payments",
+    "logout": "Logout"
+  },
+
+  "paginator": {
+    "firstPage": "First page",
+    "itemsPerPage": "Items per page",
+    "lastPage": "Last page",
+    "nextPage": "Next page",
+    "of": "of",
+    "previousPage": "Previous page"
+  },
+  "payments": {
+    "amount_paid": "Amount Paid",
+    "currency": "Currency",
+    "customer_email": "Customer Email",
+    "event_created_at": "Date",
+    "invoice_id": "Invoice ID",
+    "invoice_pdf_url": "Invoice PDF URL",
+    "payment_status": "Payment Status",
+    "period_end": "Period End",
+    "period_start": "Period Start",
+    "plan_description": "Plan Description",
+    "subscription_id": "Subscription ID"
+  },
+  "plans": {
+    "info": "Subscription Plans",
+    "subscribe": "Subscribe Now",
+    "upgrade_plan": "Upgrade Plan",
+    "current_plan": "Current Plan",
+    "free": "Free",
+    "basic": "Basic",
+    "premium": "Premium",
+    "business": "Business",
+    "business_pro": "Business Pro",
+    "upgrade": "Upgrade"
+  },
+  "privacyPolicy": {
+    "content": "This Privacy Policy explains how MockHat collects, uses, and protects your personal information.",
+    "lastUpdate": "Last updated: 26/02/2025",
+    "sections": {
+      "changes": "7. Changes to this Policy",
+      "changesDetails": "7.1. MockHat may update this policy at any time. Significant changes will be notified by publishing an update on our site.",
+      "cookies": "6. Cookies",
+      "cookiesDetails": "6.1. We use cookies to enhance your experience on the site. You can configure your browser to disable cookies, but this may affect some site functionalities.",
+      "data": "1. Information Collected",
+      "dataDetails": "1.1. Personal Information: We collect data such as your name, email, and payment details when you register or use our services. 1.2. Technical Information: We collect data such as your IP address, browser type, and activity on our site to improve user experience.",
+      "retention": "3. Data Retention",
+      "retentionDetails": "3.1. We retain your information as necessary to fulfill the purposes described in this policy or as required by applicable laws.",
+      "rights": "5. Your Rights",
+      "rightsDetails": "5.1. You can access, correct, or delete your personal information by contacting us at [support email]. 5.2. You have the right to opt-out of promotional emails by clicking the 'unsubscribe' link in our emails.",
+      "security": "4. Security",
+      "securityDetails": "4.1. We implement technical and organizational measures to protect your personal information from unauthorized access. However, no system is completely secure.",
+      "usage": "2. Use of Information",
+      "usageDetails": "2.1. We use your information to provide contracted services, improve our assessment tools, and send important notifications and promotional content (with your consent)."
+    },
+    "title": "Privacy Policy"
+  },
+  "rate": {
+    "subtitle": "Is this response adequate?",
+    "title": "Give us a feedback, to do it better !"
+  },
+  "recorder": {
+    "start": "Start recording",
+    "stop": "Stop Recording"
+  },
+  "reset-password": {
+    "back_to_login": "Back to login",
+    "button": "Reset Password",
+    "choose_new_password": "Choose a new password",
+    "contact_support": "Contact us",
+    "errorEmail": "Enter a valid email",
+    "need_help": "Need help?",
+    "save_new_password": "Save new password",
+    "subtitle": "Enter your email address and we'll send you a link to reset your password",
+    "title": "Reset Password"
+  },
+  "students": {
+    "form": {
+      "close": "Close",
+      "email": "Email",
+      "last_name": "Last Name",
+      "name": "Name",
+      "submit": "Save",
+      "register": "Register"
+    },
+    "name": "Students",
+    "table": {
+      "edit": "Edit",
+      "email": "Email",
+      "last_name": "Last Name",
+      "name": "Name"
+    },
+    "searchStudent": "Search Student",
+    "searchByNameOrLastName": "Search by name or last name"
+  },
+  "serverConnectionError": "Server connection error",
+  "termsOfUse": {
+    "content": "These Terms of Use govern your use of the MockHat platform. By accessing or using our site and services, you agree to the following terms.",
+    "lastUpdate": "Last updated: 26/02/2025",
+    "sections": {
+      "account": "2. User Account",
+      "accountDetails": "2.1. You are responsible for maintaining the security of your account and credentials. 2.2. MockHat reserves the right to suspend or delete accounts that violate these terms.",
+      "intellectual": "4. Intellectual Property",
+      "intellectualDetails": "4.1. All rights to the services, including algorithms and assessments, are the exclusive property of MockHat. 4.2. Unauthorized reproduction, distribution, or use of platform-generated content is prohibited.",
+      "liability": "6. Limitation of Liability",
+      "liabilityDetails": "6.1. MockHat does not guarantee absolute accuracy of assessments and is not liable for decisions based on results. 6.2. Our maximum liability is limited to the cost of the service used.",
+      "modifications": "5. Modifications",
+      "modificationsDetails": "5.1. MockHat may update these terms at any time. Changes will become effective once published on our site.",
+      "prohibitions": "3. Prohibitions",
+      "prohibitionsDetails": "3.1. Using MockHat for illegal or unauthorized activities is prohibited. 3.2. You must not attempt to access, modify, or manipulate our systems or data.",
+      "use": "1. Use of the Service",
+      "useDetails": "1.1. MockHat is designed to provide AI-based writing assessment tests. 1.2. You must be over 18 years old or have the consent of a legal guardian to use our services."
+    },
+    "title": "Terms of Use"
+  },
+
+  "user": {
+    "fields": {
+      "email": "Email",
+      "first_name": "First Name",
+      "last_name": "Last Name",
+      "account_name": "Account Name"
+    },
+    "name": "User"
+  },
+  "account": {
+    "email": "Email",
+    "role": "Role",
+    "invalidEmail": "Invalid email",
+    "title": "Account",
+    "name": "Name",
+    "owner": "Owner",
+    "users": "Users",
+    "plan": "Plan",
+    "invite": "Invite User",
+    "invitations": "Invitations",
+    "no_invitations": "No invitations pending",
+    "no_users": "No users in this account"
+  },
+  "users": {
+    "searchByNameOrLastName": "Search by name or last name",
+
+    "account_id": "Account ID",
+    "blocked": "Blocked",
+    "created_at": "Created at",
+    "delete": "Delete user",
+    "deleteBody": "Are you sure you want to permanently delete this user?",
+    "deleteDialog": "Are you sure you want to delete?",
+    "disabled": "Disabled",
+    "email": "Email",
+    "errorUsername": "Username must be at least 5 characters",
+    "first_name": "First Name",
+    "id": "ID",
+    "last_name": "Last Name",
+    "register": "Register user",
+    "role": "Role",
+    "update": "Update user",
+    "verified": "Verified"
+  },
+  "verify-register": {
+    "contact_support": "Contact us",
+    "need_help": "Need help?",
+    "subtitle": "Something went wrong!!!",
+    "title": "Verify Register"
+  },
+
+  "writing_tab": {
+    "image_preview": "Image Preview",
+    "text": "Write or Validate Text"
+  }
+}

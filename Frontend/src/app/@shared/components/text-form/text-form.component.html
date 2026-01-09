@@ -1,0 +1,26 @@
+<mat-card>
+  <mat-card-content>
+    <form [formGroup]="form">
+      <mat-form-field
+        appearance="fill"
+        class="full-width">
+        <mat-label>{{ 'question.response' | translate }}</mat-label>
+        <textarea
+          cdkTextareaAutosize
+          cdkAutosizeMinRows="1"
+          cdkAutosizeMaxRows="10"
+          matInput
+          id="response_text_response"
+          formControlName="response_text"></textarea>
+      </mat-form-field>
+
+      <button
+        mat-raised-button
+        (click)="response()"
+        [disabled]="form.invalid"
+        color="primary">
+        {{ 'common.send' | translate }}
+      </button>
+    </form>
+  </mat-card-content>
+</mat-card>

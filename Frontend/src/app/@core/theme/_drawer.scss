@@ -1,0 +1,12 @@
+:root {
+  mat-drawer,
+  mat-drawer-inner-container {
+    border-top-right-radius: 12px !important;
+    border-bottom-right-radius: 12px !important;
+    overflow: hidden !important;
+  }
+
+  mat-drawer-content {
+    background-color: var(--mockhat-white) !important;
+  }
+}

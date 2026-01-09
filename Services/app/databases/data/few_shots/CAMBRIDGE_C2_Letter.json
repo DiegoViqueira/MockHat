@@ -1,0 +1,26 @@
+{
+  "assigned_task": "A lifestyle magazine has asked readers for their views about the quality of life in today's towns and cities. You decide to write a letter in which you briefly describe one or two personal experiences that illustrate what urban life is like for you and other people in your neighbourhood. You should also explain which factors are crucial for a good quality of life in towns and cities generally, and why. Write your letter. Do not add any postal addresses.",
+  "task_answer": "Dear Life and Style magazine,\n\nI am writing in response to your monthly topic, this one being 'A Good Life', to share my view about the quality of life in Dublin, where I live.\n\nDublin possesses two strong points that make it stand out as one of the cities with the best quality of life in Europe: the pace of life and a sense of community.\n\nFirstly, the pace of life in Dublin is considered to be stress-free. Despite the often foul weather, Dubliners look relaxed and never in a hurry even when going to work. After work, they would normally share a few pints with colleagues before heading home, and all this without a scowl on their faces. Secondly, there is an omnipresent sense of community. For example, in my neighbourhood Smithfield, every Sunday a market and fair is held at Smithfield Square where families and friends get together to eat or to see the live shows, and where it is quite normal to share a laugh with a stranger. Tourists often point out that Dubliners and Irish alike are welcoming people who would come to your aid when in need.\n\nIn my opinion, both a tranquil pace of life and a solid sense of community are crucial to enhance the quality of life of any town or city. Both have an impact on the perception of a place and affect the atmosphere either positively or negatively. An example of a city with a poor quality of life, which lacks the two factors mentioned above, would be my birthplace Buenos Aires, Argentina. People in the streets are constantly stressed due to work, traffic or other issues; they walk hurriedly and tend to push others out of their way. Additionally, because of high crime rates, citizens are normally wary of strangers and would never stop to help others due to paranoia.",
+  "ai_answer": [
+    {
+      "criteria": "Content",
+      "score": 5.0,
+      "feedback": "All content is relevant to the task. The target reader is fully informed. The writer has described her personal observations, illustrating what life is like where she lives. The crucial factors for a good quality of urban life are given, and explained using the example of another city."
+    },
+    {
+      "criteria": "Communicative Achievement",
+      "score": 4.0,
+      "feedback": "The conventions of formal letter writing, such as appropriate opening and closing salutations and a neutral tone, are used flexibly: 'I am writing in response ... to share my view'. Complex ideas are communicated in an effective and convincing way, holding the target reader's attention with ease, and fulfilling the communicative purposes of the task."
+    },
+    {
+      "criteria": "Organisation",
+      "score": 3.0,
+      "feedback": "The text is a well-organised and coherent whole. A variety of cohesive devices and organisational patterns are used flexibly: 'two strong points', 'where families and friends ... and where', 'alike', 'both ... Both', 'An example of', 'two factors above mentioned'. Punctuation is used to good effect."
+    },
+    {
+      "criteria": "Language",
+      "score": 3.0,
+      "feedback": "A range of vocabulary, including less common lexis, is used effectively and precisely: stand out; foul weather; share a few pints; heading home; omnipresent sense of community; share a laugh; come to your aid; wary of strangers. A wide range of simple and complex grammatical forms is used with control, flexibility and sophistication: Despite the often foul weather ... going to work; in my neighbourhood ... with a stranger; An example of a city ... Buenos Aires, Argentina; Dublin serves as a good example ... has been made possible. A few errors are related to less common structures or occur as slips: who would come to your aid; quality of live."
+    }
+  ]
+}

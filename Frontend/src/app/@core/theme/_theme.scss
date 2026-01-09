@@ -1,0 +1,22 @@
+@use '@angular/material' as mat;
+@use 'sass:map';
+@use 'theme/theme-colors' as palette;
+
+@include mat.core();
+
+html {
+  @include mat.theme(
+    (
+      color: (
+        primary: palette.$primary-palette,
+        theme-type: light,
+      ),
+      typography: var(--mockhat-text-primary),
+      density: 0,
+    )
+  );
+}
+
+body {
+  background-color: var(--mockhat-white) !important;
+}

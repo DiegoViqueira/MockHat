@@ -1,0 +1,12 @@
+mat-card-content{
+  min-width: 300px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+mat-card-footer mat-card-actions {
+  display: flex;
+  gap: 1rem;
+}

@@ -1,0 +1,94 @@
+<div class="filter-container">
+  <mat-form-field
+    appearance="outline"
+    class="filter-input">
+    <mat-icon matSuffix>search</mat-icon>
+    <mat-label>{{ 'class.filter.title' | translate }}</mat-label>
+    <input
+      matInput
+      (keyup)="applyFilter($event)"
+      placeholder="{{ 'class.filter.placeholder_title' | translate }}"
+      #input />
+  </mat-form-field>
+  @if (isMobile()) {
+    <button
+      (click)="navigateToCreateAssessment()"
+      matTooltip="{{ 'class.buttons.addAssessment' | translate }}"
+      mat-mini-fab
+      style="box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1)"
+      color="primary">
+      <mat-icon>add</mat-icon>
+    </button>
+  } @else {
+    <button
+      (click)="navigateToCreateAssessment()"
+      mat-raised-button
+      color="primary">
+      <mat-icon>add</mat-icon>
+      {{ 'class.buttons.addAssessment' | translate }}
+    </button>
+  }
+</div>
+
+<mat-table [dataSource]="dataSource">
+  <!-- Title Column -->
+  <ng-container matColumnDef="title">
+    <mat-header-cell *matHeaderCellDef>{{ 'assessments.title' | translate }}</mat-header-cell>
+    <mat-cell *matCellDef="let assessment">{{ assessment.title }}</mat-cell>
+  </ng-container>
+
+  <!-- State Column -->
+  <ng-container matColumnDef="state">
+    <mat-header-cell *matHeaderCellDef>{{ 'assessments.state' | translate }}</mat-header-cell>
+    <mat-cell *matCellDef="let assessment">
+      @if (isMobile()) {
+        <mat-chip>
+          <mat-icon>{{ getIconForState(assessment.state) }}</mat-icon>
+        </mat-chip>
+      } @else {
+        <mat-chip>{{ assessment.state }}</mat-chip>
+      }
+    </mat-cell>
+  </ng-container>
+
+  <!-- Actions Column -->
+  <ng-container matColumnDef="actions">
+    <mat-header-cell *matHeaderCellDef>{{ 'common.actions' | translate }}</mat-header-cell>
+    <mat-cell *matCellDef="let assessment">
+      <button
+        mat-icon-button
+        [matMenuTriggerFor]="menu"
+        aria-label="Username icon">
+        <mat-icon class="icon-blue">more_vert</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu">
+        @if (assessment.state !== 'pending') {
+          <button
+            mat-menu-item
+            (click)="navigateToViewAssessment(assessment)">
+            <mat-icon class="icon-blue">visibility</mat-icon>
+            <span>{{ 'assessments.view' | translate }}</span>
+          </button>
+
+          <button
+            mat-menu-item
+            (click)="navigateToAddMoreWritings(assessment)">
+            <mat-icon class="icon-blue">add</mat-icon>
+            <span>{{ 'assessments.add_more_writings' | translate }}</span>
+          </button>
+        }
+        @if (assessment.state === 'pending') {
+          <button
+            mat-menu-item
+            (click)="navigateToCorrectAssessment(assessment)">
+            <mat-icon class="icon-blue">check</mat-icon>
+            <span>{{ 'assessments.perform' | translate }}</span>
+          </button>
+        }
+      </mat-menu>
+    </mat-cell>
+  </ng-container>
+
+  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+</mat-table>

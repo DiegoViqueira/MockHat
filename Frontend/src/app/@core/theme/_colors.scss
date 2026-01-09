@@ -1,0 +1,13 @@
+@use '@angular/material' as mat;
+
+@include mat.core();
+
+:root {
+  --mockhat-primary: #310872;
+  --mockhat-secondary: #f3edf7;
+  --mockhat-highlight: #590fd2;
+  --mockhat-black: #3b3740;
+  --mockhat-white: #fffef9;
+  --mockhat-card-header: #b0ccdf63;
+  --mockhat-class-card-header: #590fd2;
+}

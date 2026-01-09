@@ -1,0 +1,17 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title
+      ><mat-icon fontIcon="{{ icon() }}"></mat-icon> {{ name() | translate }}</mat-card-title
+    >
+  </mat-card-header>
+  <mat-card-content>
+    <div class="chart-container">
+      <canvas
+        baseChart
+        [data]="barChartData"
+        [options]="barChartOptions"
+        type="line">
+      </canvas>
+    </div>
+  </mat-card-content>
+</mat-card>

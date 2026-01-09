@@ -1,0 +1,30 @@
+<div class="container">
+  <input
+    hidden
+    (change)="onFileChange($event)"
+    #fileInput
+    type="file" />
+  @if (url()) {
+    <img
+      mat-card-image
+      [src]="url()"
+      alt="Image Preview"
+      class="image-fit" />
+    <button
+      type="button"
+      matSuffix
+      mat-button
+      (click)="fileInput.click()">
+      <mat-icon>cloud_upload</mat-icon>
+    </button>
+  } @else {
+    <button
+      type="button"
+      matSuffix
+      mat-raised-button
+      color="primary"
+      (click)="fileInput.click()">
+      <mat-icon>cloud_upload</mat-icon> {{ 'common.upload_image' | translate }}
+    </button>
+  }
+</div>

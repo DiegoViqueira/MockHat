@@ -1,0 +1,155 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>{{ 'userManagement' | translate }}</mat-card-title>
+  </mat-card-header>
+  <mat-card-actions class="card-action-left">
+    <button
+      (click)="onRegister()"
+      aria-hidden="false"
+      aria-label="Register user"
+      class="card-action-button"
+      color="primary"
+      mat-mini-fab
+      style="box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1)"
+      matTooltip="{{ 'users.register' | translate }}">
+      <mat-icon fontIcon="add"></mat-icon>
+    </button>
+  </mat-card-actions>
+  <mat-card-content>
+    <table
+      [dataSource]="dataSource"
+      aria-label="User list"
+      class="mat-elevation-z2"
+      mat-table>
+      <ng-container matColumnDef="first_name">
+        <th
+          *matHeaderCellDef
+          mat-header-cell>
+          {{ 'users.first_name' | translate }}
+        </th>
+        <td
+          *matCellDef="let element"
+          mat-cell>
+          {{ element.first_name }}
+        </td>
+      </ng-container>
+      <ng-container matColumnDef="last_name">
+        <th
+          *matHeaderCellDef
+          mat-header-cell>
+          {{ 'users.last_name' | translate }}
+        </th>
+        <td
+          *matCellDef="let element"
+          mat-cell>
+          {{ element.last_name }}
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="email">
+        <th
+          *matHeaderCellDef
+          mat-header-cell>
+          {{ 'users.email' | translate }}
+        </th>
+        <td
+          *matCellDef="let element"
+          mat-cell>
+          {{ element.email }}
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="role">
+        <th
+          *matHeaderCellDef
+          mat-header-cell>
+          {{ 'users.role' | translate }}
+        </th>
+        <td
+          *matCellDef="let element"
+          mat-cell>
+          {{ element.role | translate }}
+        </td>
+      </ng-container>
+      <ng-container matColumnDef="verified">
+        <th
+          *matHeaderCellDef
+          mat-header-cell>
+          {{ 'users.verified' | translate }}
+        </th>
+        <td
+          *matCellDef="let element"
+          mat-cell>
+          {{ element.verified | yesNo | translate }}
+        </td>
+      </ng-container>
+      <ng-container matColumnDef="disabled">
+        <th
+          *matHeaderCellDef
+          mat-header-cell>
+          {{ 'users.disabled' | translate }}
+        </th>
+        <td
+          *matCellDef="let element"
+          mat-cell>
+          {{ element.disabled | yesNo | translate }}
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="created_at">
+        <th
+          *matHeaderCellDef
+          mat-header-cell>
+          {{ 'users.created_at' | translate }}
+        </th>
+        <td
+          *matCellDef="let element"
+          mat-cell>
+          {{ element.created_at | date }}
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="Actions">
+        <th
+          *matHeaderCellDef
+          mat-header-cell>
+          {{ 'common.actions' | translate }}
+        </th>
+        <td
+          *matCellDef="let element"
+          mat-cell
+          class="cell-small">
+          <button
+            [matMenuTriggerFor]="menu"
+            aria-label="User actions"
+            mat-button>
+            <mat-icon>more_vert</mat-icon>
+          </button>
+          <mat-menu #menu="matMenu">
+            <button
+              (click)="onUpdate(element)"
+              mat-menu-item>
+              <span>{{ 'common.edit' | translate }}</span>
+            </button>
+            <button
+              (click)="onRemove(element)"
+              mat-menu-item>
+              <span>{{ 'common.delete' | translate }}</span>
+            </button>
+          </mat-menu>
+        </td>
+      </ng-container>
+      <tr
+        *matHeaderRowDef="displayedColumns"
+        mat-header-row></tr>
+      <tr
+        *matRowDef="let row; columns: displayedColumns"
+        mat-row></tr>
+    </table>
+    <mat-paginator
+      [length]="store.total()"
+      [pageSizeOptions]="pageSize"
+      aria-label="Select page of groups">
+    </mat-paginator>
+  </mat-card-content>
+</mat-card>

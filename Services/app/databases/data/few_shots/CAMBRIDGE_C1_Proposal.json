@@ -1,0 +1,26 @@
+{
+  "assigned_task": "Write your answer in 220 – 260 words in an appropriate style: There are plans to demolish an old and unused building in the town where you are a student. You feel that the building should be saved. You decide to write a proposal for the town council explaining why you think the building should be preserved, suggesting what could be done to modernise it and saying how the building could benefit the local people. Write your proposal.",
+  "task_answer": "To: Municipal council Subject: Municipal Library From: Matheus Rezende Introduction I come through this letter to make an appeal for the not destruction of the Municipal Library’s building. Historical Interests One of the reasons why the building should be preserved is because of its touching past. It was built with only imported material of best quality, and it was the second library in the country. It was also, for more than a hundred years, the biggest and more luxurious public building in the whole country. For its characteristic seventeenth century building and for its importance in the past, it is still studied and visited by historians. Benefits for Community The building is located right in the middle of the town, so it is accessible for the entire population, and it is also the biggest building in town, and it can surely support more books than any other building. By destructing the building it would with absolutly no doubt be a huge loss of books and culture. Improvements There is no point arguing that the building is quite old-fashioned and could use some improvements. It could really use some painting and repairing on the wall and floor, however, the best would be making some technological improvements, such as elevators, computers and an electronic “finding books” system. Conclusion To sum up, there are plenty of reasons why the library should be preserved, it benefits the people, the history and the culture, and I would be pleased if you took my letter in consideration.",
+  "ai_answer": [
+    {
+      "criteria": "Content",
+      "score": 5.0,
+      "feedback": "All content is relevant and the target reader is fully informed. The candidate addresses and develops each of the points from the input in an appropriate way (The building should be preserved due to its historical significance. It would benefit the local community because it is the largest building in the town and it is accessible for all people). The suggestions to modernise it include technological improvements and re-decorating. The target reader would be able to consider the information put forward and make a decision."
+    },
+    {
+      "criteria": "Communicative Achievement",
+      "score": 2.0,
+      "feedback": "Although the text mentions a letter, the conventions of a proposal are evident and language of suggestion and persuasion is used. The focus of this proposal tends to be on the past rather than on the future. There should be more emphasis on how this building could make a huge difference to the town and the community if it were preserved and modernised. The register and tone are appropriate and the use of headings is suitable in this context. The target reader’s attention is held and straightforward ideas are communicated."
+    },
+    {
+      "criteria": "Organisation",
+      "score": 3.0,
+      "feedback": "The text is well organised and coherent. There is good use of sub-headings and each section is focused on a separate aspect of the question. Within the paragraphs, there is a variety of cohesive devices and more complex organisational patterns are used for emphasising important points (For its characteristic seventeenth century building and for its importance in the past, it is still studied; By destructing the building it would with absolutly no doubt … ; it benefits the people, the history and the culture) to generally good effect."
+    },
+    {
+      "criteria": "Language",
+      "score": 2.0,
+      "feedback": "There is a range of vocabulary used appropriately (imported material; entire population; huge loss; no point arguing). Some less common lexis is attempted but is not always successful (its touching past; more luxurious; destructing). There is a range of simple and complex grammatical forms used with control. There are also some errors (an appeal for the not destruction; use some painting and repairing on the wall) but these do not impede communication."
+    }
+  ]
+}

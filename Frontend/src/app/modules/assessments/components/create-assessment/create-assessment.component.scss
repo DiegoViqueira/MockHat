@@ -1,0 +1,88 @@
+.create-assessment-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 16px;
+  align-items: center;
+  justify-content: flex-start;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  .form-column {
+    max-width: 500px;
+    min-width: 500px;
+    display: flex;
+    flex-direction: column;
+
+    @media (max-width: 768px) {
+      max-width: 100%;
+      min-width: 100%;
+    }
+
+    mat-form-field {
+      width: 100%;
+    }
+
+    .image-preview {
+      min-width: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      max-width: 100%; /* Asegura que no exceda el ancho del contenedor padre */
+
+      @media (max-width: 768px) {
+        width: 100%;
+        padding: 0; /* Elimina cualquier padding que pueda causar desbordamiento */
+        margin: 0; /* Elimina márgenes */
+        overflow: hidden; /* Oculta cualquier contenido que sobresalga */
+
+        img {
+          max-width: 100%; /* Asegura que las imágenes no excedan el ancho */
+          height: auto; /* Mantiene la proporción de la imagen */
+          object-fit: contain; /* Asegura que la imagen se ajuste dentro del contenedor */
+        }
+      }
+    }
+  }
+}
+
+mat-card-header {
+  display: flex;
+  align-items: self-start;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: #f0f0f0;
+}
+
+mat-card-actions {
+  gap: 1rem;
+}
+
+.camera-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  video {
+    max-width: 100%; /* Asegura que las imágenes no excedan el ancho */
+    height: auto; /* Mantiene la proporción de la imagen */
+    object-fit: contain; /* Asegura que la imagen se ajuste dentro del contenedor */
+  }
+}
+
+.upload-image-container {
+  border-radius: 10px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}

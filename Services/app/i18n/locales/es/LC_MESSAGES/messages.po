@@ -1,0 +1,216 @@
+# Spanish translations for app package.
+# Copyright (C) 2023 THE app'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the app package.
+msgid ""
+msgstr ""
+"Project-Id-Version: app\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-10-15 12:00+0200\n"
+"PO-Revision-Date: 2023-10-15 12:00+0200\n"
+"Last-Translator: Tu Nombre <tu@email.com>\n"
+"Language-Team: Spanish\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+
+msgid "Incorrect email or password"
+msgstr "Correo electrónico o contraseña incorrectos"
+
+msgid "User not found"
+msgstr "Usuario no encontrado"
+
+msgid "User already exists"
+msgstr "Usuario ya existe"
+
+msgid "Account not found"
+msgstr "Cuenta no encontrada"
+
+msgid "Internal server error"
+msgstr "Error del servidor interno"
+
+msgid "Invalid token type"
+msgstr "Tipo de token inválido"
+
+msgid "Token validation failed"
+msgstr "Error al validar el token"
+
+msgid "Authorization header missing"
+msgstr "Falta el encabezado de autorización"
+
+msgid "Not authenticated"
+msgstr "No autenticado"
+
+msgid "Class ID is required"
+msgstr "ID de clase requerido"
+
+msgid "Assessment not found"
+msgstr "Evaluación no encontrada"
+
+msgid "You are not allowed to create a writing for this assessment"
+msgstr "No tienes permiso para crear una escritura para esta evaluación"
+
+msgid "Assessment is not in the pending state"
+msgstr "La evaluación no está en estado pendiente"
+
+msgid "Student not found in class"
+msgstr "Estudiante no encontrado en la clase"
+
+msgid "Teacher not found in class"
+msgstr "Profesor no encontrado en la clase"
+
+msgid "User not verified"
+msgstr "Usuario no verificado"
+
+msgid "Email already exists"
+msgstr "Correo electrónico ya existe"
+
+msgid "Invalid user"
+msgstr "Usuario inválido"
+
+msgid "You are not allowed to create a class"
+msgstr "No tienes permiso para crear una clase"
+
+msgid "Error creating class"
+msgstr "Error al crear la clase"
+
+msgid "Class not found"
+msgstr "Clase no encontrada"
+
+msgid "Error getting class"
+msgstr "Error al obtener la clase"
+
+msgid "Class already exists"
+msgstr "Clase ya existe"
+
+msgid "Error listing classes"
+msgstr "Error al listar las clases"
+
+msgid "Error you are not allowed to create a student"
+msgstr "No tienes permiso para crear un estudiante"
+
+msgid "Error listing students"
+msgstr "Error al listar los estudiantes"
+
+msgid "Error creating student"
+msgstr "Error al crear el estudiante"
+
+msgid "Error updating student"
+msgstr "Error al actualizar el estudiante"
+
+msgid "Student already exists"
+msgstr "Estudiante ya existe"
+
+
+msgid "User does not exist"
+msgstr "El usuario no existe"
+
+msgid "User already exists"
+msgstr "El usuario ya existe"
+
+msgid "User is not an admin"
+msgstr "El usuario no es administrador"
+
+msgid "Account not found"
+msgstr "Cuenta no encontrada"
+
+msgid "Only Business accounts can have multiple users"
+msgstr "Solo las cuentas de negocio pueden tener múltiples usuarios"
+
+msgid "Account has no users"
+msgstr "La cuenta no tiene usuarios"
+
+msgid "Error removing user from account"
+msgstr "Error al eliminar el usuario de la cuenta"
+
+msgid "Role not authorized"
+msgstr "El rol no está autorizado"
+
+msgid "Role not found"
+msgstr "El rol no encontrado"
+
+msgid "Could not validate credentials"
+msgstr "No se pudieron validar las credenciales"
+
+msgid "Error creating user  "
+msgstr "Error al crear el usuario"
+
+msgid "Error updating user"
+msgstr "Error al actualizar el usuario"
+
+
+msgid "Invalid image"
+msgstr "Imagen Invalida"
+
+msgid "Assessment already exists"
+msgstr "Evaluación ya existe"
+
+msgid "Error creating assessment"
+msgstr "Error al crear la evaluación"
+
+msgid "Error transcribing assessment"
+msgstr "Error al transcribir la evaluación"
+
+msgid "Error sending email"
+msgstr "Error al enviar el correo electrónico"
+
+msgid "Error sending forgot password email"
+msgstr "Error al enviar el correo electrónico de restablecimiento de contraseña"
+
+msgid "Error sending verification email"
+msgstr "Error al enviar el correo electrónico de verificación"
+
+msgid "Error creating user"
+msgstr "Error al crear el usuario"
+
+msgid "Error deleting user"
+msgstr "Error al eliminar el usuario"
+
+msgid "Error updating user"
+msgstr "Error al actualizar el usuario"
+
+msgid "Error listing users"
+msgstr "Error al listar los usuarios"
+
+msgid "Error creating account"
+msgstr "Error al crear la cuenta"
+
+msgid "Error getting account"
+msgstr "Error al obtener la cuenta"
+
+msgid "Error updating account"
+msgstr "Error al actualizar la cuenta"
+
+msgid "Error adding user to account"
+msgstr "Error al agregar el usuario a la cuenta"
+
+msgid "Error transcribing answer"
+msgstr "Error al transcribir la respuesta"
+
+msgid "Error removing user from account"
+msgstr "Error al eliminar el usuario de la cuenta"
+
+msgid "Error changing password"
+msgstr "Error al cambiar la contraseña"
+
+msgid "Error getting users by account"
+msgstr "Error al obtener los usuarios por cuenta"
+
+msgid "Error creating user and account"
+msgstr "Error al crear el usuario y la cuenta"
+
+msgid "Subscription not found"
+msgstr "Suscripcion no encontrada"
+
+
+msgid "Error generating image URL"
+msgstr "Error generando url de la imagen"
+
+msgid "Error uploading file"
+msgstr "Error subiendo archivo"
+
+msgid "Error sending message to queue"
+msgstr "Error enviando mensaje a la cola"
+

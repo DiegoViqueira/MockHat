@@ -1,0 +1,26 @@
+{
+  "assigned_task": "You have just received an email from your English-speaking friend, Jo.\nFrom: Jo\nHi,\nYou know I’ve joined my local swimming team – well, I love it! We train every Tuesday and Thursday after school. Now my parents want me to go to an extra maths class on Tuesdays, so I won’t be able to swim then.\nHow do you think I can persuade them to change their minds?\nWrite soon,\nJo\nWrite your email.",
+  "task_answer": "Hi Jo,\nIt is good to receive news from you! I bet you are swimming like a fish. Do you remember when we were kids and we made a few races in Angelina’s pool?\nI understand why you are trying to persuade them but remember that they want your best. If I were you, firstly I would try to talk with your swimming coach and ask him about the possibilities of training another day. Then if the answer is negative, I would try to do the same with your future math teacher. I am sure that everyone knows the importance of practising sports while studying, so they will find a solution.\nIf everything doesn’t happen as you and I expect, ensure that your parents don’t get mad with your decision. They are giving their best! Put your education in first place. Opportunities to swim you will have a lot during your life. Moreover, you can come to Barcelona and try to catch me in the pool.\nGood luck,\nSam",
+  "ai_answer": [
+    {
+      "criteria": "Content",
+      "score": 5.0,
+      "feedback": "All of the content is relevant to the task. The question in the input has been answered in detail, and the target reader is fully informed."
+    },
+    {
+      "criteria": "Communicative Achievement",
+      "score": 4.0,
+      "feedback": "Although the style is slightly formal in places, the conventions of the email genre have been used effectively to hold the target reader’s attention and communicate straightforward ideas: Hi Jo; I bet you are swimming like a fish; Do you remember when; I understand why; If I were you; you can come to Barcelona and try to catch me in the pool; Good luck."
+    },
+    {
+      "criteria": "Organisation",
+      "score": 3.0,
+      "feedback": "The text is generally well organised and coherent, using a variety of linking words and cohesive devices: talk with your swimming coach and ask him; Then; if the answer is negative; do the same; so; Moreover."
+    },
+    {
+      "criteria": "Language",
+      "score": 3.0,
+      "feedback": "A range of everyday vocabulary is used appropriately, with occasional inappropriate use of less common lexis: swimming like a fish; kids; made a few races; pool; they want your best; coach; find a solution; ensure; giving their best; catch me. A range of simple and some complex grammatical forms has been used with a good degree of control: I understand … best; If I were you … another day; I am sure … solution; If everything … decision; Opportunities … your life. The errors do not impede communication: if the answer would have been negative I will try; yours; Opportunities to swim you will have."
+    }
+  ]
+}

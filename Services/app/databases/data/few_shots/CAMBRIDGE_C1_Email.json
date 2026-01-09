@@ -1,0 +1,26 @@
+{
+  "assigned_task": "You have received an email from an English friend: \nFrom: Chris \nMy new job is great, and next month I get to travel on business. Guess what – I’m actually coming to your town for a week! \nI’ll be free some evenings and one weekend. I want to make the most of this opportunity, so I’d like your advice please: where to go, what to do, and why? \nCheers, \nChris",
+  "task_answer": "Hi, Chris! \nCongratulations on getting a new job! And it is great you are finally getting a chance to visit our town. \nFirst of all, you absolutely need to visit our new waterpark “Aqua 3000”, it’s got all the awesome waterslides, the most amazing shapes and heights. We have different kinds of saunas there as well, if you fancy. As it is winter already, visiting the waterpark can be a nice opportunity to relax and warm your bones a little. \nSecondly, I would advise you to visit our new 5D cinema. I remember, you have told me once you’d really love to visit one of those, well, here is your chance! It is an exciting and unforgettable experience, you’ll be sitting in a moving chair, feel the wind or even water dripping down on your head. I know you are a big fan of horror movies, and our cinema has a large choice of them. \nOn your free weekend you should visit our famous club “31/11”. At the time of your visit there will be performing an awesome DJ Skream, you have probably heard of him. The club itself is a superb place to hang out at and to dance. The bartender makes the most delicious cocktails in the world, I swear. \nI hope some of my suggestions will prove useful to you. Maybe on one of your free evenings you will find time to stop by my house and we’ll have a nice chat about your new job. \nTake care, \nJulia",
+  "ai_answer": [
+    {
+      "criteria": "Content",
+      "score": 5.0,
+      "feedback": "All content is relevant and the target reader is fully informed. The candidate responds to Chris’s email and explains where he should go and why: the water park to relax; the cinema because it’s a new experience; a club because it’s great. The ‘what to do’ aspect is mostly implicit in the description of these places (different kinds of saunas; you are a big fan of horror movies; hang out at and to dance; stop by my house). Chris would have a list of suggestions and be able to make an informed decision about what to do."
+    },
+    {
+      "criteria": "Communicative Achievement",
+      "score": 4.0,
+      "feedback": "The conventions of an informal email are used to communicate in an effective way (Congratulations on getting a new job!; you absolutely need to; if you fancy; I swear). The tone of the email is friendly, informal and informative and is consistently appropriate throughout. There are not many complex ideas expressed, which does not allow enough flexibility to be demonstrated. There is language of advice, persuasion and description which holds the target reader’s attention with ease."
+    },
+    {
+      "criteria": "Organisation",
+      "score": 4.0,
+      "feedback": "The email is a well-organised and coherent whole. The text suggests three activities and deals with each one separately, explaining what the activity is, what is special about it and why Chris would enjoy it on this trip. There is a variety of cohesive devices used and organisational patterns are used to generally good effect. The three paragraphs are developed in a similar way, making the text flow and showing good internal cohesion with the use of referencing and substitution (I would advise you to visit our new 5D cinema … you’d really love to visit one of those … It is an exciting and unforgettable experience)."
+    },
+    {
+      "criteria": "Language",
+      "score": 4.0,
+      "feedback": "There is a range of vocabulary which is suitable for the task and which is used to good effect (awesome waterslides; if you fancy; warm your bones; water dripping down; superb place; the most delicious cocktails). There is a range of simple and complex grammatical forms used appropriately with control and flexibility. There are some errors, but these are mainly related to the candidate attempting less common words or structures (there will be performing; proof useful to you) but these do not impede communication."
+    }
+  ]
+}

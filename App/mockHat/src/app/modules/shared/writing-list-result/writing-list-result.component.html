@@ -1,0 +1,46 @@
+<ion-card>
+  <ion-card-content>
+    <ion-grid>
+      <!-- Table Header -->
+      <ion-row>
+        <ion-col>
+          {{ "writing.student_name" | translate }}
+        </ion-col>
+        <ion-col>
+          {{ "writing.file" | translate }}
+        </ion-col>
+        <ion-col>
+          {{ "writing.state" | translate }}
+        </ion-col>
+      </ion-row>
+
+      <!-- Table Rows -->
+      <ion-row *ngFor="let element of dataSource">
+        <!-- Student Name -->
+        <ion-col>
+          {{ element.student_name }}
+        </ion-col>
+
+        <!-- File -->
+        <ion-col>
+          <img
+            *ngIf="element.file"
+            [src]="element.file.url"
+            alt="File Image"
+            width="50"
+            height="50"
+          />
+        </ion-col>
+
+        <!-- Actions -->
+        <ion-col>
+          <ion-icon
+            [name]="getIconForState(element.state)"
+            [color]="getColorForState(element.state)"
+          >
+          </ion-icon>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card-content>
+</ion-card>

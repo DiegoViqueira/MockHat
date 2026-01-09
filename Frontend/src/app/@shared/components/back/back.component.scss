@@ -1,0 +1,16 @@
+.back-button-container {
+  padding: 0.5rem;
+  display: flex;
+}
+
+@media (max-width: 768px) {
+  .back-button-container {
+    padding: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .back-button-container {
+    padding: 0.5rem;
+  }
+}

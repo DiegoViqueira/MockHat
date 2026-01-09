@@ -1,0 +1,92 @@
+<legend mat-dialog-title>
+  <ng-content></ng-content>
+</legend>
+<form
+  [formGroup]="formUser"
+  (ngSubmit)="onSubmit()">
+  <mat-dialog-content class="mat-typography">
+    <div>
+      <p>
+        <mat-form-field
+          appearance="outline"
+          class="full-width">
+          <mat-label> {{ 'users.email' | translate }}:</mat-label>
+          <input
+            formControlName="email"
+            matInput
+            type="text" />
+          <mat-error
+            *ngIf="email.invalid"
+            role="alert"
+            >{{ 'users.errorUsername' | translate }}
+          </mat-error>
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field
+          appearance="outline"
+          class="full-width">
+          <mat-label> {{ 'users.first_name' | translate }}:</mat-label>
+          <input
+            formControlName="first_name"
+            matInput
+            type="text" />
+          <mat-error
+            *ngIf="email.invalid"
+            role="alert"
+            >{{ 'users.errorUsername' | translate }}
+          </mat-error>
+        </mat-form-field>
+      </p>
+
+      <p>
+        <mat-form-field
+          appearance="outline"
+          class="full-width">
+          <mat-label> {{ 'users.last_name' | translate }}:</mat-label>
+          <input
+            formControlName="last_name"
+            matInput
+            type="text" />
+          <mat-error
+            *ngIf="email.invalid"
+            role="alert"
+            >{{ 'users.errorUsername' | translate }}
+          </mat-error>
+        </mat-form-field>
+      </p>
+
+      <p>
+        <mat-form-field
+          appearance="outline"
+          class="full-width">
+          <mat-label> {{ 'users.role' | translate }}:</mat-label>
+          <mat-select
+            formControlName="role"
+            placeholder="Role">
+            <mat-option
+              *ngFor="let role of userRoles"
+              [value]="role"
+              >{{ role | translate }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </p>
+    </div>
+  </mat-dialog-content>
+  <mat-dialog-actions>
+    <button
+      type="button"
+      (click)="onCancel()"
+      mat-raised-button>
+      {{ 'common.cancel' | translate }}
+    </button>
+    <button
+      color="primary"
+      [disabled]="!formUser.valid || formUser.pristine"
+      type="submit"
+      mat-raised-button>
+      {{ 'common.save' | translate }}
+    </button>
+  </mat-dialog-actions>
+</form>

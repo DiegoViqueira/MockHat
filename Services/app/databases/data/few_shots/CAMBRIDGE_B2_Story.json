@@ -1,0 +1,26 @@
+{
+  "assigned_task": "You have seen this announcement in a new English-language magazine for young people. \nStories wanted \nWe are looking for stories for our new English-language magazine for young people. Your story must begin with this sentence: \nTom got off the train and as the train left, he realised he was holding the wrong suitcase. \nYour story must include: \n•an address \n•a surprise \nWrite your story.",
+  "task_answer": "Tom got off the train and as the train left, he realised he was holding the wrong suitcase. He was shocked. He didn’t know what he had to do. 1 hour later he opened this suitcase. He wanted to find number to person whose is this suitcase. He this address. It was Oxford Street 42. He knocked the door but nobody opened him. When he was getting home, somebody told him that person who is he looking for had moved to another city. He was a little bit angry, but next day he went to right city. He went to house on Shakespear Street. When some body opened the door he was shocked. It was Mary, his first love. He was seraching for her for many years. Finally they gave right suitcases their selves and they wanted to meet in the future. They were meeting through two years and these days they are happy marriage with many childrens.",
+  "ai_answer": [
+    {
+      "criteria": "Content",
+      "score": 5.0,
+      "feedback": "All content is relevant and the target reader is fully informed.The story follows on from the prompt and develops a narrative which includes the two content points asked for in the question, an address and a surprise. The reader can follow the sequence of events and there is a logical development which connects the separate aspects of the story. Tom gets off the train with the wrong suitcase, finds an address and when he goes there to hand the suitcase over, surprisingly, he finds his ex-girlfriend."
+    },
+    {
+      "criteria": "Communicative Achievement",
+      "score": 2.0,
+      "feedback": "The conventions of a story are used to communicate straightforward ideas. The narrative describes Tom’s emotions (He was shocked; He was a little bit angry) and tells the story through a sequence of events.The target reader’s attention is not always held because some of the sentences are quite short and this interrupts the narrative flow of the story (He this adress. It was Oxford Street 42. He knocked the door)."
+    },
+    {
+      "criteria": "Organisation",
+      "score": 2.0,
+      "feedback": "The story is generally well organised and coherent. The story has a beginning, a middle and an end and there are events which take place in sequence.Basic linking words and a limited number of cohesive devices, mainly time references, (1 hour later; finally; but next day) are used to connect sentences and move the story forward."
+    },
+    {
+      "criteria": "Language",
+      "score": 2.0,
+      "feedback": "A range of everyday vocabulary is used appropriately, although some lexis is repeated (shocked; went; When; city). There is a range of grammatical forms, past and present tenses, generally used with a good degree of control. Sentence structures are mostly simple and quite short. Errors do not impede communication."
+    }
+  ]
+}

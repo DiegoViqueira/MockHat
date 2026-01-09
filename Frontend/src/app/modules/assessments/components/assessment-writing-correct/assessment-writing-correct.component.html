@@ -1,0 +1,330 @@
+@if (isPending()) {
+  <div class="class-info">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>{{ 'assessments.students_answers_upload' | translate }}</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <table
+          mat-table
+          [dataSource]="class()?.students"
+          class="mat-elevation-z8">
+          <!-- Name Column -->
+          <ng-container matColumnDef="name">
+            <th
+              mat-header-cell
+              *matHeaderCellDef>
+              {{ 'assessments.writing.name' | translate }}
+            </th>
+            <td
+              mat-cell
+              *matCellDef="let element">
+              {{ element.name }} {{ element.last_name }}
+            </td>
+          </ng-container>
+
+          <ng-container matColumnDef="files">
+            <th
+              mat-header-cell
+              *matHeaderCellDef>
+              {{ 'assessments.writing.image_preview' | translate }}
+            </th>
+            <td
+              mat-cell
+              *matCellDef="let element">
+              @if (getStudentFiles(element._id)) {
+                @for (file of getStudentFiles(element._id); track file.url) {
+                  <img
+                    width="50"
+                    height="50"
+                    [src]="file?.url"
+                    alt="Preview" />
+                }
+              }
+            </td>
+          </ng-container>
+
+          <input
+            #fileInput
+            (change)="onFileChange($event, selectedElement)"
+            type="file"
+            id="file"
+            accept="image/*"
+            multiple
+            hidden />
+
+          <input
+            #cameraInput
+            type="file"
+            accept="image/*"
+            capture="environment"
+            multiple
+            (change)="onFileChange($event, selectedElement)"
+            hidden />
+
+          <ng-container matColumnDef="upload">
+            <th
+              mat-header-cell
+              *matHeaderCellDef>
+              {{ 'common.actions' | translate }}
+            </th>
+            @if (isMobile()) {
+              @if (isIOS) {
+                <td
+                  mat-cell
+                  *matCellDef="let element">
+                  <button
+                    mat-mini-fab
+                    color="primary"
+                    style="box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1)"
+                    (click)="selectElement(element); fileInput.click()">
+                    <mat-icon>camera</mat-icon>
+                  </button>
+                </td>
+              } @else {
+                <td
+                  mat-cell
+                  *matCellDef="let element">
+                  <button
+                    [matMenuTriggerFor]="menu"
+                    aria-label="User actions"
+                    mat-button>
+                    <mat-icon>more_vert</mat-icon>
+                  </button>
+                  <mat-menu #menu="matMenu">
+                    <button
+                      (click)="selectElement(element); cameraInput.click()"
+                      mat-menu-item>
+                      <mat-icon>camera</mat-icon>
+                      <span>{{ 'common.camera' | translate }}</span>
+                    </button>
+                    <button
+                      (click)="selectElement(element); fileInput.click()"
+                      mat-menu-item>
+                      <mat-icon>cloud_upload</mat-icon>
+                      <span>{{ 'common.upload' | translate }}</span>
+                    </button>
+                  </mat-menu>
+                </td>
+              }
+            } @else {
+              <td
+                mat-cell
+                *matCellDef="let element">
+                <button
+                  mat-mini-fab
+                  color="primary"
+                  style="box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1)"
+                  (click)="selectElement(element); fileInput.click()">
+                  <mat-icon>cloud_upload</mat-icon>
+                </button>
+              </td>
+            }
+          </ng-container>
+
+          <tr
+            mat-header-row
+            *matHeaderRowDef="displayedColumns"></tr>
+          <tr
+            mat-row
+            *matRowDef="let row; columns: displayedColumns"></tr>
+        </table>
+      </mat-card-content>
+
+      <mat-card-actions align="end">
+        <button
+          [disabled]="filesCount() === 0"
+          (click)="startAssessment()"
+          mat-raised-button
+          color="primary">
+          {{ 'assessments.start_assessment' | translate }}
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+} @else if (isCompleted()) {
+  <div class="class-info">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>{{ 'assessments.students_answers_upload' | translate }}</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <table
+          mat-table
+          [dataSource]="class()?.students"
+          class="mat-elevation-z8">
+          <!-- Name Column -->
+          <ng-container matColumnDef="name">
+            <th
+              mat-header-cell
+              *matHeaderCellDef>
+              {{ 'assessments.writing.name' | translate }}
+            </th>
+            <td
+              mat-cell
+              *matCellDef="let element">
+              {{ element.name }} {{ element.last_name }}
+            </td>
+          </ng-container>
+
+          <ng-container matColumnDef="files">
+            <th
+              mat-header-cell
+              *matHeaderCellDef>
+              {{ 'assessments.writing.image_preview' | translate }}
+            </th>
+            <td
+              mat-cell
+              *matCellDef="let element">
+              @if (getStudentFiles(element._id)) {
+                @for (file of getStudentFiles(element._id); track file.url) {
+                  <img
+                    width="50"
+                    height="50"
+                    [src]="file?.url"
+                    alt="Preview" />
+                }
+              }
+            </td>
+          </ng-container>
+
+          <input
+            #fileInput
+            (change)="onFileChange($event, selectedElement)"
+            type="file"
+            id="file"
+            accept="image/*"
+            multiple
+            hidden />
+
+          <input
+            #cameraInput
+            type="file"
+            accept="image/*"
+            capture="environment"
+            multiple
+            (change)="onFileChange($event, selectedElement)"
+            hidden />
+
+          <ng-container matColumnDef="upload">
+            <th
+              mat-header-cell
+              *matHeaderCellDef>
+              {{ 'common.actions' | translate }}
+            </th>
+            @if (isMobile()) {
+              @if (isIOS) {
+                <td
+                  mat-cell
+                  *matCellDef="let element">
+                  <button
+                    *ngIf="!isWritingUploaded(element)"
+                    mat-mini-fab
+                    color="primary"
+                    style="box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1)"
+                    (click)="selectElement(element); fileInput.click()">
+                    <mat-icon>camera</mat-icon>
+                  </button>
+                  <button
+                    *ngIf="isWritingUploaded(element)"
+                    mat-mini-fab
+                    color="primary"
+                    [disabled]="true"
+                    style="box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1)">
+                    <mat-icon>check_circle</mat-icon>
+                  </button>
+                </td>
+              } @else {
+                <td
+                  mat-cell
+                  *matCellDef="let element">
+                  <button
+                    [matMenuTriggerFor]="menu"
+                    aria-label="User actions"
+                    mat-button>
+                    <mat-icon>more_vert</mat-icon>
+                  </button>
+                  <mat-menu #menu="matMenu">
+                    <button
+                      (click)="selectElement(element); cameraInput.click()"
+                      *ngIf="!isWritingUploaded(element)"
+                      mat-menu-item>
+                      <mat-icon>camera</mat-icon>
+                      <span>{{ 'common.camera' | translate }}</span>
+                    </button>
+                    <button
+                      (click)="selectElement(element); fileInput.click()"
+                      *ngIf="!isWritingUploaded(element)"
+                      mat-menu-item>
+                      <mat-icon>cloud_upload</mat-icon>
+                      <span>{{ 'common.upload' | translate }}</span>
+                    </button>
+                    <button
+                      *ngIf="isWritingUploaded(element)"
+                      mat-menu-item>
+                      <mat-icon>check_circle</mat-icon>
+                      <span>{{ 'common.uploaded' | translate }}</span>
+                    </button>
+                  </mat-menu>
+                </td>
+              }
+            } @else {
+              <td
+                mat-cell
+                *matCellDef="let element">
+                <button
+                  *ngIf="!isWritingUploaded(element)"
+                  mat-mini-fab
+                  color="primary"
+                  [disabled]="isWritingUploaded(element)"
+                  style="box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1)"
+                  (click)="selectElement(element); fileInput.click()">
+                  <mat-icon>cloud_upload</mat-icon>
+                </button>
+
+                <button
+                  *ngIf="isWritingUploaded(element)"
+                  mat-mini-fab
+                  color="primary"
+                  [disabled]="true"
+                  style="box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1)">
+                  <mat-icon>check_circle</mat-icon>
+                </button>
+              </td>
+            }
+          </ng-container>
+
+          <tr
+            mat-header-row
+            *matHeaderRowDef="displayedColumns"></tr>
+          <tr
+            mat-row
+            *matRowDef="let row; columns: displayedColumns"></tr>
+        </table>
+      </mat-card-content>
+
+      <mat-card-actions align="end">
+        <button
+          [disabled]="filesCount() === 0"
+          (click)="startAssessment()"
+          mat-raised-button
+          color="primary">
+          {{ 'assessments.start_assessment' | translate }}
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+} @else {
+  <div class="class-info">
+    <mat-card class="center-card">
+      <mat-card-header>
+        <mat-card-title>{{ 'assessments.assessment_already_started' | translate }}</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <mat-card-subtitle>{{
+          'assessments.assessment_already_started_description' | translate
+        }}</mat-card-subtitle>
+      </mat-card-content>
+    </mat-card>
+  </div>
+}

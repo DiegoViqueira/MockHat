@@ -1,0 +1,169 @@
+<wlk-back />
+<mat-card class="mat-elevation-z8">
+  <mat-card-header>
+    <mat-card-title>{{ 'students.name' | translate }}</mat-card-title>
+    <span class="space-elements-header"></span>
+
+    <mat-card-actions align="end">
+      <button
+        (click)="onRegister()"
+        aria-hidden="false"
+        aria-label="Register user"
+        color="primary"
+        mat-mini-fab
+        style="box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1)"
+        matTooltip="{{ 'students.form.register' | translate }}">
+        <mat-icon fontIcon="add"></mat-icon>
+      </button>
+    </mat-card-actions>
+  </mat-card-header>
+  <mat-card-content>
+    <table
+      mat-table
+      [dataSource]="dataSource"
+      matSort
+      class="mat-table">
+      <!-- ID Column -->
+      <ng-container matColumnDef="id">
+        <th
+          mat-header-cell
+          *matHeaderCellDef
+          mat-sort-header>
+          ID
+        </th>
+        <td
+          mat-cell
+          *matCellDef="let student">
+          {{ student.id }}
+        </td>
+      </ng-container>
+
+      <!-- Name Column -->
+      <ng-container matColumnDef="name">
+        <th
+          mat-header-cell
+          *matHeaderCellDef
+          mat-sort-header>
+          {{ 'students.table.name' | translate }}
+        </th>
+        <td
+          mat-cell
+          *matCellDef="let student">
+          {{ student.name }}
+        </td>
+      </ng-container>
+
+      <!-- Last Name Column -->
+      <ng-container matColumnDef="last_name">
+        <th
+          mat-header-cell
+          *matHeaderCellDef
+          mat-sort-header>
+          {{ 'students.table.last_name' | translate }}
+        </th>
+        <td
+          mat-cell
+          *matCellDef="let student">
+          {{ student.last_name }}
+        </td>
+      </ng-container>
+
+      <!-- Email Column -->
+      <ng-container matColumnDef="email">
+        <th
+          mat-header-cell
+          *matHeaderCellDef
+          mat-sort-header>
+          {{ 'students.table.email' | translate }}
+        </th>
+        <td
+          mat-cell
+          *matCellDef="let student">
+          {{ student.email }}
+        </td>
+      </ng-container>
+      <!-- Status Column -->
+      <ng-container matColumnDef="status">
+        <th
+          mat-header-cell
+          *matHeaderCellDef>
+          {{ 'common.state' | translate }}
+        </th>
+        <td
+          mat-cell
+          *matCellDef="let student">
+          <mat-chip-list>
+            <mat-chip
+              [color]="student.active ? 'primary' : 'warn'"
+              selected>
+              {{ student.active ? ('common.active' | translate) : ('common.inactive' | translate) }}
+            </mat-chip>
+          </mat-chip-list>
+        </td>
+      </ng-container>
+      <!-- Created At Column -->
+      <ng-container matColumnDef="created_at">
+        <th
+          mat-header-cell
+          *matHeaderCellDef
+          mat-sort-header>
+          Created At
+        </th>
+        <td
+          mat-cell
+          *matCellDef="let student">
+          {{ student.created_at | date: 'short' }}
+        </td>
+      </ng-container>
+
+      <!-- Updated At Column -->
+      <ng-container matColumnDef="updated_at">
+        <th
+          mat-header-cell
+          *matHeaderCellDef
+          mat-sort-header>
+          Updated At
+        </th>
+        <td
+          mat-cell
+          *matCellDef="let student">
+          {{ student.updated_at | date: 'short' }}
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="edit">
+        <th
+          mat-header-cell
+          *matHeaderCellDef
+          mat-sort-header>
+          {{ 'students.table.edit' | translate }}
+        </th>
+        <td
+          mat-cell
+          *matCellDef="let student">
+          <button
+            color="primary"
+            (click)="onUpdate(student)"
+            style="box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1)"
+            mat-mini-fab
+            aria-label="Example icon button with a home icon">
+            <mat-icon>edit</mat-icon>
+          </button>
+        </td>
+      </ng-container>
+
+      <!-- Header and Row Definitions -->
+      <tr
+        mat-header-row
+        *matHeaderRowDef="displayedColumns"></tr>
+      <tr
+        mat-row
+        *matRowDef="let row; columns: displayedColumns"></tr>
+    </table>
+
+    <!-- Paginator -->
+    <mat-paginator
+      [pageSizeOptions]="[5, 10, 20]"
+      showFirstLastButtons></mat-paginator>
+  </mat-card-content>
+</mat-card>

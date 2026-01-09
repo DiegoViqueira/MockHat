@@ -1,0 +1,108 @@
+.container {
+  display: flex;
+  height: 100vh; /* Full viewport height */
+  justify-content: center;
+  align-items: center;
+  padding: 1rem; /* Añadido padding para dispositivos móviles */
+
+  @media (max-width: 768px) {
+    height: auto;
+    min-height: 100vh;
+    padding: 2rem 1rem;
+  }
+}
+
+.signup-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.forgot-password {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.highlight-card {
+  display: flex;
+  border-radius: 16px;
+  min-width: 500px;
+
+  @media (max-width: 768px) {
+    min-width: 100%;
+  }
+}
+
+.terms-and-conditions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.user-password-container {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column; /* Por defecto en columna para móviles */
+
+  @media (min-width: 768px) {
+    flex-direction: row; /* En pantallas grandes, mostrar en fila */
+  }
+}
+
+.highlight-card-content {
+  background-color: var(--mockhat-secondary);
+  border-radius: 16px;
+}
+
+.responsive-logo {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+
+  /* Opcional: puedes agregar un ancho máximo para desktop */
+  @media (min-width: 768px) {
+    max-width: 250px; /* o el tamaño que prefieras */
+    max-height: 150px;
+  }
+  @media (max-width: 768px) {
+    max-width: 150px; /* o el tamaño que prefieras */
+    max-height: 100px;
+  }
+}
+
+.header-logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.form-content {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+
+  form {
+    margin-left: 1rem;
+    margin-right: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    mat-form-field {
+      width: 100%;
+      &.mat-form-field-invalid {
+        margin-bottom: 1rem; // Margen aumentado cuando hay error
+      }
+
+      mat-error {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

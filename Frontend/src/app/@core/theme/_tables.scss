@@ -1,0 +1,17 @@
+@use '@angular/material' as mat;
+
+:root {
+  @include mat.table-overrides(
+    (
+      background-color: var(--mockhat-white),
+      header-headline-color: var(--mockhat-primary),
+      header-headline-size: 1rem,
+    )
+  );
+}
+
+:root {
+  mat-paginator {
+    background-color: var(--mockhat-white);
+  }
+}

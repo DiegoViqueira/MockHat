@@ -1,0 +1,26 @@
+{
+  "assigned_task": "You must answer this question. Write your answer in 220–260 words in an appropriate style on the separate answer sheet.\nYour class has listened to a discussion about the role of journalists in society. You have made the notes below:\nAspects of the role of journalists in society:\nprovide information\ninfluence opinion\ninspire action\nSome opinions expressed in this discussion:\n“A good journalist will simply set out the facts accurately.”\n“A good article won’t change my views on a subject.”\n“Many successful campaigns have resulted from stories in the press.”\n**Write an essay** for your tutor discussing two of the aspects of the role of journalists in your notes. You should say which aspect of their role you think is more important, giving reasons for your opinion.\nYou may, if you wish, make use of the opinions expressed in the discussion, but you should use your own words as far as possible.",
+  "task_answer": "It is clear for everyone that this century is the era of mass media. There are plenty of supporters of the theory of media being „the forth power“. But we should discuss the role of a journalist in this world of information. First of all, the main purpose of journalism is to provide a society with the news. Mass media is able to connect main social institutions, that is why without the news our society is not able to function. But at the same time we should look after the quality of information : it should be reliable, trust–worthy and presented in a neutral way. Nowadays at the golden age of tabloids, when this principle seems to be forgotten we need to bring back to life the image of an honest journalist who is a servant of society. Though today journalism is seen as an evil instrument of manipulation it has not always been like that. At the begining of the twentyeh century there was the start of the investigative journalism. The correspondents tried to change the world, fighting against illegal or immoral actions of a government. With the help of these brave soldiers of pen there were numerous cases when social catastrophies were prevented. To sum up I would like to say that there is much more behind journalism than simply telling the news. In my opinion journalists should inspire people to change the society for the better.",
+  "ai_answer": [
+    {
+      "criteria": "Content",
+      "score": 5.0,
+      "feedback": "All content is relevant to the task. The target reader is fully informed about two aspects of the role of journalists (providing information and inspiring action) and which of these the writer considers most important: there is much more behind journalism than simply telling the news. In my opinion journalists should inspire people to change the society for the better."
+    },
+    {
+      "criteria": "Communicative Achievement",
+      "score": 3.0,
+      "feedback": "The conventions of essay writing are used effectively. There is a clear development of the topic from introduction through to conclusion and the style is consistently appropriate, using an objective tone, which holds the reader’s attention throughout. Straightforward and some more complex ideas, for example when discussing people’s attitudes to journalism, are communicated"
+    },
+    {
+      "criteria": "Organisation",
+      "score": 4.0,
+      "feedback": "The text is well organised and coherent. The writer uses a variety of cohesive devices with flexibility to connect ideas both within and across sentences: that is why; Nowadays, when this principle seems to be forgotten; an honest journalist who is a servant of a society; With the help of these brave soldiers of pen; To sum up, and move the argument forward. Organisational patterns are used to generally good effect, for example the use of inversion for emphasis: that is why without the news our society is not able to function; Though today journalism is seen as … it has not always been like that. However, more attention to punctuation would improve the overall effect of the text"
+    },
+    {
+      "criteria": "Language",
+      "score": 4.0,
+      "feedback": "A range of vocabulary, including some less common lexis appropriate to the topic, is used generally effectively: the era of mass media; the golden age of tabloids; principle; servant of a society; an evil instrument of manipulation; investigative journalism; immoral actions; brave soldiers of pen; catastrophes, although there are occasional instances of less appropriate usage: look after the quality of information; trust–worthy [information]. A range of simple and complex grammatical forms is used with control and flexibility. There are slips, for example with the use of articles, but these do not impede communication."
+    }
+  ]
+}

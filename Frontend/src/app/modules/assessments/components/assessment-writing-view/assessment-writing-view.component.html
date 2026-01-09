@@ -1,0 +1,124 @@
+<div class="assessment-writing-view">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>{{ 'assessments.student_review_writings' | translate }}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="class-info">
+        <table
+          mat-table
+          [dataSource]="writings()"
+          class="mat-elevation-z8">
+          <!-- Name Column -->
+          <ng-container matColumnDef="name">
+            <th
+              mat-header-cell
+              *matHeaderCellDef>
+              {{ 'assessments.writing.name' | translate }}
+            </th>
+            <td
+              mat-cell
+              *matCellDef="let element">
+              {{ element.student?.name + ' ' + element.student?.last_name }}
+            </td>
+          </ng-container>
+
+          <ng-container matColumnDef="score">
+            <th
+              mat-header-cell
+              *matHeaderCellDef>
+              {{ 'assessments.writing.score' | translate }}
+            </th>
+            <td
+              mat-cell
+              *matCellDef="let element">
+              {{ getScore(element) }}
+            </td>
+          </ng-container>
+
+          <ng-container matColumnDef="percentage">
+            <th
+              mat-header-cell
+              *matHeaderCellDef>
+              {{ 'assessments.writing.percentage' | translate }}
+            </th>
+            <td
+              mat-cell
+              *matCellDef="let element">
+              @if (maxScoreIsValid(element)) {
+                <wlk-progress-bar [percentage]="getPercentage(element)" />
+              } @else {
+                -
+              }
+            </td>
+          </ng-container>
+
+          <ng-container matColumnDef="status">
+            <th
+              mat-header-cell
+              *matHeaderCellDef>
+              {{ 'assessments.writing.status' | translate }}
+            </th>
+            <td
+              mat-cell
+              *matCellDef="let element">
+              <div style="display: flex; align-items: center; gap: 0.3rem">
+                <mat-chip (click)="openWritingReviewDialog(element)">
+                  {{ element.writing_state }}
+                </mat-chip>
+                @if (element.writing_state === 'Error') {
+                  <mat-icon matTooltip="{{ element.error_message }}">help</mat-icon>
+                }
+              </div>
+            </td>
+          </ng-container>
+          <ng-container matColumnDef="review">
+            <th
+              mat-header-cell
+              *matHeaderCellDef>
+              {{ 'assessments.writing.review' | translate }}
+            </th>
+            <td
+              mat-cell
+              *matCellDef="let element">
+              <button
+                [disabled]="element.writing_state !== 'Completed'"
+                mat-mini-fab
+                color="primary"
+                style="box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1)"
+                (click)="openWritingReviewDialog(element)">
+                <mat-icon>visibility</mat-icon>
+              </button>
+            </td>
+          </ng-container>
+
+          <ng-container matColumnDef="download">
+            <th
+              mat-header-cell
+              *matHeaderCellDef>
+              {{ 'common.download' | translate }}
+            </th>
+            <td
+              mat-cell
+              *matCellDef="let element">
+              <button
+                [disabled]="element.writing_state !== 'Completed'"
+                mat-mini-fab
+                color="primary"
+                style="box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1)"
+                (click)="downloadPdf(element)">
+                <mat-icon>download</mat-icon>
+              </button>
+            </td>
+          </ng-container>
+          <tr
+            mat-header-row
+            *matHeaderRowDef="displayedColumns"></tr>
+          <tr
+            mat-row
+            *matRowDef="let row; columns: displayedColumns"></tr>
+        </table>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>

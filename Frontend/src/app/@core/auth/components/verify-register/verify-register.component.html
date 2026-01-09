@@ -1,0 +1,26 @@
+<div class="container">
+  <mat-card class="highlight-card">
+    <mat-card-content class="highlight-card-content">
+      <mat-card>
+        <mat-card-content class="header-logo">
+          <img
+            class="responsive-logo"
+            src="../../../../assets/images/mockhat.png" />
+          <mat-card-title>{{ 'verify-register.title' | translate }}</mat-card-title>
+        </mat-card-content>
+        <mat-card-content class="subtitle-content">
+          <mat-card-subtitle class="subtitle-content-text">
+            {{ 'verify-register.subtitle' | translate }}
+          </mat-card-subtitle>
+        </mat-card-content>
+        <mat-card-content class="form-content"> </mat-card-content>
+      </mat-card>
+      <mat-card-content class="signup-content">
+        <mat-card-subtitle>
+          {{ 'verify-register.need_help' | translate }}
+          <a routerLink="/auth/signup">{{ 'verify-register.contact_support' | translate }} </a>
+        </mat-card-subtitle>
+      </mat-card-content>
+    </mat-card-content>
+  </mat-card>
+</div>

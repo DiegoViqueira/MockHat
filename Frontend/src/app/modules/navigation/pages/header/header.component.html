@@ -1,0 +1,48 @@
+<mat-toolbar class="toolbar">
+  <!-- <button
+    *ngIf="isMobile()"
+    mat-icon-button
+    (click)="snav.toggle()">
+    <mat-icon>menu</mat-icon>
+  </button> -->
+  <img
+    src="assets/images/mockhat-with-name.png"
+    alt=""
+    width="150"
+    height="55" />
+  <span class="space-elements-header"></span>
+  <mat-divider></mat-divider>
+  @if (user()) {
+    <span class="text-account">{{ user().username }}</span>
+    <button
+      mat-icon-button
+      [matMenuTriggerFor]="menu"
+      aria-label="Username icon">
+      <mat-icon class="icon-blue">account_circle</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      @if (isAdmin) {
+        <button
+          mat-menu-item
+          (click)="account()">
+          <mat-icon class="icon-blue">badge</mat-icon>
+          <span>{{ 'header.account' | translate }}</span>
+        </button>
+
+        <button
+          mat-menu-item
+          (click)="students()">
+          <mat-icon class="icon-blue">school</mat-icon>
+          <span>{{ 'header.students' | translate }}</span>
+        </button>
+      }
+
+      <button
+        mat-menu-item
+        (click)="logOut()">
+        <mat-icon class="icon-blue">logout</mat-icon>
+        <span>{{ 'header.logout' | translate }}</span>
+      </button>
+    </mat-menu>
+  }
+</mat-toolbar>

@@ -1,0 +1,42 @@
+@use '@angular/material' as mat;
+
+// Customize the entire app. Change :root to your selector if you want to scope the styles.
+
+:root {
+  .mat-mdc-raised-button.mat-primary {
+    background-color: var(--mockhat-highlight) !important;
+    color: var(--mockhat-white) !important;
+    font-family: var(--mockhat-text-primary) !important;
+  }
+
+  .mat-mdc-mini-fab.mat-primary {
+    background-color: var(--mockhat-highlight) !important;
+    color: var(--mockhat-white) !important;
+    font-family: var(--mockhat-text-primary) !important;
+  }
+
+  .mat-mdc-raised-button[disabled].mat-mdc-button-disabled,
+  .mat-mdc-raised-button.mat-mdc-button-disabled.mat-mdc-button-disabled {
+    background-color: var(--mockhat-secondary) !important;
+    color: var(--mockhat-black) !important;
+  }
+
+  .mat-mdc-raised-button.mat-primary:hover {
+    background-color: var(--mockhat-highlight) !important;
+  }
+
+  a {
+    text-decoration: none;
+    color: var(--mockhat-primary) !important;
+    font-family: var(--mockhat-text-primary) !important;
+  }
+}
+
+:root {
+  mat-chip {
+    background-color: var(--mockhat-secondary) !important;
+    color: var(--mockhat-primary) !important;
+  }
+  --mdc-chip-label-text-color: var(--mockhat-primary) !important;
+  --mdc-chip-label-text-font-weight: 700 !important;
+}

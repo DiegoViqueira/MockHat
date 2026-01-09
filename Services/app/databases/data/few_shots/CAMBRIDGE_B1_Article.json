@@ -1,0 +1,26 @@
+{
+  "assigned_task": "You see this notice on an English-language website.\nArticles wanted! \nFILMS \nWhat kind of films do you enjoy? \nDo you prefer watching them at the cinema or at home? Why? \nWrite an article answering these questions and we will put it on our website! \nWrite your article.",
+  "task_answer": "Hi, my name is Antem. I likes watch films, but there are little cinemas in our city.\nI prefer watch fantastic films at the cinema in 3D, because they realise and interesting. My favourite filmes are ‘star wars’, ‘hobbit’ and, Harry Potter and the half-blood prince’.\nI prefer watch films at the cinema park in Alatir. If you ask: Why do you like watch film at the cinema park? I answer, that I like eat pop-corn and ice-cream. Else, I like go to the cinema with my family. It’s very funny! We go to the cinema one time a month, and two times a week on holiday.",
+  "ai_answer": [
+    {
+      "criteria": "Content",
+      "score": 5.0,
+      "feedback": "All content is relevant to the task. The target reader is fully informed about what sort of films the candidate enjoys watching, fantastic films, where they like watching them, at the cinema park, and why, I like eat pop-corn and ice-cream."
+    },
+    {
+      "criteria": "Communicative Achievement",
+      "score": 2.0,
+      "feedback": "The conventions of article writing, such as describing personal experiences and expressing opinions, are used generally appropriately to communicate simple ideas, I prefer watch; My favourite filmes are. There is an attempt to engage the reader directly through the use of phrases such as, If you ask … I answer, that …; It’s very funny!"
+    },
+    {
+      "criteria": "Organisation",
+      "score": 2.0,
+      "feedback": "The text is connected and coherent. Basic linking words are used within the text to connect some of the ideas, because; and. There is some attempt to paragraph and punctuate the text, but this is not always successful as there are single sentences which are not integrated into the text, I prefer watch filmes at the cinema park in Alatir."
+    },
+    {
+      "criteria": "Language",
+      "score": 2.0,
+      "feedback": "A range of everyday vocabulary, suitable for the topic, is used generally appropriately, fantastic films; cinema park; pop-corn and ice-cream; one time a month; two times a week on holiday. Simple grammatical forms, such as the present simple, are used with some degree of control, although there is not much variety in terms of tenses, I likes watch; I prefer watch. Errors are noticeable, but meaning can still be determined, they realise and interesting; Else, I like go"
+    }
+  ]
+}

@@ -1,0 +1,121 @@
+<div class="students-analysis-table">
+  <div class="filter-container">
+    <mat-form-field
+      appearance="outline"
+      class="filter-input">
+      <mat-icon matSuffix>search</mat-icon>
+      <mat-label>{{ 'classes.students_analysis_table.filter.title' | translate }}</mat-label>
+      <input
+        matInput
+        (keyup)="applyFilter($event)"
+        placeholder="{{ 'classes.students_analysis_table.filter.placeholder' | translate }}"
+        #input />
+    </mat-form-field>
+  </div>
+
+  <section
+    class="example-container mat-elevation-z8"
+    tabindex="0">
+    <table
+      mat-table
+      [dataSource]="dataSource"
+      matSort>
+      <!-- Position Column -->
+
+      <!-- Name Column -->
+      <ng-container matColumnDef="name">
+        <th
+          mat-header-cell
+          *matHeaderCellDef>
+          {{ 'classes.students_analysis_table.fields.name' | translate }}
+        </th>
+        <td
+          mat-cell
+          *matCellDef="let element">
+          {{ element.name }}
+        </td>
+      </ng-container>
+
+      <!-- Total Writings Column -->
+      <ng-container matColumnDef="total_writings">
+        <th
+          mat-header-cell
+          *matHeaderCellDef>
+          {{ 'classes.students_analysis_table.fields.total_writings' | translate }}
+        </th>
+        <td
+          mat-cell
+          *matCellDef="let element">
+          {{ sumTotalWritings(element) }}
+        </td>
+      </ng-container>
+
+      <!-- Avg Score Column -->
+      <ng-container matColumnDef="avg_score">
+        <th
+          mat-header-cell
+          *matHeaderCellDef>
+          {{ 'classes.students_analysis_table.fields.avg_score' | translate }}
+        </th>
+        <td
+          mat-cell
+          *matCellDef="let element">
+          {{ element.assessments.score_average }}
+        </td>
+      </ng-container>
+
+      <!-- Avg Grammar Errors Column -->
+      <ng-container matColumnDef="avg_grammar_errors">
+        <th
+          mat-header-cell
+          *matHeaderCellDef>
+          {{ 'classes.students_analysis_table.fields.avg_grammar_errors' | translate }}
+        </th>
+        <td
+          mat-cell
+          *matCellDef="let element">
+          {{ element.assessments.grammar_errors_average }}
+        </td>
+      </ng-container>
+
+      <!-- Pass Rate Column -->
+      <ng-container matColumnDef="pass_rate">
+        <th
+          mat-header-cell
+          *matHeaderCellDef>
+          {{ 'classes.students_analysis_table.fields.pass_rate' | translate }}
+        </th>
+        <td
+          mat-cell
+          *matCellDef="let element">
+          <wlk-progress-bar [percentage]="getPassRate(element) * 100" />
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="evolution">
+        <th
+          mat-header-cell
+          *matHeaderCellDef>
+          {{ 'classes.students_analysis_table.fields.evolution' | translate }}
+        </th>
+        <td
+          mat-cell
+          *matCellDef="let element">
+          <button mat-icon-button>
+            <mat-icon>trending_up</mat-icon>
+          </button>
+        </td>
+      </ng-container>
+      <tr
+        mat-header-row
+        *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+      <tr
+        mat-row
+        *matRowDef="let row; columns: displayedColumns"></tr>
+      <!-- Paginator -->
+      <mat-paginator
+        [pageSizeOptions]="[5, 10, 20]"
+        showFirstLastButtons></mat-paginator>
+    </table>
+  </section>
+</div>

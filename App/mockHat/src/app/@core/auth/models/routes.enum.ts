@@ -1,0 +1,15 @@
+export enum AppRoutes {
+  Users = 'users',
+  Modules = 'modules',
+  DashBoard = 'dashboard',
+  Payments = 'payments',
+  AssessmentQuestion = 'assesmentquestion',
+  Writing = 'writing',
+  WritingList = 'writings',
+  WritingCheck = 'writingcheck',
+  GrammarList = 'grammarlist',
+  SpellCheck = 'spellcheck',
+  Info = 'info',
+  Plans = 'plans',
+  Students = 'students',
+}

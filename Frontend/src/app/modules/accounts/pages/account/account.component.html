@@ -1,0 +1,181 @@
+<div class="container">
+  <mat-card>
+    <wlk-back [url]="backUrl"></wlk-back>
+    <mat-card-header>
+      <mat-card-title class="title">{{ 'account.title' | translate }}</mat-card-title>
+      <div class="subtitles-container">
+        <mat-card-subtitle>
+          <strong>{{ 'account.name' | translate }}:</strong> {{ account()?.name }}
+        </mat-card-subtitle>
+      </div>
+    </mat-card-header>
+    <mat-card-content class="plans-container">
+      <mat-card-title>{{ 'plans.info' | translate }}</mat-card-title>
+      <mat-tab-group [selectedIndex]="getSelectedTabIndex()">
+        <mat-tab label="INDIVIDUAL">
+          <div class="plans-grid">
+            <mat-card
+              *ngFor="let plan of plans_individual"
+              [class.selected]="this.selectedPlan() === plan"
+              class="pastel-box">
+              <mat-card-content>
+                <mat-card-title>{{ 'plans.' + plan | translate }}</mat-card-title>
+              </mat-card-content>
+              <mat-card-actions>
+                <button
+                  [disabled]="true"
+                  *ngIf="plan === this.selectedPlan()"
+                  mat-raised-button
+                  color="secondary">
+                  {{ 'plans.current_plan' | translate }}
+                </button>
+                <button
+                  mat-raised-button
+                  *ngIf="plan !== this.selectedPlan()"
+                  color="primary"
+                  (click)="upgradePlan(plan)">
+                  {{ 'plans.upgrade' | translate }}
+                </button>
+              </mat-card-actions>
+            </mat-card>
+          </div>
+        </mat-tab>
+        <mat-tab label="BUSINESS">
+          <div class="plans-grid">
+            <mat-card
+              *ngFor="let plan of plans_business"
+              [class.selected]="this.selectedPlan() === plan"
+              class="pastel-box">
+              <mat-card-content>
+                <mat-card-title>{{ 'plans.' + plan | translate }}</mat-card-title>
+              </mat-card-content>
+              <mat-card-actions>
+                <button
+                  [disabled]="true"
+                  *ngIf="plan === this.selectedPlan()"
+                  mat-raised-button
+                  color="secondary">
+                  {{ 'plans.current_plan' | translate }}
+                </button>
+                <button
+                  mat-raised-button
+                  *ngIf="plan !== this.selectedPlan()"
+                  color="primary"
+                  (click)="upgradePlan(plan)">
+                  {{ 'plans.upgrade' | translate }}
+                </button>
+              </mat-card-actions>
+            </mat-card>
+          </div>
+        </mat-tab>
+      </mat-tab-group>
+    </mat-card-content>
+    <mat-card-content class="users-container">
+      <mat-card>
+        <mat-card-header class="users-header">
+          <mat-card-title>{{ 'account.users' | translate }}</mat-card-title>
+          <button
+            *ngIf="isBussines()"
+            mat-raised-button
+            color="primary"
+            (click)="openInviteUserDialog()">
+            <mat-icon>add</mat-icon>
+            {{ 'account.invite' | translate }}
+          </button>
+        </mat-card-header>
+        <mat-divider></mat-divider>
+        <mat-card-content *ngIf="account()?.users.length > 0">
+          <table
+            mat-table
+            [dataSource]="account()?.users">
+            <ng-container matColumnDef="email">
+              <th
+                mat-header-cell
+                *matHeaderCellDef>
+                {{ 'account.email' | translate }}
+              </th>
+              <td
+                mat-cell
+                *matCellDef="let element">
+                {{ element.email }}
+              </td>
+            </ng-container>
+
+            <ng-container matColumnDef="role">
+              <th
+                mat-header-cell
+                *matHeaderCellDef>
+                {{ 'account.role' | translate }}
+              </th>
+              <td
+                mat-cell
+                *matCellDef="let element">
+                {{ element.role }}
+              </td>
+            </ng-container>
+
+            <tr
+              mat-header-row
+              *matHeaderRowDef="displayedColumns"></tr>
+            <tr
+              mat-row
+              *matRowDef="let row; columns: displayedColumns"></tr>
+          </table>
+        </mat-card-content>
+        <mat-card-content *ngIf="account()?.users.length === 0">
+          <p>{{ 'account.no_users' | translate }}</p>
+        </mat-card-content>
+      </mat-card>
+    </mat-card-content>
+
+    <mat-card-content *ngIf="isBussines()">
+      <mat-card>
+        <mat-card-header class="users-header">
+          <mat-card-title>{{ 'account.invitations' | translate }}</mat-card-title>
+        </mat-card-header>
+        <mat-divider></mat-divider>
+        <mat-card-content *ngIf="invitations()?.invitations.length > 0">
+          <table
+            mat-table
+            [dataSource]="invitations()?.invitations">
+            <ng-container matColumnDef="email">
+              <th
+                mat-header-cell
+                *matHeaderCellDef>
+                {{ 'account.email' | translate }}
+              </th>
+              <td
+                mat-cell
+                *matCellDef="let element">
+                {{ element.email }}
+              </td>
+            </ng-container>
+
+            <ng-container matColumnDef="role">
+              <th
+                mat-header-cell
+                *matHeaderCellDef>
+                {{ 'account.role' | translate }}
+              </th>
+              <td
+                mat-cell
+                *matCellDef="let element">
+                {{ element.role }}
+              </td>
+            </ng-container>
+
+            <tr
+              mat-header-row
+              *matHeaderRowDef="displayedColumns"></tr>
+            <tr
+              mat-row
+              *matRowDef="let row; columns: displayedColumns"></tr>
+          </table>
+        </mat-card-content>
+        <mat-card-content *ngIf="invitations()?.invitations.length === 0">
+          <p>{{ 'account.no_invitations' | translate }}</p>
+        </mat-card-content>
+      </mat-card>
+    </mat-card-content>
+  </mat-card>
+</div>

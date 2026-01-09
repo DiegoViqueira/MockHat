@@ -1,0 +1,26 @@
+{
+  "assigned_task": "Articles wanted! \nTHE BEST DAY OF MY LIFE \nHave you ever had a day that you will always remember? What made it so special? \nWrite an article answering these questions. \nThe best articles will be published in our magazine. \nWrite your article.",
+  "task_answer": "The best day of my life was when I went to the cinema with my friends. We watched a new movie and we laughed a lot. It was a funny movie. I will never forget that day. I liked it very much. I will always remember that day. I will never forget that day. I liked it very much. I will always remember that day.",
+  "ai_answer": [
+    {
+      "criteria": "Content",
+      "score": 5.0,
+      "feedback": "All content is relevant, and all required task points are addressed. The reader is fully informed about the day and why it was special."
+    },
+    {
+      "criteria": "Communicative Achievement",
+      "score": 4.0,
+      "feedback": "The article uses an appropriate tone and engages the reader. Ideas are communicated clearly, with minor lapses."
+    },
+    {
+      "criteria": "Organisation",
+      "score": 4.0,
+      "feedback": "The text is well-organized with logical sequencing. Cohesive devices are used appropriately."
+    },
+    {
+      "criteria": "Language",
+      "score": 3.0,
+      "feedback": "A range of vocabulary and grammatical structures is used with some errors, but they do not impede communication."
+    }
+  ]
+}

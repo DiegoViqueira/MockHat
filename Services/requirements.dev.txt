@@ -1,0 +1,16 @@
+pytest==8.3.4
+pytest-asyncio==0.25.3
+pytest-mock==3.14.0
+pytest-cov==6.0.0
+gradio
+matplotlib
+prettytable
+llama-index
+langgraph
+duckduckgo-search
+wikipedia
+markdown-pdf
+IPython
+pyppeteer
+nest_asyncio
+scikit-learn

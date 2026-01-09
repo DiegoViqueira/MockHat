@@ -1,0 +1,26 @@
+{
+  "assigned_task": "In your English class you have been talking about the environment. Now, your English teacher has asked you to write an essay. Write an essay using all the notes and giving reasons for your point of view. Every country in the world has problems with pollution and damage to the environment. Do you think these problems can be solved? Notes Write about: 1. **transport** 2. **rivers and seas** 3. **(your own idea)**",
+  "task_answer": "To begin with pollution and damage to the environment is the most serious and difficult problem for countries of all over the world. Scientists of different countries predict a global ecocatastrophe if people won’t change their attitude to our planet. First of all a huge damage to the environment brings a transport. People can’t imagine their living without cars, buses, trains, ships and planes. But it’s an open secret that one of disadvantage of these accustomed things is harmful exhaust. Needless to say that use of environment friendly engines helps us to save atmosphere from pollution. In addition to this our rivers and seas are in not less danger situation. It’s a fact of common knowledge that numerous factories and plants pour off their waste to ponds. Obviously that cleaning manufacturing water helps to avoid extinction of ocean residents. Apart from this I’m inclined to believe that every person can and must contribute to solving this important problem. Doing a little steps for protection our environment every day we will be able to save our Earth. And it’s a task of each of us.",
+  "ai_answer": [
+    {
+      "criteria": "Content",
+      "score": 4.0,
+      "feedback": "All content is relevant to the task. All content is relevant to the task. However, the target reader is on the whole informed, rather than being fully informed. Both numbered points (transport; rivers and seas) are referred to with some discussion of the problems caused (harmful exhaust; factories which pour off their waste to ponds) and some limited mention of solutions. No tangible 3rd aspect of environmental damage is discussed. While the writer does conclude with a strong statement of opinion (every person can and must) the reader is not fully informed on the solutions proposed (Doing a little steps for protection our environment every day we will be able to save our Earth)."
+    },
+    {
+      "criteria": "Communicative Achievement",
+      "score": 3.0,
+      "feedback": "The essay is written in a consistently neutral register and the format is appropriate for the communicative task, using more formal language to introduce the ideas within the text (To begin with; First of all; It’s a fact of common knowledge). There is a clear essay structure with an opening statement, topic paragraphs and a conclusion which sums up the writer’s point of view. Straightforward ideas are communicated to the target reader but when more complex ideas are attempted these are sometimes not as successful (Obviously that cleaning manufacturing water helps to avoid extinction of ocean residents)."
+    },
+    {
+      "criteria": "Organisation",
+      "score": 3.0,
+      "feedback": "The text is generally well organised and coherent, using a variety of linking words and cohesive devices, particularly to introduce the ideas throughout the text (To begin with; In addition to this; Needless to say; Apart from this). The essay is clearly organised into paragraphs, which each deal with one idea. Occasionally the follow-up examples are not as clearly connected as they could be. For example, they discuss how factories pollute pond water and then offer a solution which would help ocean residents."
+    },
+    {
+      "criteria": "Language",
+      "score": 3.0,
+      "feedback": "There is a range of everyday vocabulary used appropriately with some attempt to use more sophisticated lexis (a global ecocatastrophe; atmosphere; common knowledge; factories and plants; inclined to believe; must contribute to solving). There is a range of simple and some more complex grammatical forms used, and although there are errors, these do not impede communication (a huge damage; People can’t imagine their living without cars; one of disadvantage; in not less danger situation)."
+    }
+  ]
+}

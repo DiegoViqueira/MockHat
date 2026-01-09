@@ -1,0 +1,63 @@
+<ion-header>
+  <ion-toolbar class="custom-toolbar">
+    <ion-title slot="end">{{'login.name' | translate}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="container">
+    <ion-card class="full-height-card">
+      <!-- Imagen del logo -->
+      <ion-card-header>
+        <img
+          width="100"
+          height="100"
+          src="assets/images/mockhat.png"
+          alt="MockHat Logo"
+        />
+      </ion-card-header>
+
+      <!-- Login con redes sociales -->
+
+      <ion-card-content>
+        <div class="social_container">
+          <ion-button expand="full" shape="round" (click)="loginWithGoogle()">
+            <ion-icon name="logo-google" slot="start"></ion-icon>
+            {{ 'login.with_google' | translate }}
+          </ion-button>
+          <ion-button
+            expand="full"
+            shape="round"
+            (click)="loginWithMicrosoft()"
+          >
+            <ion-icon name="logo-microsoft" slot="start"></ion-icon>
+            {{ 'login.with_microsoft' | translate }}
+          </ion-button>
+        </div>
+
+        <p style="text-align: center">
+          {{ 'legal.title' | translate }}
+          <ion-button fill="clear" size="small" (click)="onLegal()">
+            {{ 'termsOfSale.title' | translate }} </ion-button
+          >,
+          <ion-button fill="clear" size="small" (click)="onLegal()">
+            {{ 'termsOfService.title' | translate }} </ion-button
+          >, {{ 'legal.subtitle' | translate }}
+          <ion-button fill="clear" size="small" (click)="onLegal()">
+            {{ 'privacyPolicy.title' | translate }} </ion-button
+          >.
+        </p>
+      </ion-card-content>
+    </ion-card>
+
+    <!-- Footer -->
+  </div>
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <ion-title size="small">
+      MockHat S.L.© {{ year }} | English AI Tool | [Spain] |
+      <a href="www.mockhat.com" target="_blank">www.mockhat.com</a>
+    </ion-title>
+  </ion-toolbar>
+</ion-footer>

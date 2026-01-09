@@ -1,0 +1,280 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: CloudFormation template for mockhat subscription API
+
+Parameters:
+  ImageUrl:
+    Type: String
+    Description: Image URL for the Fargate task
+  VPC:
+    Type: AWS::EC2::VPC::Id
+    Description: Virtual Private Cloud Id where the Load Balancer and the Cluster live.
+  PublicSubnetIds:
+    Type: List<AWS::EC2::Subnet::Id>
+    Description: Subnets for the Load Balancer (hence PUBLIC).
+  MONGOURL:
+    Type: String
+    Description: mongo DB url Database.
+  HostedZoneId:
+    Type: String
+    Description: The Route 53 Hosted Zone ID for mockhat.com
+  AppDomainPrefix:
+    Type: String
+    Description: The domain prefix before mockhat.com
+
+Resources:
+  LoadBalancerSecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: !Sub "Load Balancer Security Group for mockhat payments "
+      VpcId: !Ref VPC
+      SecurityGroupIngress:
+        - IpProtocol: tcp
+          FromPort: 443
+          ToPort: 443
+          CidrIp: 0.0.0.0/0
+        - IpProtocol: tcp
+          FromPort: 443
+          ToPort: 443
+          CidrIpv6: ::/0
+        - IpProtocol: tcp
+          FromPort: 80
+          ToPort: 80
+          CidrIp: 0.0.0.0/0
+        - IpProtocol: tcp
+          FromPort: 8000
+          ToPort: 8000
+          CidrIp: 0.0.0.0/0
+      Tags:
+        - Key: Name
+          Value: !Sub "mockhat-LBSG"
+        - Key: Stack
+          Value: mockhatpayments
+
+  ContainerSecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: !Sub "Container Security Group for mockhat payments"
+      VpcId: !Ref VPC
+      SecurityGroupIngress:
+        - IpProtocol: tcp
+          FromPort: 8000
+          ToPort: 8000
+          SourceSecurityGroupId: !Ref LoadBalancerSecurityGroup
+      Tags:
+        - Key: Name
+          Value: !Sub "mockhatpayments-ContSG"
+        - Key: Stack
+          Value: mockhatpayments
+
+  # ECS Cluster
+  mockhatpaymentsEcsCluster:
+    Type: AWS::ECS::Cluster
+    Properties:
+      Tags:
+        - Key: Name
+          Value: !Sub "mockhatpayments-Cluster"
+        - Key: Stack
+          Value: mockhatpayments
+
+  # Execution Role for ECS Tasks
+  mockhatpaymentsExecutionRole:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service: ecs-tasks.amazonaws.com
+            Action: sts:AssumeRole
+      Path: "/"
+      Policies:
+        - PolicyName: mockhatpayments-ExecRolePolicy
+          PolicyDocument:
+            Version: "2012-10-17"
+            Statement:
+              - Effect: Allow
+                Action:
+                  - ecr:GetAuthorizationToken
+                  - ecr:BatchCheckLayerAvailability
+                  - ecr:GetDownloadUrlForLayer
+                  - ecr:GetRepositoryPolicy
+                  - ecr:DescribeRepositories
+                  - ecr:ListImages
+                  - ecr:DescribeImages
+                  - ecr:BatchGetImage
+                  - logs:CreateLogStream
+                  - logs:PutLogEvents
+                Resource: "*"
+
+  S3AccessPolicy:
+    Type: AWS::IAM::Policy
+    Properties:
+      PolicyName: S3AccessPolicy
+      PolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Effect: Allow
+            Action:
+              - s3:PutObject
+              - s3:GetObject
+              - s3:PutObjectTagging
+              - s3:GetObjectTagging
+            Resource: !Sub "arn:aws:s3:::mockhatpayments-content-storage/*"
+      Roles:
+        - !Ref mockhatpaymentsExecutionRole
+
+  mockhatpaymentsLogGroup:
+    Type: AWS::Logs::LogGroup
+    Properties:
+      LogGroupName: !Sub "/ecs/mockhatpayments"
+      RetentionInDays: 30
+      Tags:
+        - Key: Name
+          Value: !Sub "mockhatpayments-LG"
+        - Key: Stack
+          Value: mockhatpayments
+
+  # Task Definition
+  mockhatpaymentsTaskDefinition:
+    Type: AWS::ECS::TaskDefinition
+    Properties:
+      Family: !Sub "mockhatpayments-TD"
+      Cpu: "256" # Example value, adjust based on your needs
+      Memory: "512" # Example value, adjust based on your needs
+      NetworkMode: awsvpc
+      RequiresCompatibilities:
+        - FARGATE
+      ExecutionRoleArn: !Ref mockhatpaymentsExecutionRole
+      TaskRoleArn: !Ref mockhatpaymentsExecutionRole
+      ContainerDefinitions:
+        - Name: mockhatpayments-container
+          Image: !Ref ImageUrl
+          Environment:
+            - Name: MONGO_URL
+              Value: !Ref MONGOURL
+          HealthCheck:
+            Command:
+              - "CMD-SHELL"
+              - "curl -f http://localhost:8000/health || exit 1"
+            Interval: 60
+            Timeout: 10
+            Retries: 5
+            StartPeriod: 30
+          Cpu: 256
+          Memory: 512
+          PortMappings:
+            - ContainerPort: 8000
+              HostPort: 8000
+          LogConfiguration:
+            LogDriver: awslogs
+            Options:
+              awslogs-group: !Ref mockhatpaymentsLogGroup
+              awslogs-region: !Ref AWS::Region
+              awslogs-stream-prefix: mockhatpayments
+
+  # Fargate Service
+  mockhatpaymentsFargateService:
+    Type: AWS::ECS::Service
+    DependsOn: [mockhatpaymentsTaskDefinition, LoadBalancerListener]
+    Properties:
+      ServiceName: !Sub "mockhatpayments-Service"
+      Cluster: !Ref mockhatpaymentsEcsCluster
+      LaunchType: FARGATE
+      TaskDefinition: !Ref mockhatpaymentsTaskDefinition
+      DesiredCount: 1
+      DeploymentConfiguration:
+        DeploymentCircuitBreaker:
+          Enable: true
+          Rollback: true
+      LoadBalancers:
+        - ContainerName: mockhatpayments-container
+          ContainerPort: 8000
+          TargetGroupArn: !Ref mockhatpaymentsTargetGroup
+      NetworkConfiguration:
+        AwsvpcConfiguration:
+          AssignPublicIp: ENABLED
+          Subnets: !Ref PublicSubnetIds
+          SecurityGroups:
+            - !Ref ContainerSecurityGroup
+      Tags:
+        - Key: Name
+          Value: !Sub "mockhatpayments-Service"
+        - Key: Stack
+          Value: mockhatpayments
+
+  # Load Balancer
+  mockhatpaymentsLoadBalancer:
+    Type: AWS::ElasticLoadBalancingV2::LoadBalancer
+    Properties:
+      LoadBalancerAttributes:
+        - Key: idle_timeout.timeout_seconds
+          Value: 60
+      Scheme: internet-facing
+      SecurityGroups:
+        - !Ref LoadBalancerSecurityGroup
+      Subnets: !Ref PublicSubnetIds
+
+  # Target Group
+  mockhatpaymentsTargetGroup:
+    Type: AWS::ElasticLoadBalancingV2::TargetGroup
+    Properties:
+      HealthCheckIntervalSeconds: 30
+      HealthCheckPath: !Sub "/health"
+      HealthCheckProtocol: HTTP
+      HealthCheckTimeoutSeconds: 5
+      HealthyThresholdCount: 2
+      TargetGroupAttributes:
+        - Key: deregistration_delay.timeout_seconds
+          Value: 30
+      TargetType: ip
+      Name: !Sub "mockhatpaymentsTG"
+      Port: 8000
+      Protocol: HTTP
+      UnhealthyThresholdCount: 2
+      VpcId: !Ref VPC
+      Tags:
+        - Key: Name
+          Value: !Sub "mockhatpaymentsTG"
+        - Key: Stack
+          Value: mockhatpayments
+
+  # Load Balancer Listener
+  LoadBalancerListener:
+    Type: AWS::ElasticLoadBalancingV2::Listener
+    Properties:
+      DefaultActions:
+        - Type: forward
+          TargetGroupArn: !Ref mockhatpaymentsTargetGroup
+      LoadBalancerArn: !Ref mockhatpaymentsLoadBalancer
+      Port: 443
+      Protocol: HTTPS
+      Certificates:
+        - CertificateArn: !Ref mockhatpaymentsCertificate
+
+  mockhatpaymentsDNSRecord:
+    Type: AWS::Route53::RecordSet
+    Properties:
+      HostedZoneId: !Ref HostedZoneId
+      Name: !Sub "${AppDomainPrefix}.mockhat.com."
+      Type: A
+      AliasTarget:
+        DNSName: !GetAtt mockhatpaymentsLoadBalancer.DNSName
+        HostedZoneId: !GetAtt mockhatpaymentsLoadBalancer.CanonicalHostedZoneID
+        EvaluateTargetHealth: false
+
+  mockhatpaymentsCertificate:
+    Type: AWS::CertificateManager::Certificate
+    Properties:
+      DomainName: !Sub "${AppDomainPrefix}.mockhat.com"
+      ValidationMethod: DNS
+      DomainValidationOptions:
+        - DomainName: !Sub "${AppDomainPrefix}.mockhat.com"
+          HostedZoneId: !Ref HostedZoneId
+
+Outputs:
+  ApiDNSName:
+    Description: DNS Name for the mockhat  API
+    Value: !Sub "${AppDomainPrefix}.mockhat.com."
+    Export:
+      Name: !Sub "${AWS::StackName}-ApiDNSName"

@@ -1,0 +1,76 @@
+<div class="container">
+  <mat-card class="highlight-card">
+    <mat-card-content class="highlight-card-content">
+      <mat-card>
+        <mat-card-content class="header-logo">
+          <img
+            class="responsive-logo"
+            src="../../../../assets/images/mockhat.png" />
+          <mat-card-title>{{ 'login.with_account' | translate }}</mat-card-title>
+        </mat-card-content>
+        <mat-card-content class="form-content">
+          <form [formGroup]="form">
+            <mat-form-field appearance="outline">
+              <mat-label>{{ 'common.email' | translate }}</mat-label>
+              <input
+                matInput
+                formControlName="Username" />
+              <mat-icon
+                class="icon-gray"
+                matSuffix
+                >email</mat-icon
+              >
+              <mat-error
+                class="error-message-in"
+                role="alert">
+                {{ 'login.errorUsername' | translate }}
+              </mat-error>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+              <mat-label>{{ 'common.password' | translate }}</mat-label>
+              <input
+                matInput
+                [type]="hide ? 'password' : 'text'"
+                formControlName="Password" />
+              <button
+                class="icon-gray"
+                mat-icon-button
+                matSuffix
+                (click)="hide = !hide"
+                [attr.aria-label]="'Hide password'"
+                [attr.aria-pressed]="hide">
+                <mat-icon>{{ hide ? 'visibility_off' : 'visibility' }}</mat-icon>
+              </button>
+              <mat-error
+                class="error-message-in"
+                role="alert">
+                {{ 'login.errorPassword' | translate }}
+              </mat-error>
+            </mat-form-field>
+            <div class="forgot-password">
+              <mat-card-subtitle>
+                <a routerLink="/auth/forgot-password">
+                  {{ 'login.forgot_password' | translate }}
+                </a>
+              </mat-card-subtitle>
+            </div>
+            <button
+              [disabled]="!form.valid || form.pristine"
+              mat-raised-button
+              color="primary"
+              (click)="login()">
+              {{ 'login.name' | translate }}
+            </button>
+          </form>
+        </mat-card-content>
+      </mat-card>
+      <mat-card-content class="signup-content">
+        <mat-card-subtitle>
+          {{ 'login.no_account' | translate }}
+          <a routerLink="/auth/signup">{{ 'login.signup' | translate }} </a>
+        </mat-card-subtitle>
+      </mat-card-content>
+    </mat-card-content>
+  </mat-card>
+</div>

@@ -1,0 +1,26 @@
+{
+  "assigned_task": "A group of British teachers is going to visit your college for two days. The aim of their trip is to learn about how technology is used in education in your country. You have been asked to write a report for the group leader. Your report should: Include information about how technology is used to teach different subjects. Recommend which lessons the teachers should watch to see technology being used. Write your report.",
+  "task_answer": "Use of Technology in education Introduction This report is intended to inform how technology is used in common lessons and recommend the most interesting technical developments to be seen. I conducted a survey among teachers and students in order to find out what is preferred to be used by them. Technology in different subjects The majority of the people claimed that the best thing were computers and interactive boards. I was given these reasons: They provide an opportunity to make the lessons more enjoyable. Everybody is able to find information on the internet whenever they want to. Computer presentations can be easily given. However, use of another technical developments vary among students and teachers depending on which subject they focus on. For instance, people who were interested in Science mentioned these points: Newly equipped chemical lab with its recently purchased substances. Equipment suitable for teaching Physics (e.g. digital watches, laser). Recommendations For most of the people who I asked for their reply were really important computers and interactive boards in the classrooms. I would therefore recommend seeing this. On the other hand, if you are interested in particular subjects you ought to see their specialised classrooms with a variety of modern technical developments, too.",
+  "ai_answer": [
+    {
+      "criteria": "Content",
+      "score": 5.0,
+      "feedback": "All content is relevant and the target reader is fully informed. The report gives information about which technology is used for teaching purposes around the school (interactive boards; computers) and specifically in science (newly equipped chemical lab). The report has a clear recommendation at the end and gives options about what would be good for the reader to see: either going to see what the students have decided is important (computers and interactive boards) or what the reader has a specific interest in (if you are interested in particular subjects you ought to see their specialised classrooms)."
+    },
+    {
+      "criteria": "Communicative Achievement",
+      "score": 4.0,
+      "feedback": "The conventions of report writing are used effectively to hold the target reader’s attention. The register is neutral and information is given in an objective tone, making good use of the passive voice (This report is intended; developments to be seen; can be easily given). The format of the report is effective in using headings, sub-headings and a numbering system in the second section to highlight important aspects. Straightforward ideas are communicated."
+    },
+    {
+      "criteria": "Organisation",
+      "score": 4.0,
+      "feedback": "The text is well organised and coherent, and the overall organisation of the report is effective in helping to communicate the main points. A variety of appropriate linking words are used (However; which; For instance)."
+    },
+    {
+      "criteria": "Language",
+      "score": 3.0,
+      "feedback": "A range of everyday vocabulary is used appropriately and there is some good use of topic-specific vocabulary (technical developments; conducted a survey; interactive boards; provide an opportunity; I would therefore recommend). A range of simple and some more complex grammatical forms is used, particularly different passive structures. Some errors occur when attempting more complex ideas (For most of the people who I asked for their reply were really important computers). However, the errors do not impede communication."
+    }
+  ]
+}

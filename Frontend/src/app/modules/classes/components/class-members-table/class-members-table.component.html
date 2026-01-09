@@ -1,0 +1,91 @@
+<div class="filter-container">
+  <mat-form-field
+    appearance="outline"
+    class="filter-input">
+    <mat-icon matSuffix>search</mat-icon>
+    <mat-label>{{ 'class.filter.name' | translate }}</mat-label>
+    <input
+      matInput
+      (keyup)="applyFilter($event)"
+      placeholder="{{ 'class.filter.placeholder' | translate }}"
+      #input />
+  </mat-form-field>
+
+  @if (isMobile()) {
+    <button
+      [disabled]="!isAdmin"
+      (click)="addMember()"
+      matTooltip="{{ 'class.buttons.addMember' | translate }}"
+      mat-mini-fab
+      style="box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1)"
+      color="primary">
+      <mat-icon>add</mat-icon>
+    </button>
+  } @else {
+    <button
+      [disabled]="!isAdmin"
+      (click)="addMember()"
+      mat-raised-button
+      color="primary">
+      <mat-icon>add</mat-icon>
+      {{ 'class.buttons.addMember' | translate }}
+    </button>
+  }
+</div>
+<table
+  matSort
+  mat-table
+  [dataSource]="dataSource"
+  class="mat-elevation-z8">
+  <ng-container matColumnDef="avatar">
+    <th
+      mat-header-cell
+      *matHeaderCellDef>
+      &nbsp;
+    </th>
+    <td
+      mat-cell
+      *matCellDef="let row">
+      <div class="user-avatar">
+        {{ row.avatar }}
+      </div>
+    </td>
+  </ng-container>
+
+  <ng-container matColumnDef="name">
+    <th
+      mat-header-cell
+      mat-sort-header
+      sortActionDescription="Sort by name"
+      *matHeaderCellDef>
+      {{ 'class.tables.members.name' | translate }}
+    </th>
+    <td
+      mat-cell
+      *matCellDef="let row">
+      {{ row.name }}
+    </td>
+  </ng-container>
+
+  <ng-container matColumnDef="role">
+    <th
+      mat-header-cell
+      mat-sort-header
+      sortActionDescription="Sort by role"
+      *matHeaderCellDef>
+      {{ 'class.tables.members.role' | translate }}
+    </th>
+    <td
+      mat-cell
+      *matCellDef="let row">
+      {{ row.role | translate }}
+    </td>
+  </ng-container>
+
+  <tr
+    mat-header-row
+    *matHeaderRowDef="displayedColumns"></tr>
+  <tr
+    mat-row
+    *matRowDef="let row; columns: displayedColumns"></tr>
+</table>

@@ -1,0 +1,133 @@
+<div class="container">
+  <mat-card class="highlight-card">
+    <mat-card-content class="highlight-card-content">
+      <mat-card>
+        <mat-card-content class="header-logo">
+          <img
+            class="responsive-logo"
+            src="../../../../assets/images/mockhat.png" />
+          <mat-card-title>{{ 'auth.register.title' | translate }}</mat-card-title>
+        </mat-card-content>
+
+        <mat-card-content class="form-content">
+          <form [formGroup]="form">
+            <mat-form-field appearance="outline">
+              <mat-label>{{ 'user.fields.account_name' | translate }}</mat-label>
+              <input
+                matInput
+                formControlName="account_name"
+                type="text"
+                required />
+              <mat-error *ngIf="form.get('account_name')?.hasError('required')">
+                {{ 'common.validation.required' | translate }}
+              </mat-error>
+            </mat-form-field>
+
+            <div class="user-password-container">
+              <mat-form-field appearance="outline">
+                <mat-label>{{ 'user.fields.first_name' | translate }}</mat-label>
+                <input
+                  matInput
+                  formControlName="first_name"
+                  required />
+                <mat-error *ngIf="form.get('first_name')?.hasError('required')">
+                  {{ 'common.validation.required' | translate }}
+                </mat-error>
+              </mat-form-field>
+
+              <mat-form-field appearance="outline">
+                <mat-label>{{ 'user.fields.last_name' | translate }}</mat-label>
+                <input
+                  matInput
+                  formControlName="last_name"
+                  required />
+                <mat-error *ngIf="form.get('last_name')?.hasError('required')">
+                  {{ 'common.validation.required' | translate }}
+                </mat-error>
+              </mat-form-field>
+            </div>
+            <mat-form-field appearance="outline">
+              <mat-label>{{ 'user.fields.email' | translate }}</mat-label>
+              <input
+                matInput
+                formControlName="email"
+                type="email"
+                required />
+              <mat-error *ngIf="form.get('email')?.hasError('required')">
+                {{ 'common.validation.required' | translate }}
+              </mat-error>
+              <mat-error *ngIf="form.get('email')?.hasError('email')">
+                {{ 'common.validation.email' | translate }}
+              </mat-error>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+              <mat-label>{{ 'common.password' | translate }}</mat-label>
+              <input
+                matInput
+                [type]="hidePassword ? 'password' : 'text'"
+                formControlName="password"
+                required />
+              <button
+                mat-icon-button
+                matSuffix
+                (click)="hidePassword = !hidePassword">
+                <mat-icon>{{ hidePassword ? 'visibility_off' : 'visibility' }}</mat-icon>
+              </button>
+              <mat-error *ngIf="form.get('password')?.hasError('required')">
+                {{ 'common.validation.required' | translate }}
+              </mat-error>
+              <mat-error *ngIf="form.get('password')?.hasError('pattern')">
+                {{ 'common.validation.pattern' | translate }}
+              </mat-error>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+              <mat-label>{{ 'common.confirm_password' | translate }}</mat-label>
+              <input
+                matInput
+                [type]="hidePassword ? 'password' : 'text'"
+                formControlName="confirmPassword"
+                required />
+              <mat-error *ngIf="form.get('confirmPassword')?.hasError('required')">
+                {{ 'common.validation.required' | translate }}
+              </mat-error>
+              <mat-error *ngIf="form.get('confirmPassword')?.hasError('passwordMismatch')">
+                {{ 'auth.validation.password_mismatch' | translate }}
+              </mat-error>
+            </mat-form-field>
+            <div class="terms-and-conditions">
+              <mat-checkbox formControlName="terms_and_conditions_accepted"> </mat-checkbox>
+              <button
+                mat-button
+                (click)="openTermsAndConditionsDialog()">
+                <mat-card-subtitle>{{
+                  'auth.actions.accept_terms_and_conditions' | translate
+                }}</mat-card-subtitle>
+              </button>
+            </div>
+            <button
+              mat-raised-button
+              color="primary"
+              type="submit"
+              (click)="onSubmit()"
+              [disabled]="!form.valid || isLoading">
+              <mat-spinner
+                diameter="20"
+                *ngIf="isLoading"
+                class="button-spinner">
+              </mat-spinner>
+              {{ 'auth.actions.register' | translate }}
+            </button>
+          </form>
+        </mat-card-content>
+      </mat-card>
+      <mat-card-content class="signup-content">
+        <mat-card-subtitle>
+          {{ 'auth.actions.already_have_account' | translate }}
+          <a routerLink="/auth/login">{{ 'auth.actions.back_to_login' | translate }} </a>
+        </mat-card-subtitle>
+      </mat-card-content>
+    </mat-card-content>
+  </mat-card>
+</div>

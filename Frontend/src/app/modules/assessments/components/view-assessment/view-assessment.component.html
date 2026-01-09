@@ -1,0 +1,117 @@
+<wlk-back
+  (back)="back()"
+  [url]="backUrl"
+  class="back-button" />
+
+@if (assessment()) {
+  <div class="class-container">
+    <mat-card class="class-card">
+      <mat-card-header class="class-header">
+        <mat-card-title> {{ assessment()?.title }} </mat-card-title>
+
+        <div class="class-header-info">
+          <mat-card-subtitle>
+            <strong>{{ 'assessments.writing.state' | translate }}</strong>
+            {{ assessment()?.state.toUpperCase() }}
+          </mat-card-subtitle>
+
+          <mat-card-subtitle
+            ><strong>{{ 'assessments.writing.certification' | translate }}</strong>
+            {{ assessment()?.institution.toUpperCase() }}
+          </mat-card-subtitle>
+          <mat-card-subtitle>
+            <strong>{{ 'assessments.writing.exam_type' | translate }}</strong>
+            {{ assessment()?.exam_type.toUpperCase() }}
+          </mat-card-subtitle>
+          <mat-card-subtitle>
+            <strong>{{ 'assessments.writing.level' | translate }}</strong>
+            {{ assessment()?.level.toUpperCase() }}
+          </mat-card-subtitle>
+          <mat-card-subtitle>
+            <strong>{{ 'assessments.writing.task' | translate }}</strong> {{ assessment()?.task }}
+          </mat-card-subtitle>
+        </div>
+      </mat-card-header>
+
+      <mat-card-content>
+        @if (mode === 'validate') {
+          <div class="assessment-grid">
+            <!-- Image Column -->
+
+            <div class="assessment-grid-item">
+              <mat-card-title>{{ 'assessments.image' | translate }}</mat-card-title>
+              <div class="assessment-image-container">
+                <img
+                  [src]="assessment()?.image_url"
+                  alt="Assessment Image"
+                  class="assessment-image" />
+              </div>
+            </div>
+
+            <!-- Text Column -->
+            <div class="assessment-grid-item">
+              <mat-card-title>{{ 'assessments.image_text' | translate }}</mat-card-title>
+              <form [formGroup]="form">
+                <mat-form-field
+                  class="full-width"
+                  appearance="outline">
+                  <textarea
+                    cdkTextareaAutosize
+                    cdkAutosizeMinRows="1"
+                    cdkAutosizeMaxRows="100"
+                    matInput
+                    appearance="outline"
+                    formControlName="image_text"
+                    class="assessment-image-text"
+                    [value]="assessment()?.image_text">
+                  </textarea>
+                </mat-form-field>
+              </form>
+            </div>
+          </div>
+        }
+        @if (mode === 'view') {
+          <wlk-assessment-writing-view />
+        } @else if (mode === 'correct' || mode === 'add_more_writings') {
+          <wlk-assessment-writing-correct />
+        }
+      </mat-card-content>
+
+      <mat-card-footer>
+        <mat-card-actions
+          align="end"
+          style="gap: 1rem">
+          @if (mode === 'validate') {
+            <button
+              mat-raised-button
+              (click)="ok()"
+              color="primary">
+              {{ 'common.ok' | translate }}
+            </button>
+
+            <button
+              mat-raised-button
+              (click)="updateAssessmentText()"
+              [disabled]="form.invalid"
+              color="primary">
+              {{ 'common.save_changes' | translate }}
+            </button>
+          }
+        </mat-card-actions>
+      </mat-card-footer>
+    </mat-card>
+  </div>
+} @else {
+  <div class="class-container">
+    <mat-card class="center-card">
+      <mat-card-header>
+        <mat-card-title>{{ 'assessments.no_assessment' | translate }}</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <mat-card-subtitle>{{
+          'assessments.no_assessment_subtitle' | translate
+        }}</mat-card-subtitle>
+      </mat-card-content>
+    </mat-card>
+  </div>
+}

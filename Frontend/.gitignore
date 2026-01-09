@@ -1,0 +1,11 @@
+/.angular/cache
+node_modules/
+.vs/*
+custom_vars.sh.bak
+.angular/
+.idea/
+dist/
+coverage/
+junit.xml
+.nx/
+test-report.xml

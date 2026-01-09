@@ -1,0 +1,26 @@
+<div class="container">
+  <mat-card class="highlight-card">
+    <mat-card-content class="highlight-card-content">
+      <mat-card>
+        <mat-card-content class="header-logo">
+          <img
+            class="responsive-logo"
+            src="../../../../assets/images/mockhat.png" />
+          <mat-card-title>{{ 'mail-sent.title' | translate }}</mat-card-title>
+        </mat-card-content>
+        <mat-card-content class="subtitle-content">
+          <mat-card-subtitle class="subtitle-content-text">
+            {{ 'mail-sent.subtitle' | translate }}
+          </mat-card-subtitle>
+        </mat-card-content>
+        <mat-card-content class="form-content"> </mat-card-content>
+      </mat-card>
+      <mat-card-content class="signup-content">
+        <mat-card-subtitle>
+          {{ 'mail-sent.need_help' | translate }}
+          <a routerLink="/auth/signup">{{ 'mail-sent.contact_support' | translate }} </a>
+        </mat-card-subtitle>
+      </mat-card-content>
+    </mat-card-content>
+  </mat-card>
+</div>

@@ -1,0 +1,120 @@
+<app-header></app-header>
+
+<ion-content class="ion-padding" [fullscreen]="true">
+  <ion-header collapse="condense">
+    <h1>Content</h1>
+  </ion-header>
+  <div id="container">
+    <!-- Stepper Indicator -->
+    <ion-grid>
+      <ion-row>
+        <ion-col
+          *ngFor="let step of steps; let i = index"
+          [class.active]="i === currentStep"
+        >
+          <div class="step-indicator">{{ i + 1 }}</div>
+          <div class="step-title">{{step | translate }}</div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <!-- Step Content -->
+    <div
+      class="step-content"
+      *ngFor="let step of steps; let i = index"
+      [hidden]="i !== currentStep"
+    >
+      <h2>{{ step | translate }}</h2>
+      @if (i === 0) {
+      <form [formGroup]="writingForm">
+        <ion-list [inset]="true">
+          <!-- Level Select -->
+          <ion-item>
+            <ion-label position="floating"
+              >{{ 'question.level' | translate }}</ion-label
+            >
+            <ion-select
+              placeholder="Level"
+              formControlName="level"
+              (ionChange)="onLevelChange($event.detail.value)"
+            >
+              <ion-select-option
+                *ngFor="let level of levels"
+                [value]="level.level"
+              >
+                {{ level.level }}
+              </ion-select-option>
+            </ion-select>
+          </ion-item>
+
+          <!-- Task Select -->
+          <ion-item *ngIf="filteredTasks.length">
+            <ion-label position="floating"
+              >{{ 'writing.task' | translate }}</ion-label
+            >
+            <ion-select placeholder="Task" formControlName="task">
+              <ion-select-option
+                *ngFor="let task of filteredTasks"
+                [value]="task"
+              >
+                {{ task }}
+              </ion-select-option>
+            </ion-select>
+          </ion-item>
+
+          <ion-item>
+            <ion-textarea
+              *ngIf="capturedImage"
+              [inert]="true"
+              formControlName="text_question"
+              placeholder="{{ 'writing_tab.text' | translate }}"
+              rows="15"
+            >
+            </ion-textarea>
+          </ion-item>
+          <ion-item>
+            <ion-button
+              (click)="takePicture()"
+              size="medium"
+              disabled="{{spinnerLoading}}"
+              slot="end"
+              ><ion-icon name="camera-outline" slot="icon-only"></ion-icon>
+            </ion-button>
+          </ion-item>
+          <ion-item>
+            <img
+              *ngIf="capturedImage"
+              [src]="capturedImage"
+              alt="Captured image"
+          /></ion-item>
+        </ion-list>
+      </form>
+
+      } @else if (i === 1) { <app-writing-list></app-writing-list> } @else {
+      <app-writing-list-result></app-writing-list-result>
+      }
+    </div>
+
+    <!-- Navigation Buttons -->
+    <ion-footer>
+      <ion-toolbar>
+        <ion-buttons slot="end">
+          <ion-button
+            *ngIf="currentStep < steps.length - 1"
+            disabled="{{spinnerLoading}}"
+            (click)="nextStep()"
+            >{{ 'writing.next' | translate}}</ion-button
+          >
+        </ion-buttons>
+
+        <ion-buttons slot="end">
+          <ion-button
+            *ngIf="currentStep === steps.length - 1"
+            (click)="goFirst()"
+            >{{'writing.reset' | translate}}</ion-button
+          >
+        </ion-buttons>
+      </ion-toolbar>
+    </ion-footer>
+  </div>
+</ion-content>

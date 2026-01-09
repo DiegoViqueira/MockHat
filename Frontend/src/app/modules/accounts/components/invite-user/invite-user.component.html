@@ -1,0 +1,47 @@
+<mat-dialog-content>
+  <div class="dialog-content">
+    <mat-card-title class="title">{{ 'account.invite' | translate }}</mat-card-title>
+    <div class="form-container">
+      <form [formGroup]="form">
+        <mat-form-field
+          appearance="outline"
+          class="full-width">
+          <mat-label>{{ 'account.email' | translate }}</mat-label>
+          <input
+            matInput
+            formControlName="email" />
+          <mat-error *ngIf="form.controls.email.invalid">
+            {{ 'account.invalidEmail' | translate }}
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field
+          appearance="outline"
+          class="full-width">
+          <mat-label>{{ 'account.role' | translate }}</mat-label>
+          <mat-select formControlName="role">
+            <mat-option
+              *ngFor="let role of roles"
+              [value]="role">
+              {{ role }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </form>
+    </div>
+  </div>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button
+    mat-raised-button
+    color="primary"
+    (click)="closeDialog()">
+    {{ 'common.cancel' | translate }}
+  </button>
+  <button
+    mat-raised-button
+    color="primary"
+    [disabled]="form.invalid"
+    (click)="onSubmit()">
+    {{ 'account.invite' | translate }}
+  </button>
+</mat-dialog-actions>

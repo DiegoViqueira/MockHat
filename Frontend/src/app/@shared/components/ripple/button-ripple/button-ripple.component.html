@@ -1,0 +1,20 @@
+<div
+  (click)="trigger()"
+  class="example-ripple-container mat-elevation-z4"
+  matRipple>
+  <mat-card appearance="outlined">
+    <mat-card-content>
+      <img
+        mat-card-image
+        width="200"
+        height="200"
+        alt=""
+        ngSrc="assets/images/{{ icon }}" />
+    </mat-card-content>
+    <mat-card-footer>
+      <mat-card-title> {{ name | translate }}</mat-card-title>
+    </mat-card-footer>
+  </mat-card>
+
+  <ng-content></ng-content>
+</div>

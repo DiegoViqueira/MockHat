@@ -1,0 +1,26 @@
+{
+  "assigned_task": "At the college where you study English, you recently organised a special day to raise money for charity. The Principal of the college has asked you for a report about the day. In your report, you should outline what activities were organised, evaluate the success of the day and make suggestions for future fundraising events. Write your report.",
+  "task_answer": "After the event I organised with the other school representatives, in order to raise funds for charity, it can be said that it was a success. This even made a really good image for the school, even because most of the students came. The event took place last saturday afternoon, and every member of the school was invited with the family and friends who desires to participate. Being close to the Christmas period we invited people to bring clothes, toys, books and everything they would like to donate to less fortunate people. All those things were then given to a charity association that help people of the city and even of other countries such as Romania and Brazil. Beyond of this we even sold creative christmas object that two classes made during a workshop in the last month. For entertaining everybody with something useful two associations came to present themselves and their activities. After this people were free to make offers and the amazing thing is that most of the participants donated something. This day shoud to be considered a real success because of the high number of people who came, which is around five hundreds. The positive thing is that everybody participated actively and happily in a way I have rarely seen. Many objects and moneys were donated and this improved the life of many people with little effort. Concluding I suggest to do this event every year around the Christmas period because is a way of doing something positive in an easy and happy way. Not only because many people came, but also because we helped many unlike families.",
+  "ai_answer": [
+    {
+      "criteria": "Content",
+      "score": 5.0,
+      "feedback": "All content is relevant to the task. The target reader is fully informed about the points in the task. There is information about the activities which took place, an evaluation of the day and suggestions about future similar events."
+    },
+    {
+      "criteria": "Communicative Achievement",
+      "score": 3.0,
+      "feedback": "The conventions of a report, such as a neutral tone throughout, are used effectively to hold the target reader’s attention. There is a reflective tone, and functional language is used to describe and evaluate the events on the day. Straightforward and some complex ideas are communicated: it can be said that it was a success; This day shoud to be considered a real success because of; The positive thing is that."
+    },
+    {
+      "criteria": "Organisation",
+      "score": 2.0,
+      "feedback": "The text is well organised and coherent. Although there are no headings, which are usually used to organise a report, the sections are clearly introduced and focus on one aspect of the task at a time. There is a variety of linking words and cohesive devices, but there is some awkwardness at times, for example the first line of the text and even because; Beyond of this."
+    },
+    {
+      "criteria": "Language",
+      "score": 2.0,
+      "feedback": "There is a range of vocabulary used appropriately for the task: donate; less fortunate people. A range of simple and complex grammatical forms is used with control: who desires to participate; Being close to; those things were then given to; to be considered; everyone participated actively and happily in a way I have rarely seen. Errors are present, including tense control and plural agreement, but these do not impede communication: object; This day shoud to be; many unlike families."
+    }
+  ]
+}

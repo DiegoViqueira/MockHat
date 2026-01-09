@@ -1,0 +1,91 @@
+<wlk-back [url]="toUrl" />
+<div class="class-container">
+  @if (class()) {
+    <mat-card class="class-card">
+      <mat-card-content class="class-header">
+        <div class="class-avatar">
+          {{ class().level.charAt(0) }}
+        </div>
+        <div class="class-info">
+          <div class="class-name">
+            <mat-card-title class="class-title">{{ class().name }}</mat-card-title>
+            <mat-card-subtitle class="class-subtitle">{{ class().description }}</mat-card-subtitle>
+          </div>
+
+          <div class="class-description">
+            <mat-card-subtitle>
+              <strong>{{ 'class.institution' | translate }}</strong>
+              {{ class().institution }}</mat-card-subtitle
+            >
+            <mat-card-subtitle>
+              <strong>{{ 'class.level' | translate }}</strong>
+              {{ class().level }}</mat-card-subtitle
+            >
+          </div>
+        </div>
+      </mat-card-content>
+
+      <mat-card-content style="padding: 1rem">
+        <mat-tab-group mat-align-tabs="center">
+          <mat-tab label="{{ 'classes.metrics.global_metrics' | translate }}">
+            <mat-card-content class="class-metrics">
+              <div class="class-metrics-score">
+                <mat-card>
+                  <mat-card-content>
+                    <mat-card-title>{{ 'class.metrics.average_score' | translate }}</mat-card-title>
+
+                    <mat-card-title>{{
+                      metrics()?.class_score_metrics?.average_score
+                    }}</mat-card-title>
+                  </mat-card-content>
+                </mat-card>
+                <mat-card>
+                  <mat-card-content>
+                    <mat-card-title>{{ 'class.metrics.pass_rate' | translate }}</mat-card-title>
+                    <wlk-progress-bar [percentage]="getPassRate()" />
+                  </mat-card-content>
+                </mat-card>
+                <mat-card>
+                  <mat-card-content>
+                    <mat-card-title>{{
+                      'class.metrics.avg_grammar_errors' | translate
+                    }}</mat-card-title>
+                    <mat-card-title>{{
+                      metrics()?.class_score_metrics?.avg_grammar_errors
+                    }}</mat-card-title>
+                  </mat-card-content>
+                </mat-card>
+              </div>
+            </mat-card-content>
+
+            <mat-card-content class="class-metrics-chart">
+              <wlk-line-chart-component
+                [name]="'Weekly Average Scores'"
+                [datasets]="datasets"
+                [labels]="labels" />
+            </mat-card-content>
+
+            <mat-card-content class="class-metrics-chart">
+              <wlk-bar-chart-component
+                [name]="'Score Criteria Average'"
+                [datasets]="datasetsCriteriaAverage"
+                [labels]="labelsCriteriaAverage" />
+            </mat-card-content>
+          </mat-tab>
+          <mat-tab label="{{ 'classes.students_analysis_table.title' | translate }}">
+            <wlk-students-analysis-table [metrics]="metrics()"
+          /></mat-tab>
+        </mat-tab-group>
+      </mat-card-content>
+    </mat-card>
+  } @else {
+    <mat-card class="class-card center-card">
+      <mat-card-header>
+        <mat-card-title>{{ 'class.no_class' | translate }}</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <mat-card-subtitle>{{ 'class.no_class_subtitle' | translate }}</mat-card-subtitle>
+      </mat-card-content>
+    </mat-card>
+  }
+</div>

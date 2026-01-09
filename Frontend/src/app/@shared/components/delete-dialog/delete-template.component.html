@@ -1,0 +1,18 @@
+<mat-dialog-content>
+  <mat-card-subtitle>{{ data.message | translate }}</mat-card-subtitle>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button
+    (click)="onCancel()"
+    mat-button>
+    {{ 'common.no' | translate }}
+  </button>
+  <button
+    class="submit-save"
+    color="primary"
+    mat-button
+    (click)="onConfirm()"
+    mat-flat-button>
+    {{ 'common.yes' | translate }}
+  </button>
+</mat-dialog-actions>

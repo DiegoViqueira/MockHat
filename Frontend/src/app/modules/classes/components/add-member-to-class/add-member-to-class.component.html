@@ -1,0 +1,23 @@
+<div class="dialog-container">
+  <mat-dialog-content class="mat-typography">
+    <mat-card-title>{{ 'classes.addMemberToClass' | translate }}</mat-card-title>
+    <mat-card-subtitle>{{ 'classes.addMembersToClassTooltip' | translate }}</mat-card-subtitle>
+
+    <mat-tab-group>
+      <mat-tab label="{{ 'classes.students' | translate }}">
+        <wlk-add-student-to-class></wlk-add-student-to-class>
+      </mat-tab>
+      <mat-tab label="{{ 'classes.teachers' | translate }}">
+        <wlk-add-teacher-to-class></wlk-add-teacher-to-class>
+      </mat-tab>
+    </mat-tab-group>
+  </mat-dialog-content>
+  <mat-dialog-actions align="end">
+    <button
+      mat-raised-button
+      color="primary"
+      mat-dialog-close>
+      {{ 'common.close' | translate }}
+    </button>
+  </mat-dialog-actions>
+</div>

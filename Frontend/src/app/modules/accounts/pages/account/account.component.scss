@@ -1,0 +1,104 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+mat-card {
+  box-shadow: none;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--mockhat-primary);
+}
+
+mat-card-header {
+  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+.subtitles-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 0.5rem;
+
+  mat-card-subtitle {
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--mockhat-primary);
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+  }
+
+  mat-card-title {
+    color: var(--mockhat-primary);
+  }
+}
+
+.plans-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.users-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.plans-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(250px, 300px)
+  ); // fija a 2 columnas con ancho máximo
+  gap: 1rem;
+  padding: 1rem;
+  justify-content: center; // centra las columnas en el contenedor
+  margin: 0 auto; // centra el grid mismo
+
+  mat-card {
+    width: 100%;
+    height: 100%;
+  }
+  .pastel-box {
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(
+      135deg,
+      rgba(173, 177, 230, 0.938),
+      rgba(242, 205, 250, 0.836),
+      rgba(174, 185, 245, 0.973)
+    );
+    backdrop-filter: blur(4px);
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &.selected {
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 0 16px rgba(9, 1, 20, 0.637);
+    }
+
+    &:hover {
+      box-shadow: 0 0 16px rgba(9, 1, 20, 0.637);
+    }
+  }
+}
+
+.users-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+  padding: 0.5rem;
+}

@@ -1,0 +1,105 @@
+.no-classess {
+  margin-top: 5rem;
+  text-align: center;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 80vh;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.filter-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  max-width: 99%; // Asegura que no exceda el ancho del contenedor padre
+  margin-top: 1rem;
+
+  mat-form-field {
+    flex: 1;
+    max-width: calc(30% - 48px); // Resta el espacio del botón (40px + 8px de gap)
+  }
+
+  @media (max-width: 768px) {
+    mat-form-field {
+      max-width: 30%;
+    }
+  }
+
+  button {
+    flex-shrink: 0;
+    margin-left: auto;
+  }
+}
+
+.user-avatar {
+  background-color: var(--mockhat-secondary); // o el color que prefieras
+  color: var(--mockhat-primary); // texto
+  font-weight: 600;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 8px;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.table-wrapper {
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+}
+
+.table-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
+
+.pastel-box {
+  background: linear-gradient(
+    135deg,
+    rgba(173, 177, 230, 0.938),
+    rgba(242, 205, 250, 0.836),
+    rgba(174, 185, 245, 0.973)
+  );
+  backdrop-filter: blur(4px);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.class-card {
+  display: flex;
+  mat-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    color: var(--mockhat-primary);
+    border-radius: 10px;
+    gap: 1rem;
+    padding: 1rem;
+    min-height: 50px;
+    margin: 0.5rem 0.5rem 0 0.5rem;
+
+    mat-card-title {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--mockhat-primary);
+    }
+
+    mat-card-subtitle {
+      font-size: 1rem;
+      font-weight: 400;
+      color: var(--mockhat-primary);
+    }
+  }
+}

@@ -1,0 +1,20 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 100%; /* Adjust as needed */
+  margin: 0 auto;
+  max-height: 80%;
+}
+
+
+
+.image-fit {
+  width: 100%;      /* Ensures the image takes up the full width */
+  height: 100%;     /* Ensures the image covers the full height of its container */
+  object-fit: cover; /* Ensures the image covers the container */
+  display: flex;
+  max-height: 350px; /* Sets a max height, adjust as necessary */
+}

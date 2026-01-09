@@ -1,0 +1,13 @@
+.chart-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* Ensures that the chart takes up the full width of the container */
+  height: 400px; /* Set a fixed height for the charts to be the same */
+}
+
+.chart-container canvas {
+  max-width: 100% !important;
+  max-height: 100% !important;
+}
+

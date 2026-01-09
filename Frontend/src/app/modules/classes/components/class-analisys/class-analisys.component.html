@@ -1,0 +1,42 @@
+<wlk-back [url]="toUrl" />
+<div class="class-container">
+  @if (class()) {
+    <mat-card class="class-card">
+      <mat-card-content class="class-header">
+        <div class="class-avatar">
+          {{ class().level.charAt(0) }}
+        </div>
+        <div class="class-info">
+          <div class="class-name">
+            <mat-card-title class="class-title">{{ class().name }}</mat-card-title>
+            <mat-card-subtitle class="class-subtitle">{{ class().description }}</mat-card-subtitle>
+          </div>
+
+          <div class="class-description">
+            <mat-card-subtitle>
+              <strong>{{ 'class.institution' | translate }}</strong>
+              {{ class().institution }}</mat-card-subtitle
+            >
+            <mat-card-subtitle>
+              <strong>{{ 'class.level' | translate }}</strong>
+              {{ class().level }}</mat-card-subtitle
+            >
+          </div>
+        </div>
+      </mat-card-content>
+
+      <mat-card-content class="class-analysis">
+        <markdown [data]="analysis()"></markdown>
+      </mat-card-content>
+    </mat-card>
+  } @else {
+    <mat-card class="class-card center-card">
+      <mat-card-header>
+        <mat-card-title>{{ 'class.no_class' | translate }}</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <mat-card-subtitle>{{ 'class.no_class_subtitle' | translate }}</mat-card-subtitle>
+      </mat-card-content>
+    </mat-card>
+  }
+</div>

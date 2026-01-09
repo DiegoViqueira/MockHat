@@ -1,0 +1,23 @@
+.search-container {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.avatar {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background-color: var(--mockhat-secondary);
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.student-item {
+  margin-bottom: 0.5rem;
+}

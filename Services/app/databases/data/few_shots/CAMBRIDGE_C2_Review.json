@@ -1,0 +1,26 @@
+{
+  "assigned_task": "An international magazine is running a series of reviews of children's books and has asked for contributions from its readers. You decide to send in a review of one book you read when you were a child. You should briefly describe the story and explain the impact the book had on you. You should also assess the extent to which the book is likely to remain relevant for young people in the future. Write your review.",
+  "task_answer": "Children's book\n\nA book that brings back endless memories of my childhood is 'The Hobbit' by J.R.R. Tolkien. This story is a prequel to the trilogy 'The Lord of the Rings' and narrates the life of an extraordinary hobbit named Bilbo Baggins.\n\nThe reason why this book has a special place in my heart is because of the euphoria and excitement it brought as I was flipping through the pages as a kid. The story is based on an adventure that Bilbo Baggins undergoes after being persuaded by an eccentric wizard called Gandalf to join him and other dwarves. Bilbo's life takes a quick turn – from living in a 'Hobbit Hole' to battling bizarre creatures and monsters in the woods. The story had intense moments that as a child left me completely hooked to the plot.\n\nThe ultimate goal of the protagonist was to defeat a malevolent and sinister dragon called 'Smaug' and reclaim all of the gold that he stole from the dwarves. Even up to this day, I still consider Bilbo Baggins as one of the most heroic fictional characters of all time. He was a hobbit living a normal and ordinary life before he transformed into the benevolent hero that made the most heart-touching and ecstatic memories in this plot.\n\nThe impact this book had on me was colossal. I learned a great deal of values and ethics from all the characters that made a worthwhile contribution to the story – from learning to remain humble to respecting your kin and mustering the courage to take up any challenge, no matter how difficult it may seem. I will also venture to say that this book, although a classic, remains highly relevant for youth in upcoming generations, not only because of the valuable lessons it has to offer but because of the mixed feelings of melancholy, merriness, bafflement and adrenaline rushes you may experience while reading.",
+  "ai_answer": [
+    {
+      "criteria": "Content",
+      "score": 5.0,
+      "feedback": "All content is relevant to the task. The target reader is fully informed about a children's book which the writer has read. The story is briefly described, giving some information about the characters and a plot synopsis, and the impact on the writer is explained. The conclusion expresses the relevance to future generations: this book, although classical, remains highly relevant for the youth in upcoming generations."
+    },
+    {
+      "criteria": "Communicative Achievement",
+      "score": 4.0,
+      "feedback": "The conventions of writing a review, such as the use of an informative tone and a positive viewpoint, are used to communicate complex ideas in an effective and convincing way. The book is described appealingly and enthusiastically, and the impact the book has had on the writer is clear: the euphoria and excitement it brought as I was flipping through the pages as a kid; intense moments that left me completely hooked to the plot; I still consider Bilbo Baggins as one of the most heroic fictional characters of all time. The target reader's attention is held with ease and all communicative purposes of the task are fulfilled."
+    },
+    {
+      "criteria": "Organisation",
+      "score": 3.0,
+      "feedback": "The text is a well-organised and coherent whole. The paragraphs are well structured and a variety of cohesive devices and organisational patterns, such as substitution, are used with flexibility to link ideas across sentences and paragraphs in a very natural way: A book; 'The Hobbit'; This Story; This book; is because of; takes a quick turn – from living in a 'Hobbit Hole' to; not only because of ... but because of the. Although there is a lack of more overt cohesive devices, the sentences are constructed to reference preceding and following ideas."
+    },
+    {
+      "criteria": "Language",
+      "score": 3.0,
+      "feedback": "A range of topic-specific vocabulary, including less common lexis, is used effectively and precisely to communicate specific emotions and ideas: endless memories; prequel; euphoria; flipping through the pages; eccentric; battling bizarre creatures; hooked; protagonist; malevolent; reclaim; benevolent; colossal; humble; mustering the courage; melancholy; bafflement; adrenaline. A wide range of simple and complex grammatical forms is used with full control, flexibility and sophistication: after being persuaded; no matter how difficult it may seem. There are occasional errors, but these do not impede communication: hooked to the plot; heart-touching."
+    }
+  ]
+}

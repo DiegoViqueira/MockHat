@@ -1,0 +1,33 @@
+<mat-card class="container">
+  <mat-card-content>
+    <input
+      #fileInput
+      (change)="onFileChange($event)"
+      type="file"
+      id="file"
+      accept="image/*"
+      hidden />
+    <div
+      class="img-area"
+      data-img="">
+      @if (url()) {
+        <img
+          mat-card-image
+          [src]="url()"
+          alt="Image Preview" />
+      } @else {
+        <i class="bx bxs-cloud-upload icon"></i>
+        <h3>{{ 'common.upload_image' | translate }}</h3>
+        <p>{{ 'common.image_size' | translate }} <span>10MB</span></p>
+      }
+    </div>
+    <mat-card-actions align="end">
+      <button
+        (click)="fileInput.click()"
+        mat-raised-button
+        color="primary">
+        <mat-icon>cloud_upload</mat-icon> {{ 'common.upload_image' | translate }}
+      </button>
+    </mat-card-actions>
+  </mat-card-content>
+</mat-card>

@@ -1,0 +1,26 @@
+{
+  "assigned_task": "A magazine has invited readers to contribute to a series of articles entitled ‘An UnforgettableEvent’. You decide to write an article briefly describing an event that is especially memorable for you. You should also evaluate the benefits for people, in general, of recalling memorable events. Write your article.",
+  "task_answer": "'An Unforgettable Event'\nI remember it as if it was yesterday when my English teacher came to me during\na school break and asked me: 'how would you like to go to Canada for a month\nto study at a local high school, all expenses paid?' As you can imagine, my jaw\ndropped something like ten feet at the mere thought of it. I was sixteen at the time\nand it seemed like the world was opening in front of me. After I recovered from the\nimmediate shock I said I would go in a heartbeat, and so we went into the Principal's\noffice to call my mother. It wasn't me making the phonecall but I could perfectly\nimagine what my mom's face was at the other end of the line. First of all, she would be\ncompletely puzzled that I was at the Principal's office because I never got into trouble.\nAfter that, I imagine she was in utter disbelief when she heard the\nwords: 'your daughter is going to Canada for a month, if that is okay with you\nof course.' They passed me the phone and my mom asked me: 'do you want to go?' to\nwhich I said: 'YES!' And that was it, my future had taken a new direction and I was going\nto be in Canada by the end of the year.\n\nAs I had expected I made a lot of new friends, I fell in love with all the members\nof the family that took me in, and I was completely blown away by their completely\ndifferent way of life.\n\nIt is funny though how, despite having had all those wonderful experiences once I\ngot there, I sometimes find myself thinking about the time I was told that, if I wanted\nto, the opportunity was mine, rather than about the time I spent in the actual country.\n\nI believe that recalling memorable events in our lives has a very positive effect on\nus. It makes us feel special, it makes us think back on halcyon times and that joy spreads\nand it is contagious. Suddenly we find ourselves feeling that happiness in every fiber of\nour beings.",
+  "ai_answer": [
+    {
+      "criteria": "Content",
+      "score": 5.0,
+      "feedback": "All content is relevant to the task. The target reader is fully informed about the writer’s memorable event, both the moment of learning about it and the event itself, and of the benefits for people in general of recalling these kinds of events."
+    },
+    {
+      "criteria": "Communicative Achievement",
+      "score": 4.0,
+      "feedback": "The conventions of article writing, with an appropriate combination of direct and indirect speech and a consistent, natural tone, are used with flexibility to communicate the writer's experience and thoughts in a convincing way. Appropriate language choices are used to communicate the writer's enthusiasm for the event recalled, balancing details of the event with reflections on the emotions felt: 'It is funny though how, despite having had...' in the actual country and the reader's attention is held with ease: 'As you can imagine', 'It makes us feel special', 'Suddenly we find ourselves'."
+    },
+    {
+      "criteria": "Organisation",
+      "score": 2.0,
+      "feedback": "The text is well organised and coherent. The organisation of the text is logical and easy to follow: the writer leads the reader through the experience from beginning to end, combining details and emotions, before moving on to a summary of the experience and the impact of similar experiences on people in general. A variety of cohesive devices and organisational patterns are used to good effect: 'After I recovered', 'to which I said', 'And that was it', 'As I had expected', 'despite having had all those wonderful experiences', 'It makes us feel ... it makes us think ... and that joy spreads and it is contagious.'"
+    },
+    {
+      "criteria": "Language",
+      "score": 4.0,
+      "feedback": "A range of vocabulary, including less common vocabulary to describe specific aspects, is used appropriately and sometimes to good effect: 'my jaw dropped', 'utter disbelief', 'blown away', 'halcyon times'. A range of simple and complex grammatical forms is used with control and flexibility: 'I remember it as if it was yesterday', 'I would go in a heartbeat', 'I had expected', 'I sometimes find myself thinking'. Errors are minimal and do not impede communication."
+    }
+  ]
+}

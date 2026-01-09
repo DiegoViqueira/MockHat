@@ -1,0 +1,23 @@
+.mat-mdc-button.mat-mdc-snack-bar-action {
+  color: var(--mockhat-primary) !important;
+}
+
+.info-snackbar {
+  --mdc-snackbar-container-color: #ebdeff !important; /* Azul */
+  --mdc-snackbar-supporting-text-color: #310872 !important; /* Texto blanco */
+}
+
+.warning-snackbar {
+  --mdc-snackbar-container-color: #fdefd5 !important; /* Naranja */
+  --mdc-snackbar-supporting-text-color: #52410a !important; /* Texto blanco */
+}
+
+.error-snackbar {
+  --mdc-snackbar-container-color: #f3d7cf !important; /* Rojo */
+  --mdc-snackbar-supporting-text-color: #8e0b0b !important; /* Texto blanco */
+}
+
+.success-snackbar {
+  --mdc-snackbar-container-color: #dbefe3 !important; /* Verde */
+  --mdc-snackbar-supporting-text-color: #14482b !important; /* Texto blanco */
+}

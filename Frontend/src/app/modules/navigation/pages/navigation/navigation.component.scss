@@ -1,0 +1,112 @@
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Altura completa de la ventana */
+  width: 100%;
+  overflow: hidden; /* Previene scroll en el contenedor principal */
+}
+
+.sidenav-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0; /* Importante: permite que flex items se encojan */
+  overflow: hidden;
+}
+
+mat-drawer-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0; /* Permite encogimiento */
+}
+
+/* Asegura que el contenido del drawer se comporte correctamente */
+::ng-deep .mat-drawer-content {
+  display: flex;
+  flex-direction: column;
+  min-height: 0; /* Permite encogimiento */
+}
+
+.mockhat-title {
+  font-size: 1rem;
+  font-family: 'Rubik', sans-serif;
+  color: var(--mockhat-primary);
+}
+
+mat-divider {
+  color: #3f51b5 !important; /* Cambiado a color primario de Angular Material */
+  background-color: #3f51b5 !important; /* Mismo color para el fondo */
+}
+
+mat-drawer-container {
+  background-color: var(--mockhat-white) !important;
+  padding-left: 1px !important;
+}
+
+.mockhat-title-container {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+/* Estilo para el sidenav según la imagen */
+.side-nav-custom {
+  margin-top: 0.1rem;
+  width: auto !important;
+  min-width: 200px !important; /* Ancho fijo similar al de la imagen */
+  height: calc(100% - 0.3rem) !important;
+  border-top-right-radius: 20px !important;
+  border-bottom-right-radius: 20px !important;
+  border-top-left-radius: 20px !important;
+  border-bottom-left-radius: 20px !important;
+  background-color: var(--mockhat-secondary) !important; /* Color lila claro como en la imagen */
+  overflow: hidden !important;
+  margin-right: 0.01rem; /* Espacio entre el sidenav y el contenido */
+}
+
+/* Para asegurar que los bordes redondeados se muestren */
+::ng-deep .mat-drawer.side-nav-custom {
+  border-top-right-radius: 20px !important;
+  border-bottom-right-radius: 20px !important;
+  border-top-left-radius: 20px !important;
+  border-bottom-left-radius: 20px !important;
+  background-color: var(--mockhat-secondary) !important;
+  border-right: none !important;
+  box-shadow: none !important;
+}
+
+/* Estilo para los elementos del menú */
+
+/* Estilo para el elemento activo del menú */
+.active-nav-item {
+  background-color: #d7c1fb !important; /* Color lila más oscuro para el ítem activo */
+}
+
+/* Estilo para los íconos en el menú */
+mat-icon {
+  color: var(--mockhat-primary); /* Color para los íconos */
+}
+
+/* Estilo para el texto del menú */
+span[matListItemLine] {
+  color: var(--mockhat-primary); /* Color oscuro para el texto */
+  margin-left: 8px;
+}
+
+/* Divider personalizado */
+mat-divider {
+  color: #d4c6f1 !important; /* Color lila para los divisores */
+  background-color: #d4c6f1 !important;
+}
+
+/* Para asegurar que el contenido ocupe todo el espacio disponible */
+.main-content {
+  height: calc(100% - 64px); /* Resta la altura del header */
+  flex: 1;
+  overflow-y: auto;
+}

@@ -1,0 +1,25 @@
+<ion-header [translucent]="true">
+  <ion-toolbar class="custom-toolbar">
+    <!-- Botón de menú -->
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+
+    <!-- Botón secundario -->
+    <ion-buttons slot="secondary">
+      <ion-button>
+        <ion-icon slot="icon-only" name="person-circle"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <!-- Botón de logout -->
+    <ion-buttons slot="primary">
+      <ion-button (click)="logout()">
+        <ion-icon slot="icon-only" name="log-out-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <!-- Título -->
+    <ion-title>{{ title }}</ion-title>
+  </ion-toolbar>
+</ion-header>

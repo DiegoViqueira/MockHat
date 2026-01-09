@@ -1,0 +1,39 @@
+<div class="classes-container">
+  <mat-toolbar>
+    <span>{{ 'classes.title' | translate }}</span>
+
+    <button
+      [disabled]="!isAdmin"
+      (click)="createClass()"
+      mat-raised-button
+      matTooltip="{{ 'classes.buttons.create' | translate }}"
+      color="primary">
+      <mat-icon>add</mat-icon>
+      {{ 'classes.buttons.create' | translate }}
+    </button>
+  </mat-toolbar>
+
+  <mat-tab-group
+    mat-stretch-tabs="false"
+    mat-align-tabs="center"
+    (selectedTabChange)="onTabChange($event)">
+    <mat-tab label="{{ 'classes.tabs.active' | translate }}">
+      <div style="overflow-x: auto">
+        <!-- Contenido compartido -->
+        <wlk-classes-table
+          (gotoClass)="goToClass($event)"
+          (viewMetrics)="viewMetrics($event)"
+          (viewClassAnalysis)="viewClassAnalysis($event)"></wlk-classes-table>
+      </div>
+    </mat-tab>
+    <mat-tab label="{{ 'classes.tabs.inactive' | translate }}">
+      <div style="overflow-x: auto">
+        <!-- Contenido compartido -->
+        <wlk-classes-table
+          (gotoClass)="goToClass($event)"
+          (viewMetrics)="viewMetrics($event)"
+          (viewClassAnalysis)="viewClassAnalysis($event)"></wlk-classes-table>
+      </div>
+    </mat-tab>
+  </mat-tab-group>
+</div>

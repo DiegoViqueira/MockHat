@@ -1,0 +1,461 @@
+{
+  "user_detail": {
+    "plan": "Plan"
+  },
+  "mobile_not_supported": "We are sorry but MockHat is not supported on mobile devices yet! Please use a desktop or laptop computer to access the app.",
+  "plans": { "info": "Subscription Plans" },
+  "assessment": {
+    "name": "Assessment",
+    "detail": "Assessment details",
+    "create": "Start Assessment",
+    "send": "Send",
+    "task_qtty": "Tasks",
+    "task": "Task",
+    "finished": "Well Done !! Lets go Back.",
+    "score": "Score",
+    "you_are": "You Are on "
+  },
+  "recorder": {
+    "stop": "Stop Recording",
+    "start": "Start recording"
+  },
+  "assessments": {
+    "start": "Start New Assessment",
+    "list": "List Old Assessment"
+  },
+  "pick_date": "Pick a date",
+  "actions": "Actions",
+  "expiry_date": "Expiration Date",
+  "pending": "Pending",
+  "Pending": "Pending",
+  "Starting": "Starting",
+  "Started": "Started",
+  "more": "More details",
+  "Fault": "Fault",
+  "OK": "Ok",
+  "Error": "Error",
+  "UNKNOWN_EXCEPTION": "Unknown exception",
+  "Timeout": "Time's up",
+  "passwordRule": "The password is not valid. It must contain at least one special character from the following $!%*._+=?&, a number, an uppercase letter, a lowercase letter, and at least 8 characters.",
+  "ErrorLicence": "License error",
+  "itemsPerPage": "Items per page",
+  "add_confirm": "Are you sure you want to add?",
+  "any_trouble": "Any trouble",
+  "browse_file": "Browse File",
+  "confirm_password": "Confirm new Password",
+  "dnr_here": "Drag your images here",
+  "email": "Email",
+  "onlyNumbers": "Only numeric values.",
+  "email_address": "Email Address",
+  "file_size": "Size",
+  "fill_form": "Fill out the form in this",
+  "full_name": "Full Name",
+  "gender": "Gender",
+  "generate": {
+    "table": "Generate Report"
+  },
+  "id": "Id",
+  "length": "Length",
+  "login_wit_google": "Continue with Google",
+  "log_in": "Log In",
+  "log_out": "Log Out",
+  "login_message": "Hello! Welcome to BioMaster",
+  "mail_to_contact": "or contact us at",
+  "max": "Maximum",
+  "subscribe": "Subscribe Now",
+  "payments": {
+    "event_created_at": "Date",
+    "customer_email": "Customer Email",
+    "subscription_id": "Subscription ID",
+    "plan_description": "Plan Description",
+    "period_start": "Period Start",
+    "period_end": "Period End",
+    "invoice_id": "Invoice ID",
+    "payment_status": "Payment Status",
+    "amount_paid": "Amount Paid",
+    "currency": "Currency",
+    "invoice_pdf_url": "Invoice PDF URL",
+    "free_message": "Your current plan is Free, with limited usage."
+  },
+  "writing": {
+    "student_id": "Student",
+    "student_name": "Full Name",
+    "file": "File",
+    "result": "Writing AI Result",
+    "check": "Correct",
+    "list": "List Writings",
+    "list_grammar": "List Grammars",
+    "text": "Receive instant feedback on your writing. All done automagically!",
+    "upload_assessment": "Upload Assessment",
+    "verify_assessment": "Verify Assessment",
+    "upload_answer": "Upload Answer",
+    "verify_answer": "Verify Answer",
+    "evaluate": "Evaluate",
+    "task": "Task",
+    "spell_check": "Grammar correction",
+    "state": "State",
+    "next": "Next",
+    "reset": "Reset",
+    "uploaded_assessment": "Uploaded Assessment",
+    "verified_assessment": "Verified Assessment",
+    "form": {
+      "submit": "Save",
+      "close": "Close",
+      "add": "Add"
+    },
+    "actions": "Actions"
+  },
+  "menu": {
+    "section_subpart": "Section Sub Part",
+    "administration": "Administration",
+    "dashboard": "Dashboard",
+    "assessments": "Assessments",
+    "profits": "Profits",
+    "datasets": "Datasets",
+    "payments": "Billing",
+    "chatbot": "ChatBot",
+    "settings": "Settings",
+    "questions": "Questions",
+    "users": "Users",
+    "writing": "Writing",
+    "info": "Info",
+    "students": "Students"
+  },
+  "students": {
+    "name": "Students",
+    "form": {
+      "name": "Name",
+      "last_name": "Last Name",
+      "level": "Level",
+      "submit": "Save",
+      "close": "Close"
+    },
+    "table": {
+      "name": "Name",
+      "last_name": "Last Name",
+      "level": "Level",
+      "edit": "Edit"
+    }
+  },
+  "question": {
+    "text": "Text",
+    "exam_type": "Exam Type",
+    "institution": "Institution",
+    "section": "Section",
+    "level": "Level",
+    "tags": "Tags",
+    "disabled": "Disabled",
+    "part": "Part",
+    "subpart": "Sub Part",
+    "register": "Register Question",
+    "section_subpart": "Section Sub Part",
+    "response": "Your answer",
+    "video": "Video",
+    "image": "Image",
+    "audio": "Audio",
+    "creator": "Creator",
+    "validator": "Validator",
+    "created": "Created",
+    "updated": "Updated",
+    "image_description": "Image content description",
+    "video_description": "Video content description",
+    "audio_description": "Audio content description"
+  },
+  "questions": {
+    "register": "Register Question"
+  },
+  "dashboard": {
+    "assessments": "Assessments",
+    "users": "Users",
+    "profits": "Profits",
+    "dataset": "Dataset",
+    "progress": "Progress",
+    "statistics": "Statistics by Month",
+    "usage": "Plan Usage",
+    "writings": "Writings",
+    "grammars": "Grammars"
+  },
+  "usage": {
+    "usedused": "Used",
+    "remaining": "Remaining"
+  },
+  "min": "Minimum",
+  "MONTH": "Month",
+  "new": "New",
+  "new_password": "New Password",
+  "next": "Next",
+  "no_account": "Don't have an account?",
+  "no_data": "No information to display",
+  "old_password": "Current Password",
+  "or": "or",
+  "password": "Password",
+  "period": "Period",
+  "pick_a_date": "Select a date",
+  "prev": "Previous",
+  "quantity": "Quantity",
+  "required": "is required",
+  "select": "Select",
+  "symbols": "Symbols",
+  "total": "Total",
+  "user": "User",
+  "WEEK": "Week",
+  "YEAR": "Year",
+  "empty": " ",
+  "appname": "Herta - BioMaster",
+  "loading": "Loading data. Please wait...",
+  "username": "Username",
+  "remember": "Remember my credentials",
+  "all": "All",
+  "from": "From",
+  "faces": "Faces",
+  "to": "To",
+  "dateTime": "Date Time",
+  "search": "Search",
+  "searchPlaceholder": "Type something here",
+  "image": "Image",
+  "image_size": "Image size must be less than",
+  "firstName": "First Name",
+  "filter": "Filter",
+  "lastName": "Last Name",
+  "time": "Date Time",
+  "validThrough": "Valid through",
+  "comments": "Comments",
+  "type": "Type",
+  "timeStamp": "Date Time",
+  "token": "Token",
+  "close": "Close",
+  "activity": "Active",
+  "lastUpdate": "Last Update",
+  "general": "General",
+  "dataBase": "Database",
+  "language": "Language",
+  "logLevel": "Log Level",
+  "days": "days",
+  "role": "Role",
+  "usersFound": "Users found",
+  "newPassword": "New Password",
+  "repeatPassword": "Repeat Password",
+  "color": "Color",
+  "selectColor": "Select Color",
+  "valuesOutsideRecommendedRange": "The following values are outside the recommended ranges:",
+  "unrecommendedValues": "Unrecommended values",
+  "settingsUpdated": "The options were updated successfully",
+  "settingsUpdateError": "Could not update the options",
+  "userDeleteError": "Could not delete the user",
+  "userUpdateError": "Could not update the user",
+  "userCreateError": "Could not create the user",
+  "userUpdated": "The user was updated successfully",
+  "adminDeleteError": "Cannot delete the last administrator",
+  "userDeleted": "The user was deleted successfully",
+  "userAdded": "The user was created successfully",
+  "somethingWrong": "Something went wrong",
+  "version": "{version_ui} - {version_server}",
+  "userDeleteSameError": "Cannot delete the user you are currently logged in as",
+  "confirm": "Confirm",
+  "no": "No",
+  "yes": "Yes",
+  "modified": "Updated",
+  "unmodified": "Not updated",
+  "never": "Never",
+  "reset": "Reset",
+  "of": "of",
+  "sizeAmount": "Size: {value}",
+  "timeValue": "Date Time",
+  "contactSupportPre": "Having trouble with the application?",
+  "contactSupport": "Contact support",
+  "startService": "Start service",
+  "Administrator": "Administrator",
+  "logout": "Goodbye",
+  "unknown": "Unknown",
+  "congratulations": "Congratulations!",
+  "logOutMessage": "Logging out, please wait...",
+  "errorLogin": "The username or password is incorrect. Please try again.",
+  "header": {
+    "profile": "Profile",
+    "logout": "Log out",
+    "plans": "Plans"
+  },
+  "writing_tab": {
+    "text": "Write or Validate Text",
+    "image_preview": "Image Preview"
+  },
+  "rate": {
+    "title": "Give us a feedback, to do it better !",
+    "subtitle": "Is this response adequate?"
+  },
+  "upload_image": "Upload an image",
+  "login": {
+    "name": "Login",
+    "errorPassword": "Password cannot be empty",
+    "errorUsername": "Username cannot be empty",
+    "with_socials": "With a Social Network",
+    "with_account": "With an account",
+    "or": "OR",
+    "no_account": "Don't have an account? Contact us",
+    "with_google": "Continue with Google",
+    "with_microsoft": "Continue with Microsoft"
+  },
+  "profile": {
+    "title": "Profile",
+    "username": "Username",
+    "password": "Password",
+    "errorPassword": "Password cannot be empty",
+    "newPassword": "New password",
+    "confirmPassword": "Re-enter password",
+    "mismatch": "Please ensure your passwords match",
+    "passwordChanged": "Password was changed"
+  },
+  "users": {
+    "delete": "Delete user",
+    "deleteBody": "Are you sure you want to permanently delete this user?",
+    "register": "Register user",
+    "update": "Update user",
+    "deleteDialog": "Are you sure you want to delete?",
+    "blocked": "Blocked",
+    "errorUsername": "Username must be at least 5 characters",
+    "first_name": "First Name",
+    "last_name": "Last Name",
+    "email": "Email",
+    "level": "Level",
+    "gender": "Gender"
+  },
+  "Male": "Male",
+  "Female": "Female",
+  "paginator": {
+    "firstPage": "First page",
+    "itemsPerPage": "Items per page",
+    "lastPage": "Last page",
+    "nextPage": "Next page",
+    "previousPage": "Previous page",
+    "of": "of"
+  },
+  "ai_generated": "This content was generated using artificial intelligence and may contain errors. Please verify before using it.",
+  "error": {
+    "backend": "Service unavailable. contact administator.",
+    "license": "Usage plan limit reached."
+  },
+  "upgrade_plan": "Upgrade Plan",
+  "stripe_customer_id": "Customer Id Stripe",
+  "info": {
+    "title": "MockHat - Compliance with EU Regulations",
+    "introduction": "At {{company}}, we are committed to complying with {{eu}} regulations, including the {{aiAct}} and the {{gdpr}}. Protecting your privacy, ensuring the security of your data, and using AI ethically are our top priorities.",
+    "sections": {
+      "aiAct": {
+        "title": "AI Act",
+        "description": "Ethical and Safe Use of AI",
+        "content": "The {{aiAct}} of the {{eu}} regulates the use of artificial intelligence to ensure safety and the protection of fundamental rights. Our platform complies with this law through:",
+        "list": {
+          "transparency": "Transparency: We explain how our AI systems work and the data they use.",
+          "riskManagement": "Risk Management: We conduct rigorous audits to ensure the fairness and safety of our AI systems.",
+          "humanSupervision": "Human Supervision: We ensure human intervention in critical decisions to prevent risks."
+        },
+        "actions": {
+          "next": "Next"
+        }
+      },
+      "gdpr": {
+        "title": "GDPR",
+        "description": "Protection of Your Personal Data",
+        "content": "The {{gdpr}} establishes how we handle personal data. We ensure compliance with its principles:",
+        "list": {
+          "transparency": "Transparency: We clearly explain how we process your data.",
+          "minimization": "Data Minimization: We only collect the essential data.",
+          "security": "Security: We use advanced measures such as encryption to protect your information.",
+          "servicesInEU": "Services within the EU: All our services are hosted on servers located within the EU, adhering to strict European standards of security and privacy.",
+          "userRights": "User Rights: You can access, rectify, delete, and port your data, as well as object to its use."
+        },
+        "actions": {
+          "next": "Next",
+          "previous": "Previous"
+        }
+      },
+      "ethicalIA": {
+        "title": "Ethical Use of AI",
+        "list": {
+          "fairness": "Fairness: We eliminate biases in our AI models to ensure fair treatment for all users.",
+          "anonymization": "Data Anonymization: We never send personal data to our AI models. Any information used to train or improve model performance is anonymized to ensure users cannot be identified."
+        },
+        "actions": {
+          "previous": "Previous"
+        }
+      },
+      "conclusion": {
+        "title": "Staying Up-to-Date",
+        "content": "We continuously update our platform to comply with evolving {{eu}} regulations."
+      }
+    }
+  },
+  "months": {
+    "1": "January",
+    "2": "February",
+    "3": "March",
+    "4": "April",
+    "5": "May",
+    "6": "June",
+    "7": "July",
+    "8": "August",
+    "9": "September",
+    "10": "October",
+    "11": "November",
+    "12": "December"
+  },
+  "legal": {
+    "title": "By continuing, you agree to the updated",
+    "subtitle": "and"
+  },
+  "termsOfSale": {
+    "title": "Terms of Sale",
+    "lastUpdate": "Last updated: 19/11/2024",
+    "content": "These Terms of Sale govern the transactions made through the MockHat platform (hereinafter, 'we' or 'our'). By making a purchase, you agree to the terms described below.",
+    "sections": {
+      "services": "1. Services Offered",
+      "servicesDetails": "1.1. MockHat provides automated writing assessment services and related testing based on artificial intelligence. 1.2. Services are subject to availability and may be modified or suspended without prior notice.",
+      "pricing": "2. Pricing and Payments",
+      "pricingDetails": "2.1. Service prices are indicated on the corresponding page and may vary depending on the selected plan. 2.2. Payments must be made in full before accessing the service. 2.3. We accept payments via [credit/debit cards, PayPal, etc.].",
+      "refunds": "3. Refund Policy",
+      "refundsDetails": "3.1. Refunds are only available if the services have not been used within [X days] of purchase. 3.2. If you believe there has been a billing error, contact us at [support email].",
+      "liability": "4. Limitation of Liability",
+      "liabilityDetails": "4.1. MockHat is not responsible for errors in assessment or results derived from the use of the service. 4.2. Our maximum liability will be limited to the amount paid for the service."
+    }
+  },
+  "termsOfService": {
+    "title": "Terms of Service",
+    "lastUpdate": "Last updated: 19/11/2024",
+    "content": "These Terms of Service govern your use of the MockHat platform. By accessing or using our site and services, you agree to the following terms.",
+    "sections": {
+      "use": "1. Use of the Service",
+      "useDetails": "1.1. MockHat is designed to provide AI-based writing assessment tests. 1.2. You must be over 18 years old or have the consent of a legal guardian to use our services.",
+      "account": "2. User Account",
+      "accountDetails": "2.1. You are responsible for maintaining the security of your account and credentials. 2.2. MockHat reserves the right to suspend or delete accounts that violate these terms.",
+      "prohibitions": "3. Prohibitions",
+      "prohibitionsDetails": "3.1. Using MockHat for illegal or unauthorized activities is prohibited. 3.2. You must not attempt to access, modify, or manipulate our systems or data.",
+      "intellectual": "4. Intellectual Property",
+      "intellectualDetails": "4.1. All rights to the services, including algorithms and assessments, are the exclusive property of MockHat. 4.2. Unauthorized reproduction, distribution, or use of platform-generated content is prohibited.",
+      "modifications": "5. Modifications",
+      "modificationsDetails": "5.1. MockHat may update these terms at any time. Changes will become effective once published on our site.",
+      "liability": "6. Limitation of Liability",
+      "liabilityDetails": "6.1. MockHat does not guarantee absolute accuracy of assessments and is not liable for decisions based on results. 6.2. Our maximum liability is limited to the cost of the service used."
+    }
+  },
+  "privacyPolicy": {
+    "title": "Privacy Policy",
+    "lastUpdate": "Last updated: 19/11/2024",
+    "content": "This Privacy Policy explains how MockHat collects, uses, and protects your personal information.",
+    "sections": {
+      "data": "1. Information Collected",
+      "dataDetails": "1.1. Personal Information: We collect data such as your name, email, and payment details when you register or use our services. 1.2. Technical Information: We collect data such as your IP address, browser type, and activity on our site to improve user experience.",
+      "usage": "2. Use of Information",
+      "usageDetails": "2.1. We use your information to provide contracted services, improve our assessment tools, and send important notifications and promotional content (with your consent).",
+      "retention": "3. Data Retention",
+      "retentionDetails": "3.1. We retain your information as necessary to fulfill the purposes described in this policy or as required by applicable laws.",
+      "security": "4. Security",
+      "securityDetails": "4.1. We implement technical and organizational measures to protect your personal information from unauthorized access. However, no system is completely secure.",
+      "rights": "5. Your Rights",
+      "rightsDetails": "5.1. You can access, correct, or delete your personal information by contacting us at [support email]. 5.2. You have the right to opt-out of promotional emails by clicking the 'unsubscribe' link in our emails.",
+      "cookies": "6. Cookies",
+      "cookiesDetails": "6.1. We use cookies to enhance your experience on the site. You can configure your browser to disable cookies, but this may affect some site functionalities.",
+      "changes": "7. Changes to this Policy",
+      "changesDetails": "7.1. MockHat may update this policy at any time. Significant changes will be notified by publishing an update on our site."
+    }
+  }
+}

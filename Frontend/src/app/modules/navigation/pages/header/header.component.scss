@@ -1,0 +1,29 @@
+.nav-header {
+  display: flex;
+  align-items: center;
+}
+
+.toolbar {
+  background-color: var(--mockhat-white);
+  border-bottom: 1px solid var(--mockhat-secondary);
+}
+
+.space-elements-header {
+  display: flex;
+  margin-right: 1rem;
+  justify-content: space-around;
+  align-items: center;
+  margin-left: auto; /* Esto empujará los elementos hacia la derecha */
+}
+
+.text-account {
+  font-size: 0.8rem;
+  font-family: 'Rubik', sans-serif;
+  color: var(--mockhat-primary);
+}
+
+.is-mobile .toolbar {
+  position: fixed;
+  /* Make sure the toolbar will stay on top of the content as it scrolls past. */
+  z-index: 2;
+}

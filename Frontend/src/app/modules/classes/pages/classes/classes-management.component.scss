@@ -1,0 +1,32 @@
+@use '@angular/material' as mat;
+
+.classes-container {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+mat-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  gap: 1rem;
+  background-color: var(--mockhat-white);
+  span {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--mockhat-primary);
+  }
+}
+
+mat-tab-group {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+::ng-deep .mat-mdc-tab .mdc-tab__content {
+  font-size: 1rem !important;
+}

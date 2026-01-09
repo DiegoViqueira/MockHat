@@ -1,0 +1,15 @@
+<div>
+  <strong>{{ label }}</strong>
+  <div class="progress-container">
+    <div
+      class="progress-fill"
+      [style.width.%]="percentage">
+      <span *ngIf="percentage >= 1">{{ percentage }}%</span>
+      <span
+        *ngIf="percentage < 1"
+        class="progress-text"
+        >{{ percentage }}%</span
+      >
+    </div>
+  </div>
+</div>

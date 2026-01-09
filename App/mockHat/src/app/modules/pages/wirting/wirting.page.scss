@@ -1,0 +1,29 @@
+.step-indicator {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: lightgray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+
+.step-title {
+  text-align: center;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+ion-col.active .step-indicator {
+  background-color: var(--ion-color-primary);
+  color: white;
+}
+
+.step-content {
+  text-align: center;
+  margin-top: 20px;
+  align-items: center;
+  justify-content: center;
+  padding: auto;
+}

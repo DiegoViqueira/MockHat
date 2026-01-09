@@ -1,0 +1,22 @@
+# Production stage
+FROM python:3.12 AS build
+
+WORKDIR /app
+# Create a non-root user
+RUN useradd -m mockhat
+
+# Copy application
+COPY app/ ./app
+COPY config/.env.prod ./config/.env
+
+# Install only runtime dependencies
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Update PATH environment variable for mockhat
+ENV PATH="/home/mockhat/.local/bin:${PATH}"
+
+# Switch to non-root user
+USER mockhat
+
+CMD ["python", "app/payments.py"]

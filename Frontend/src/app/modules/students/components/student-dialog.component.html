@@ -1,0 +1,69 @@
+<mat-card>
+  <mat-card-content>
+    <form [formGroup]="studentForm">
+      <!-- Name Field -->
+      <p>
+        <mat-form-field
+          appearance="outline"
+          class="form-field">
+          <mat-label> {{ 'students.form.name' | translate }}</mat-label>
+          <input
+            matInput
+            formControlName="name"
+            placeholder="{{ 'students.form.name' | translate }}" />
+        </mat-form-field>
+      </p>
+      <!-- Last Name Field -->
+      <p>
+        <mat-form-field
+          appearance="outline"
+          class="form-field">
+          <mat-label> {{ 'students.form.last_name' | translate }}</mat-label>
+          <input
+            matInput
+            formControlName="last_name"
+            placeholder="{{ 'students.form.last_name' | translate }}" />
+        </mat-form-field>
+      </p>
+      <!-- Level Field -->
+      <p>
+        <mat-form-field
+          appearance="outline"
+          class="form-field">
+          <mat-label>
+            {{ 'students.form.email' | translate }}
+            <span class="optional-text">({{ 'common.optional' | translate }})</span>
+          </mat-label>
+          <input
+            matInput
+            formControlName="email"
+            placeholder="{{ 'students.form.email' | translate }}" />
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-slide-toggle formControlName="active">
+          {{ 'common.active' | translate }}
+        </mat-slide-toggle>
+      </p>
+      <!-- Submit Button -->
+    </form>
+  </mat-card-content>
+  <mat-card-footer>
+    <mat-card-actions align="end">
+      <button
+        (click)="onSubmit()"
+        mat-raised-button
+        color="primary"
+        [disabled]="!studentForm.valid">
+        {{ 'common.save' | translate }}
+      </button>
+
+      <button
+        mat-raised-button
+        color="primary"
+        (click)="close()">
+        {{ 'common.close' | translate }}
+      </button>
+    </mat-card-actions>
+  </mat-card-footer>
+</mat-card>

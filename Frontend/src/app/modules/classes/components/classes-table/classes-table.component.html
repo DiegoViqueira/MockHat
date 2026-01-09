@@ -1,0 +1,60 @@
+<ng-container *ngIf="classes().length > 0; else noClasses">
+  <div class="table-wrapper">
+    <div class="filter-container">
+      <mat-form-field
+        appearance="outline"
+        class="filter-input">
+        <mat-icon matSuffix>search</mat-icon>
+        <mat-label>{{ 'classes.filter.title' | translate }}</mat-label>
+        <input
+          matInput
+          (keyup)="applyFilter($event)"
+          placeholder="{{ 'classes.filter.placeholder' | translate }}"
+          #input />
+      </mat-form-field>
+      <button mat-icon-button>
+        <mat-icon>grid_view</mat-icon>
+      </button>
+    </div>
+    <div class="table-grid">
+      @for (class of classesfiltered(); track class._id) {
+        <mat-card class="class-card">
+          <mat-card-header class="pastel-box">
+            <mat-card-title>{{ class.name }}</mat-card-title>
+            <mat-card-subtitle>{{ class.description }}</mat-card-subtitle>
+          </mat-card-header>
+          <mat-card-actions align="end">
+            <button
+              matTooltip="{{ 'classes.buttons.view_metrics' | translate }}"
+              (click)="viewMetrics.emit(class)"
+              mat-icon-button>
+              <mat-icon>bar_chart</mat-icon>
+            </button>
+            <button
+              matTooltip="{{ 'classes.buttons.class_analysis' | translate }}"
+              (click)="viewClassAnalysis.emit(class)"
+              mat-icon-button>
+              <mat-icon svgIcon="ai" />
+            </button>
+            <button
+              matTooltip="{{ 'classes.buttons.more' | translate }}"
+              (click)="classClick(class)"
+              mat-icon-button>
+              <mat-icon>more_vert</mat-icon>
+            </button>
+          </mat-card-actions>
+        </mat-card>
+      }
+    </div>
+  </div>
+</ng-container>
+<ng-template #noClasses>
+  <div class="no-classess">
+    <img
+      src="assets/icons/education.svg"
+      width="300"
+      height="300"
+      alt="No classes" />
+    <mat-card-title>{{ 'classes.no-aulas' | translate }} </mat-card-title>
+  </div>
+</ng-template>

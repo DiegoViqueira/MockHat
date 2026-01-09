@@ -1,0 +1,142 @@
+<wlk-back
+  [url]="backUrl"
+  class="back-button" />
+@if (class()) {
+  <div class="create-assessment-container">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>{{ 'assessments.createAssessment' | translate }}</mat-card-title>
+
+        <mat-card-subtitle>{{ 'class.name' | translate }}: {{ class()?.name }}</mat-card-subtitle>
+        <mat-chip-listbox>
+          <mat-chip>{{ class()?.level }}</mat-chip>
+          <mat-chip>{{ class()?.institution }}</mat-chip>
+        </mat-chip-listbox>
+      </mat-card-header>
+      <mat-card-content>
+        <div class="form-column">
+          <form [formGroup]="form">
+            <mat-form-field appearance="outline">
+              <mat-label>{{ 'assessments.form.name' | translate }}</mat-label>
+              <input
+                matInput
+                formControlName="name" />
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+              <mat-label>{{ 'assessments.form.exam_type' | translate }}</mat-label>
+              <mat-select
+                formControlName="exam_type"
+                (selectionChange)="onExamTypeChange($event.value)">
+                <mat-option
+                  *ngFor="let examType of availableExamTypes"
+                  [value]="examType">
+                  {{ examType }}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+
+            <mat-form-field
+              appearance="outline"
+              *ngIf="availableTasks.length">
+              <mat-label>{{ 'assessments.form.task' | translate }}</mat-label>
+              <mat-select
+                placeholder="Task"
+                formControlName="task">
+                <mat-option
+                  *ngFor="let task of availableTasks"
+                  [value]="task">
+                  {{ task }}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+          </form>
+
+          <input
+            #fileInput
+            (change)="onFileChange($event)"
+            type="file"
+            id="file"
+            accept="image/*"
+            hidden />
+
+          <input
+            #cameraInput
+            type="file"
+            accept="image/*"
+            capture="environment"
+            (change)="onFileChange($event)"
+            hidden />
+
+          <div class="image-preview">
+            @if (url()) {
+              <img
+                mat-card-image
+                [src]="url()"
+                alt="Image Preview" />
+            }
+            @if (!isMobile() && !url()) {
+              <div class="upload-image-container">
+                <mat-card-subtitle>{{ 'common.upload_image' | translate }}</mat-card-subtitle>
+                <mat-card-subtitle>{{ 'common.image_size' | translate }}</mat-card-subtitle>
+              </div>
+            }
+          </div>
+        </div>
+      </mat-card-content>
+      <mat-card-actions align="end">
+        @if (isMobile()) {
+          @if (isIOS) {
+            <button
+              mat-mini-fab
+              color="primary"
+              style="box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1)"
+              (click)="fileInput.click()">
+              <mat-icon>camera</mat-icon>
+            </button>
+          } @else {
+            <button
+              [matMenuTriggerFor]="menu"
+              aria-label="User actions"
+              color="primary"
+              mat-raised-button>
+              <mat-icon>more_vert</mat-icon>
+              {{ 'assessments.form.upload_image' | translate }}
+            </button>
+            <mat-menu #menu="matMenu">
+              <button
+                (click)="cameraInput.click()"
+                mat-menu-item>
+                <mat-icon>camera</mat-icon>
+                <span>{{ 'common.camera' | translate }}</span>
+              </button>
+              <button
+                (click)="fileInput.click()"
+                mat-menu-item>
+                <mat-icon>cloud_upload</mat-icon>
+                <span>{{ 'common.upload' | translate }}</span>
+              </button>
+            </mat-menu>
+          }
+        } @else {
+          <button
+            mat-raised-button
+            color="primary"
+            style="box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1)"
+            (click)="fileInput.click()">
+            <mat-icon>cloud_upload</mat-icon>
+            {{ 'assessments.form.upload_image' | translate }}
+          </button>
+        }
+
+        <button
+          [disabled]="!form.valid || !url()"
+          mat-raised-button
+          (click)="createAssessment()"
+          color="primary">
+          {{ 'assessments.form.create' | translate }}
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+}

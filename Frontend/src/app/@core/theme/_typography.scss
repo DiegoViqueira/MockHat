@@ -1,0 +1,30 @@
+@use '@angular/material' as mat;
+
+@include mat.core();
+
+:root {
+  --mockhat-text-primary: 'PT Sans';
+  --mockhat-text-secondary: 'Rubik';
+}
+
+:root {
+  span {
+    font-family: var(--mockhat-text-primary);
+  }
+  h1 {
+    font-family: var(--mockhat-text-secondary);
+  }
+  h2 {
+    font-family: var(--mockhat-text-secondary);
+  }
+  h3 {
+    font-family: var(--mockhat-text-secondary);
+  }
+  h4 {
+    font-family: var(--mockhat-text-secondary);
+  }
+
+  p {
+    font-family: var(--mockhat-text-primary);
+  }
+}

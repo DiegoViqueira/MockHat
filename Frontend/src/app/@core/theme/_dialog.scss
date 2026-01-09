@@ -1,0 +1,18 @@
+mat-dialog-container {
+  background-color: var(--mockhat-white);
+  border-radius: 1rem;
+}
+
+mat-dialog-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--mockhat-primary);
+}
+
+mat-dialog-content {
+  background-color: var(--mockhat-white);
+}
+
+mat-dialog-actions {
+  background-color: var(--mockhat-white);
+}

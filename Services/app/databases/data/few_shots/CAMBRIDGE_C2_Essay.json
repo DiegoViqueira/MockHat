@@ -1,0 +1,26 @@
+{
+  "assigned_task": "Technology in our lives\n\nDespite the obvious advantages of new technology, the speed with which we are confronted with new developments leaves many feeling overwhelmed. How we respond to new technologies is often a reflection of how able we are as individuals to cope with change in other areas of our lives. If we feel in control, we are more likely to embrace innovation; if we are less confident, we may avoid situations which threaten or challenge us.\n\nTechnology at work\n\nWhether it be new software for the office, or state-of-the-art equipment for the factory, the successful introduction of new technology in the workplace requires effective, practical training in how to use it. This training allows staff to become familiar with the technology before using it for real in their daily tasks. Getting everyone on board by preparing them psychologically for change is the first step, as unless they are persuaded that they, too, will benefit by learning new skills or doing less interesting tasks more quickly, then whatever form the change takes, it will meet with a certain amount of resistance.\n\nWrite your essay.",
+  "task_answer": "MAN VS. COMPUTER:\nIt is an undeniable truth that technology has become a mainstay in our lives. From our personal lives to our public sphere tasks, there is a perpetual flow of gadgets and gizmos creeping into our environments to assist us with our activities. And what's not to like? For the most part, even the most monotonous of tasks have become quicker and easier with the help of these inventions.\n\nOf course, there are those who are not yet completely comfortable with this notion. The sheer acceleration with which new technologies are brought to life is enough to make any tradition-oriented person run for the hills! In fact, it has been proven that an individual's ability to 'cope' with this phenomenon mirrors their character; people who hold tighter reins on the happenings in their lives tend to welcome change, whereas those who are less confident see it as a threat to a certain degree.\n\nThis leads to an impasse in the workplace; an employee probably cannot avoid working with new technology altogether simply because they are less confident. Therefore, it is imperative that works are effectively and practically trained so that they can be in control, and thus have no qualms about new innovations. The first step here would be to instill the right mindset in employees by assuring them that they would gain greatly from this change. In fact, this is a vital step in any effort to seamlessly integrate humans and technology, as it paves the way for far greater developments in the future.",
+  "ai_answer": [
+    {
+      "criteria": "Content",
+      "score": 5.0,
+      "feedback": "All content is relevant to the task. The target reader is fully informed about the main ideas in the two texts. The writer covers how people react to the development of technology both in our everyday lives and at work: The sheer acceleration ... run for the hills; ability to 'cope' with this phenomenon mirrors their character; effectively and practically trained; instill the right mindset in the employees. The writer's own views are evident throughout the text."
+    },
+    {
+      "criteria": "Communicative Achievement",
+      "score": 4.0,
+      "feedback": "The conventions of essay writing are used naturally and with flexibility. The evaluation of the key points from the input texts is combined with the writer's opinions: 'it is imperative that works are effectively and practically trained; this is a vital step' and complex ideas are communicated convincingly. The writer has adopted an informal tone which is used consistently to engage and hold the interest of the reader with ease: 'And what's not to like?', 'run for the hills!', ''cope' with this phenomenon'."
+    },
+    {
+      "criteria": "Organisation",
+      "score": 3.0,
+      "feedback": "The text is a well-organised, coherent whole. The shift between the different points in the input texts develops naturally: 'In fact, it has been proven that', 'This leads to an impasse', 'The first step here would be', enabling the writer to express opinions on the central topic effectively. Cohesive devices and organisational patterns are used with flexibility: 'From our personal lives to our public sphere tasks', 'there are those who are', 'with which', 'whereas those who are less confident', 'and thus', 'as it paves the way'."
+    },
+    {
+      "criteria": "Language",
+      "score": 4.0,
+      "feedback": "A range of less common lexis is used with sophistication and precision: undeniable truth, mainstay, a perpetual flow of gadgets and gizmos, monotonous, run for the hills, mirrors their character, imperative, no qualms, instill the right mindset, but also with some examples of less appropriate usage arising from ambition: hold tighter reins on the happenings in their lives, seamlessly integrate humans and technology. Use of grammar is natural and sophisticated and errors are minimal."
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+<wlk-back [url]="toUrl" />
+<div class="class-container">
+  @if (class()) {
+    <mat-card class="class-card">
+      <mat-card-content class="class-header">
+        <div class="class-avatar">
+          {{ class().level.charAt(0) }}
+        </div>
+        <div class="class-info">
+          <div class="class-name">
+            <mat-card-title class="class-title">{{ class().name }}</mat-card-title>
+            <mat-card-subtitle class="class-subtitle">{{ class().description }}</mat-card-subtitle>
+          </div>
+
+          <div class="class-description">
+            <mat-card-subtitle>
+              <strong>{{ 'class.institution' | translate }}</strong>
+              {{ class().institution }}</mat-card-subtitle
+            >
+            <mat-card-subtitle>
+              <strong>{{ 'class.level' | translate }}</strong>
+              {{ class().level }}</mat-card-subtitle
+            >
+          </div>
+        </div>
+        <div class="class-actions">
+          <mat-slide-toggle
+            [disabled]="IsAdmin"
+            class="example-margin"
+            matTooltip="{{ 'class.toggle_class' | translate }}"
+            [checked]="isActive()"
+            (change)="onToggleClass($event)">
+          </mat-slide-toggle>
+        </div>
+      </mat-card-content>
+
+      <mat-card-content>
+        <mat-tab-group
+          mat-stretch-tabs="false"
+          mat-align-tabs="center"
+          [selectedIndex]="toAssessments ? 1 : 0"
+          (selectedTabChange)="onTabChange($event)">
+          <mat-tab label="{{ 'class.members' | translate }}">
+            <wlk-class-members-table />
+          </mat-tab>
+          <mat-tab label="{{ 'class.assessments' | translate }}">
+            <wlk-class-assessments-table />
+          </mat-tab>
+        </mat-tab-group>
+      </mat-card-content>
+    </mat-card>
+  } @else {
+    <mat-card class="class-card center-card">
+      <mat-card-header>
+        <mat-card-title>{{ 'class.no_class' | translate }}</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <mat-card-subtitle>{{ 'class.no_class_subtitle' | translate }}</mat-card-subtitle>
+      </mat-card-content>
+    </mat-card>
+  }
+</div>

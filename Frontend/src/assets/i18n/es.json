@@ -1,0 +1,439 @@
+{
+  "ai_generated": "Este contenido fue generado con inteligencia artificial y puede contener errores. Verifica antes de usarlo.",
+  "assessments": {
+    "no_assessment": "No hay evaluación seleccionada",
+    "no_assessment_subtitle": "Por favor regresa y selecciona una evaluación para ver los detalles",
+    "add_more_writings": "Agregar más escrituras",
+    "createAssessment": "Crear evaluación",
+    "list": "Ver evaluaciones",
+    "start": "Iniciar nueva evaluación",
+    "view": "Ver evaluación",
+    "perform": "Realizar evaluación",
+    "start_assessment": "Iniciar evaluación",
+    "title": "Título",
+    "state": "Estado",
+    "actions": "Acciones",
+    "score": "Puntuación",
+    "student_review_writings": "Revisión de escrituras",
+    "assessment_already_started": "Evaluación ya iniciada",
+    "image": "Imagen",
+    "image_text": "Transcripción de imagen",
+    "students_answers_upload": "Subir respuestas de estudiantes",
+    "assessment_already_started_description": "La evaluación ya ha sido iniciada. Recibirás un correo electrónico cuando termine.",
+    "writing": {
+      "state": "Estado",
+      "review": "Revisión",
+      "status": "Estado",
+      "name": "Nombre",
+      "score": "Puntuación",
+      "percentage": "Porcentaje",
+      "actions": "Acciones",
+      "student": "Estudiante",
+      "grammar": "Gramática",
+      "assessment": "Ejercicio",
+      "student_answer": "Respuesta del Estudiante",
+      "grammar_feedback": "Comentario Gramatical",
+      "ai_feedback": "Evaluación IA",
+      "grammar_errors": "Errores Gramaticales",
+      "corrected_text": "Texto Corregido",
+      "display_grammar_errors": "Mostrar Errores Gramaticales",
+      "error_text": "Texto del Error",
+      "correction_explanation": "Explicación de la Corrección",
+      "student_response_text": "Respuesta del Estudiante",
+      "student_response_image_url": "URL de la Imagen de la Respuesta del Estudiante",
+      "student_response_word_count": "Palabras",
+      "writing_state": "Estado de la Escritura",
+      "level": "Nivel",
+      "institution": "Institución",
+      "certification": "Certificación",
+      "exam_type": "Tipo de Examen",
+      "task": "Tarea",
+      "image_preview": "Vista previa",
+      "update_changes": "Actualizar Cambios",
+      "criteria_scores": "Puntuaciones por Criterio",
+      "error_feedback": "Comentarios de Error",
+      "no_writing": "No hay escritura seleccionada",
+      "no_writing_subtitle": "Por favor regresa y selecciona una escritura para ver los detalles"
+    },
+    "form": {
+      "name": "Nombre",
+      "create": "Crear Evaluación",
+      "start_camera": "Iniciar Cámara",
+      "upload_image": "Subir Imagen",
+      "take_photo": "Tomar Foto",
+      "exam_type": "Tipo de Examen",
+      "task": "Tarea"
+    }
+  },
+  "auth": {
+    "actions": {
+      "accept_terms_and_conditions": "He leído y acepto los Términos de Uso y la Política de Privacidad",
+      "already_have_account": "¿Ya tienes una cuenta?",
+      "back_to_login": "Iniciar sesión",
+      "register": "Registrarse"
+    },
+    "invite_user_to_account": {
+      "title": "Invitar Usuario a la Cuenta",
+      "subtitle": "Eres invitado a unirte a la cuenta"
+    },
+    "CANNOT_REFRESH_AUTH": "Sesión expirada, por favor inicie sesión nuevamente",
+    "UNKNOWN_ERROR": "Ocurrió un error desconocido",
+    "register": {
+      "title": "Crear una cuenta"
+    },
+    "validation": {
+      "required": "Este campo es requerido",
+      "password_mismatch": "Las contraseñas no coinciden",
+      "pattern": "Debe ser una contraseña válida"
+    }
+  },
+
+  "class": {
+    "toggle_class": "Cambiar Estado de la Clase",
+    "name": "Clase",
+    "level": "Nivel",
+    "institution": "Institución",
+    "members": "Miembros",
+    "assessments": "Evaluaciones",
+    "no_class": "No hay clase seleccionada",
+    "no_class_subtitle": "Por favor regresa y selecciona una clase para ver los detalles",
+    "metrics": {
+      "average_score": "Promedio de Puntuación",
+      "pass_rate": "Tasa de Aprobación",
+      "avg_grammar_errors": "Promedio de Errores Gramaticales"
+    },
+    "tables": {
+      "members": {
+        "role": "Rol",
+        "name": "Nombre",
+        "last_name": "Apellido",
+        "email": "Correo electrónico"
+      }
+    },
+    "buttons": {
+      "addMember": "Agregar Miembro",
+      "addAssessment": "Agregar Evaluación",
+      "disable": "Desactivar Clase",
+      "class_analysis": "Análisis de Clase"
+    },
+    "filter": {
+      "name": "Nombre",
+      "placeholder": "Escribe un nombre",
+      "title": "Título",
+      "placeholder_title": "Escribe un título"
+    },
+    "students": {
+      "save": "Guardar cambios",
+      "create": "Crear nuevo Estudiante"
+    },
+    "teachers": {
+      "save": "Guardar cambios"
+    }
+  },
+  "role": {
+    "student": "Estudiante",
+    "teacher": "Profesor"
+  },
+  "classes": {
+    "buttons": {
+      "create": "Crear nueva clase",
+      "more": "Entrar para ver más detalles",
+      "view_metrics": "Ver Métricas",
+      "class_analysis": "Análisis de Clase con IA"
+    },
+    "students_analysis_table": {
+      "title": "Metricas por estudiante",
+      "filter": {
+        "title": "Filtrar",
+        "placeholder": "Escribe un nombre"
+      },
+      "fields": {
+        "name": "Nombre",
+        "total_writings": "Total Escrituras",
+        "avg_score": "Promedio de Puntuación",
+        "evolution": "Evolución",
+        "pass_rate": "Tasa de Aprobación",
+        "avg_grammar_errors": "Promedio de Errores Gramaticales"
+      }
+    },
+    "metrics": {
+      "global_metrics": "Metricas Globales"
+    },
+    "table": {
+      "name": "Nombre",
+      "institution": "Institución",
+      "level": "Nivel",
+      "members": "Miembros"
+    },
+    "tabs": {
+      "active": "Activas",
+      "inactive": "Inactivas"
+    },
+    "filter": {
+      "title": "Filtrar",
+      "placeholder": "Escribe un nombre"
+    },
+    "title": "Clases",
+    "addAssessment": "Agregar Evaluación",
+    "addMemberToClass": "Agregar Miembros a la Clase",
+    "addMembersToClassTooltip": "Selecciona uno o más miembros",
+    "no-aulas": "No has creado ninguna clase aún",
+    "tooltip-active": "Mostrar solo clases activas",
+    "tooltip-analytics": "Detalles de Analytics",
+    "tooltip-inactive": "Mostrar solo clases inactivas",
+    "tooltip-settings": "Detalles de Configuración",
+    "tooltip-students": "Detalles de Estudiantes",
+    "tooltip-tasks": "Detalles de Tareas",
+    "active": "Activas",
+    "inactive": "Inactivas",
+    "form": {
+      "name": "Nombre",
+      "description": "Descripción",
+      "institution": "Institución",
+      "level": "Nivel"
+    },
+    "students": "Estudiantes",
+    "teachers": "Profesores",
+    "assessments": "Evaluaciones"
+  },
+  "common": {
+    "camera": "Cámara",
+    "upload": "Archivos",
+    "are_you_sure": "¿Estás seguro?",
+    "are_you_sure_message": "¿Estás seguro de querer cambiar el estado de la clase?",
+    "optional": "Opcional",
+    "download": "Descargar PDF",
+    "ok": "OK",
+    "add": "Agregar",
+    "save_changes": "Guardar Cambios",
+    "dateTime": "Fecha y Hora",
+    "edit": "Editar",
+    "delete": "Eliminar",
+    "actions": "Acciones",
+    "active": "Activo",
+    "inactive": "Inactivo",
+    "state": "Estado",
+    "cancel": "Cancelar",
+    "close": "Cerrar",
+    "confirm": "Confirmar",
+    "email": "Correo electrónico",
+    "password": "Contraseña",
+    "confirm_password": "Confirmar Contraseña",
+    "save": "Guardar",
+    "send": "Enviar",
+    "create": "Crear",
+    "yes": "Si",
+    "no": "No",
+    "upload_image": "Por favor haz click en el botón para subir una imagen",
+    "image_size": "Tamaño máximo de la imagen: 10MB",
+    "validation": {
+      "email": "Debe ser un correo electrónico válido",
+      "pattern": "Debe ser una contraseña válida (mínimo 8 caracteres, una mayúscula, una minúscula, un número y un símbolo)",
+      "required": "Este campo es requerido"
+    }
+  },
+
+  "account": {
+    "title": "Cuenta",
+    "name": "Nombre",
+    "owner": "Propietario",
+    "users": "Usuarios",
+    "plan": "Plan",
+    "invite": "Invitar Usuario",
+    "email": "Correo electrónico",
+    "role": "Rol",
+    "invalidEmail": "Correo electrónico inválido",
+    "invitations": "Invitaciones",
+    "no_invitations": "No hay invitaciones pendientes",
+    "no_users": "No hay usuarios en esta cuenta"
+  },
+  "header": {
+    "logout": "Cerrar sesión",
+    "account": "Cuenta",
+    "students": "Estudiantes"
+  },
+
+  "login": {
+    "errorPassword": "La contraseña no puede estar vacía",
+    "errorUsername": "Ingrese un correo electrónico válido",
+    "forgot_password": "¿Olvidaste tu contraseña?",
+    "name": "Inicio de Sesión",
+    "no_account": "¿No tienes una cuenta?",
+    "signup": "Registrarse",
+    "with_account": "¡Bienvenido de nuevo!"
+  },
+  "mail-sent": {
+    "contact_support": "Contactanos",
+    "need_help": "¿No recibiste el correo?",
+    "subtitle": "Hemos enviado un enlace a tu correo para continuar el proceso, por favor verifica que el correo no esté en spam.",
+    "title": "Correo enviado"
+  },
+  "menu": {
+    "home": "Inicio",
+    "billing": "Facturación",
+    "assessments": "Evaluaciones",
+    "administration": "Administración",
+    "classes": "Clases",
+    "settings": "Ajustes",
+    "students": "Estudiantes",
+    "users": "Usuarios",
+    "writing": "Escritura",
+    "payments": "Pagos",
+    "logout": "Cerrar sesión"
+  },
+  "paginator": {
+    "firstPage": "Primera página",
+    "itemsPerPage": "Ítems por página",
+    "lastPage": "Última página",
+    "nextPage": "Siguiente página",
+    "of": "de",
+    "previousPage": "Página anterior"
+  },
+  "payments": {
+    "amount_paid": "Monto Pagado",
+    "currency": "Moneda",
+    "customer_email": "Correo Electrónico del Cliente",
+    "event_created_at": "Fecha",
+    "invoice_id": "ID de Factura",
+    "invoice_pdf_url": "URL del PDF de la Factura",
+    "payment_status": "Estado del Pago",
+    "period_end": "Fin del Periodo",
+    "period_start": "Inicio del Periodo",
+    "plan_description": "Descripción del Plan",
+    "subscription_id": "ID de Suscripción"
+  },
+  "plans": {
+    "info": "Planes de suscripción",
+    "subscribe": "Suscribirse Ahora",
+    "upgrade_plan": "Actualizar Plan",
+    "current_plan": "Plan Actual",
+    "free": "Gratuito",
+    "basic": "Básico",
+    "premium": "Premium",
+    "business": "Negocio",
+    "business_pro": "Negocio Pro",
+    "upgrade": "Seleccionar"
+  },
+  "privacyPolicy": {
+    "content": "Esta Política de Privacidad explica cómo MockHat recopila, usa y protege tu información personal.",
+    "lastUpdate": "Última actualización: 26/02/2025",
+    "sections": {
+      "changes": "7. Cambios en esta Política",
+      "changesDetails": "7.1. MockHat puede actualizar esta política en cualquier momento. Los cambios significativos serán notificados publicando una actualización en nuestro sitio.",
+      "cookies": "6. Cookies",
+      "cookiesDetails": "6.1. Utilizamos cookies para mejorar tu experiencia en el sitio. Puedes configurar tu navegador para deshabilitar las cookies, pero esto puede afectar algunas funcionalidades del sitio.",
+      "data": "1. Información Recopilada",
+      "dataDetails": "1.1. Información Personal: Recopilamos datos como tu nombre, correo electrónico y detalles de pago al registrarte o usar nuestros servicios. 1.2. Información Técnica: Recopilamos datos como tu dirección IP, tipo de navegador y actividad en nuestro sitio para mejorar la experiencia del usuario.",
+      "retention": "3. Retención de Datos",
+      "retentionDetails": "3.1. Retenemos tu información mientras sea necesario para cumplir con los propósitos descritos en esta política o según lo exijan las leyes aplicables.",
+      "rights": "5. Tus Derechos",
+      "rightsDetails": "5.1. Puedes acceder, corregir o eliminar tu información personal contactándonos en [correo de soporte]. 5.2. Tienes derecho a optar por no recibir correos promocionales haciendo clic en el enlace de 'darse de baja' en nuestros correos.",
+      "security": "4. Seguridad",
+      "securityDetails": "4.1. Implementamos medidas técnicas y organizativas para proteger tu información personal contra accesos no autorizados. Sin embargo, ningún sistema es completamente seguro.",
+      "usage": "2. Uso de la Información",
+      "usageDetails": "2.1. Utilizamos tu información para proporcionar servicios contratados, mejorar nuestras herramientas de evaluación y enviar notificaciones importantes y contenido promocional (con tu consentimiento)."
+    },
+    "title": "Política de Privacidad"
+  },
+
+  "rate": {
+    "subtitle": "¿Es esta respuesta adecuada?",
+    "title": "Danos tu feedback para hacerlo mejor"
+  },
+  "recorder": {
+    "start": "Iniciar Grabación",
+    "stop": "Finalizar Grabación"
+  },
+  "reset-password": {
+    "back_to_login": "Volver al inicio de sesión",
+    "button": "Restablecer contraseña",
+    "choose_new_password": "Elige una nueva contraseña",
+    "contact_support": "Contactanos",
+    "errorEmail": "Ingrese un correo electrónico válido",
+    "need_help": "¿Necesitas ayuda?",
+    "save_new_password": "Guardar nueva contraseña",
+    "subtitle": "Ingrese su correo electrónico y le enviaremos un enlace para restablecer su contraseña",
+    "title": "Restablecer contraseña"
+  },
+  "serverConnectionError": "Error de conexión con el servidor",
+  "stripe_customer_id": "Customer Id Stripe",
+  "students": {
+    "form": {
+      "close": "Cerrar",
+      "email": "Correo Electrónico",
+      "last_name": "Apellido",
+      "name": "Nombre",
+      "submit": "Guardar",
+      "register": "Registrar"
+    },
+    "name": "Estudiantes",
+    "table": {
+      "edit": "Editar",
+      "email": "Correo Electrónico",
+      "last_name": "Apellido",
+      "name": "Nombre"
+    },
+    "searchStudent": "Buscar Estudiante",
+    "searchByNameOrLastName": "Buscar por nombre o apellido"
+  },
+  "termsOfUse": {
+    "content": "Estos Términos de Uso regulan el uso de la plataforma MockHat. Al acceder o utilizar nuestra plataforma, aceptas los siguientes términos.",
+    "lastUpdate": "Última actualización: 26/02/2025",
+    "sections": {
+      "account": "2. Cuenta de Usuario",
+      "accountDetails": "2.1. Eres responsable de mantener la seguridad de tu cuenta y credenciales. 2.2. MockHat se reserva el derecho de suspender o eliminar cuentas que violen estos términos.",
+      "intellectual": "4. Propiedad Intelectual",
+      "intellectualDetails": "4.1. Todos los derechos de los servicios, incluidos algoritmos y evaluaciones, son propiedad exclusiva de MockHat. 4.2. El uso no autorizado de contenido generado por la plataforma es prohibitivo.",
+      "liability": "6. Limitación de Responsabilidad",
+      "liabilityDetails": "6.1. MockHat no garantiza la precisión absoluta de las evaluaciones y no es responsable de decisiones basadas en los resultados. 6.2. Nuestra responsabilidad máxima está limitada al costo del servicio utilizado.",
+      "modifications": "5. Modificaciones",
+      "modificationsDetails": "5.1. MockHat puede actualizar estos términos en cualquier momento. Los cambios entrarán en vigor una vez publicados en nuestro sitio.",
+      "prohibitions": "3. Prohibiciones",
+      "prohibitionsDetails": "3.1. Utilizar MockHat para actividades ilegales o no autorizadas es prohibitivo. 3.2. No debes intentar acceder, modificar o manipular nuestros sistemas o datos.",
+      "use": "1. Uso del Servicio",
+      "useDetails": "1.1. MockHat está diseñado para proporcionar pruebas de evaluación de escritura basadas en IA. 1.2. Debes tener al menos 18 años o tener el consentimiento de un tutor legal para usar nuestros servicios."
+    },
+    "title": "Términos de Uso"
+  },
+  "upload_image": "Subir imagen",
+
+  "user": {
+    "fields": {
+      "email": "Correo Electrónico",
+      "first_name": "Nombre",
+      "last_name": "Apellidos",
+      "account_name": "Nombre de la cuenta"
+    },
+    "name": "Usuario"
+  },
+  "users": {
+    "searchByNameOrLastName": "Buscar por nombre o apellido",
+    "account_id": "ID de cuenta",
+    "blocked": "Bloqueado",
+    "created_at": "Fecha de creación",
+    "delete": "Eliminar usuario",
+    "deleteBody": "¿Está seguro de que desea eliminar permanentemente a este usuario?",
+    "deleteDialog": "¿Está seguro de que quiere eliminar?",
+    "disabled": "Deshabilitado",
+    "email": "Correo electrónico",
+    "errorUsername": "El nombre de usuario debe tener al menos 5 caracteres",
+    "first_name": "Nombre",
+    "id": "ID",
+    "last_name": "Apellido",
+    "register": "Registrar usuario",
+    "role": "Rol",
+    "update": "Actualizar usuario",
+    "verified": "Verificado"
+  },
+  "verify-register": {
+    "contact_support": "Contactanos",
+    "need_help": "Necesitas ayuda?",
+    "subtitle": "¡Algo salió mal!",
+    "title": "Verificar Registro"
+  },
+
+  "writing_tab": {
+    "image_preview": "Previsualización de Imagen",
+    "text": "Ingrese o Valide Texto"
+  }
+}

@@ -1,0 +1,275 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: CloudFormation template for mockhat  API
+
+Parameters:
+  ImageUrl:
+    Type: String
+    Description: Image URL for the Fargate task
+  VPC:
+    Type: AWS::EC2::VPC::Id
+    Description: Virtual Private Cloud Id where the Load Balancer and the Cluster live.
+  PublicSubnetIds:
+    Type: List<AWS::EC2::Subnet::Id>
+    Description: Subnets for the Load Balancer (hence PUBLIC).
+  HostedZoneId:
+    Type: String
+    Description: The Route 53 Hosted Zone ID for mockhat.com
+  AppDomainPrefix:
+    Type: String
+    Description: The domain prefix before mockhat.com
+
+Resources:
+  LoadBalancerSecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: !Sub "Load Balancer Security Group for mockhat "
+      VpcId: !Ref VPC
+      SecurityGroupIngress:
+        - IpProtocol: tcp
+          FromPort: 443
+          ToPort: 443
+          CidrIp: 0.0.0.0/0
+        - IpProtocol: tcp
+          FromPort: 443
+          ToPort: 443
+          CidrIpv6: ::/0
+        - IpProtocol: tcp
+          FromPort: 80
+          ToPort: 80
+          CidrIp: 0.0.0.0/0
+        - IpProtocol: tcp
+          FromPort: 8000
+          ToPort: 8000
+          CidrIp: 0.0.0.0/0
+      Tags:
+        - Key: Name
+          Value: !Sub "mockhat-LBSG"
+        - Key: Stack
+          Value: mockhat
+
+  ContainerSecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: !Sub "Container Security Group for mockhat"
+      VpcId: !Ref VPC
+      SecurityGroupIngress:
+        - IpProtocol: tcp
+          FromPort: 8000
+          ToPort: 8000
+          SourceSecurityGroupId: !Ref LoadBalancerSecurityGroup
+      Tags:
+        - Key: Name
+          Value: !Sub "mockhat-ContSG"
+        - Key: Stack
+          Value: mockhat
+
+  # ECS Cluster
+  mockhatEcsCluster:
+    Type: AWS::ECS::Cluster
+    Properties:
+      Tags:
+        - Key: Name
+          Value: !Sub "mockhat-Cluster"
+        - Key: Stack
+          Value: mockhat
+
+  # Execution Role for ECS Tasks
+  mockhatExecutionRole:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service: ecs-tasks.amazonaws.com
+            Action: sts:AssumeRole
+      Path: "/"
+      Policies:
+        - PolicyName: mockhat-ExecRolePolicy
+          PolicyDocument:
+            Version: "2012-10-17"
+            Statement:
+              - Effect: Allow
+                Action:
+                  - ecr:GetAuthorizationToken
+                  - ecr:BatchCheckLayerAvailability
+                  - ecr:GetDownloadUrlForLayer
+                  - ecr:GetRepositoryPolicy
+                  - ecr:DescribeRepositories
+                  - ecr:ListImages
+                  - ecr:DescribeImages
+                  - ecr:BatchGetImage
+                  - logs:CreateLogStream
+                  - logs:PutLogEvents
+                Resource: "*"
+
+  S3AccessPolicy:
+    Type: AWS::IAM::Policy
+    Properties:
+      PolicyName: S3AccessPolicy
+      PolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Effect: Allow
+            Action:
+              - s3:PutObject
+              - s3:GetObject
+              - s3:PutObjectTagging
+              - s3:GetObjectTagging
+            Resource: !Sub "arn:aws:s3:::mockhat-content-storage/*"
+      Roles:
+        - !Ref mockhatExecutionRole
+
+  mockhatLogGroup:
+    Type: AWS::Logs::LogGroup
+    Properties:
+      LogGroupName: !Sub "/ecs/mockhat"
+      RetentionInDays: 30
+      Tags:
+        - Key: Name
+          Value: !Sub "mockhat-LG"
+        - Key: Stack
+          Value: mockhat
+
+  # Task Definition
+  mockhatTaskDefinition:
+    Type: AWS::ECS::TaskDefinition
+    Properties:
+      Family: !Sub "mockhat-TD"
+      Cpu: "256" # Example value, adjust based on your needs
+      Memory: "512" # Example value, adjust based on your needs
+      NetworkMode: awsvpc
+      RequiresCompatibilities:
+        - FARGATE
+      ExecutionRoleArn: !Ref mockhatExecutionRole
+      TaskRoleArn: !Ref mockhatExecutionRole
+      ContainerDefinitions:
+        - Name: mockhat-backend-container
+          Image: !Ref ImageUrl
+          HealthCheck:
+            Command:
+              - "CMD-SHELL"
+              - "curl -f http://localhost:8000/health || exit 1"
+            Interval: 60
+            Timeout: 10
+            Retries: 5
+            StartPeriod: 30
+          Cpu: 256
+          Memory: 512
+          PortMappings:
+            - ContainerPort: 8000
+              HostPort: 8000
+          LogConfiguration:
+            LogDriver: awslogs
+            Options:
+              awslogs-group: !Ref mockhatLogGroup
+              awslogs-region: !Ref AWS::Region
+              awslogs-stream-prefix: mockhat
+
+  # Fargate Service
+  mockhatFargateService:
+    Type: AWS::ECS::Service
+    DependsOn: [mockhatTaskDefinition, LoadBalancerListener]
+    Properties:
+      ServiceName: !Sub "mockhat-Service"
+      Cluster: !Ref mockhatEcsCluster
+      LaunchType: FARGATE
+      TaskDefinition: !Ref mockhatTaskDefinition
+      DesiredCount: 1
+      DeploymentConfiguration:
+        DeploymentCircuitBreaker:
+          Enable: true
+          Rollback: true
+      HealthCheckGracePeriodSeconds: 60
+      LoadBalancers:
+        - ContainerName: mockhat-backend-container
+          ContainerPort: 8000
+          TargetGroupArn: !Ref mockhatTargetGroup
+      NetworkConfiguration:
+        AwsvpcConfiguration:
+          AssignPublicIp: ENABLED
+          Subnets: !Ref PublicSubnetIds
+          SecurityGroups:
+            - !Ref ContainerSecurityGroup
+      Tags:
+        - Key: Name
+          Value: !Sub "mockhat-Service"
+        - Key: Stack
+          Value: mockhat
+
+  # Load Balancer
+  mockhatLoadBalancer:
+    Type: AWS::ElasticLoadBalancingV2::LoadBalancer
+    Properties:
+      LoadBalancerAttributes:
+        - Key: idle_timeout.timeout_seconds
+          Value: 60
+      Scheme: internet-facing
+      SecurityGroups:
+        - !Ref LoadBalancerSecurityGroup
+      Subnets: !Ref PublicSubnetIds
+
+  # Target Group
+  mockhatTargetGroup:
+    Type: AWS::ElasticLoadBalancingV2::TargetGroup
+    Properties:
+      HealthCheckIntervalSeconds: 30
+      HealthCheckPath: !Sub "/health"
+      HealthCheckProtocol: HTTP
+      HealthCheckTimeoutSeconds: 20
+      HealthyThresholdCount: 2
+      TargetGroupAttributes:
+        - Key: deregistration_delay.timeout_seconds
+          Value: 30
+      TargetType: ip
+      Name: !Sub "mockhatTG"
+      Port: 8000
+      Protocol: HTTP
+      UnhealthyThresholdCount: 5
+      VpcId: !Ref VPC
+      Tags:
+        - Key: Name
+          Value: !Sub "mockhatTG"
+        - Key: Stack
+          Value: mockhat
+
+  # Load Balancer Listener
+  LoadBalancerListener:
+    Type: AWS::ElasticLoadBalancingV2::Listener
+    Properties:
+      DefaultActions:
+        - Type: forward
+          TargetGroupArn: !Ref mockhatTargetGroup
+      LoadBalancerArn: !Ref mockhatLoadBalancer
+      Port: 443
+      Protocol: HTTPS
+      Certificates:
+        - CertificateArn: !Ref mockhatCertificate
+
+  mockhatDNSRecord:
+    Type: AWS::Route53::RecordSet
+    Properties:
+      HostedZoneId: !Ref HostedZoneId
+      Name: !Sub "${AppDomainPrefix}.mockhat.com."
+      Type: A
+      AliasTarget:
+        DNSName: !GetAtt mockhatLoadBalancer.DNSName
+        HostedZoneId: !GetAtt mockhatLoadBalancer.CanonicalHostedZoneID
+        EvaluateTargetHealth: false
+
+  mockhatCertificate:
+    Type: AWS::CertificateManager::Certificate
+    Properties:
+      DomainName: !Sub "${AppDomainPrefix}.mockhat.com"
+      ValidationMethod: DNS
+      DomainValidationOptions:
+        - DomainName: !Sub "${AppDomainPrefix}.mockhat.com"
+          HostedZoneId: !Ref HostedZoneId
+
+Outputs:
+  ApiDNSName:
+    Description: DNS Name for the mockhat  API
+    Value: !Sub "${AppDomainPrefix}.mockhat.com."
+    Export:
+      Name: !Sub "${AWS::StackName}-ApiDNSName"

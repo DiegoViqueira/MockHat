@@ -1,0 +1,26 @@
+{
+  "assigned_task": "You see this announcement in an international music magazine: \n**Music of your homeland** \n*We would like to know which pieces of music readers feel represent their country well. Send us a review about two popular pieces of music from your country, comparing them, explaining which ways they reflect the positive aspects of your country’s culture, and recommending which one a visitor to your country should definitely listen to.* \n*We will publish the best review.* \n**Write your review.**",
+  "task_answer": "At first I was doubting a lot about which two songs should I pick for representing my Spain, my homeland, but I have decided to select two regional ones. The first of it is “Ikusi Mendizaleak”. It talks about the place where I was born, the Basque Country. Almost all people here know it, so I think it can be representative for this northern Spain territory. The song talks about a group of people that go to the mountains and see beautiful places with green grass and a lot of forests. It is a great description of Basque Country, which is full of precious, natural places and mountains so worthy to visit. Also, it talks about how even though you can be tired and the path can be hard, you can never give up until you make it to your objective, which I think is a great and strong message. The second song I have chosen for representing my homeland is about Seville, which is 1000km far away from the Basque Country. I can’t remember the song title but here in Spain we all know it. It starts with “Sevilla tiene un color especial”, this meaning Seville has a special colour. It describes the beautiful places the city has and how special these are for their people. Also, it talks about how the locals are different from the rest of Spain and how happy and well they live. To summarise, if you ever wanted to go to the north of Spain you should definitely listen to the first one, and if you wanted to go south to the second. Both of them are marvelous places to visit and stay!",
+  "ai_answer": [
+    {
+      "criteria": "Content",
+      "score": 5.0,
+      "feedback": "All content is relevant to the task. The target reader is fully informed. The candidate reviews two popular pieces of music, compares them, explains how they reflect positive aspects of Spain's culture, and recommends which one a visitor should listen to."
+    },
+    {
+      "criteria": "Communicative Achievement",
+      "score": 3.0,
+      "feedback": "The conventions of a review are used effectively to hold the target reader’s attention and communicate straightforward and some complex ideas. The tone is positive and engaging, though flexibility in language use could be enhanced."
+    },
+    {
+      "criteria": "Organisation",
+      "score": 3.0,
+      "feedback": "The text is well organised and coherent, using a variety of cohesive devices to generally good effect. Ideas are mostly logically sequenced, with appropriate paragraphing."
+    },
+    {
+      "criteria": "Language",
+      "score": 2.0,
+      "feedback": "A range of everyday vocabulary and some less common lexis is used appropriately. Simple and some complex grammatical forms are used with a good degree of control. Errors are present but do not impede communication."
+    }
+  ]
+}

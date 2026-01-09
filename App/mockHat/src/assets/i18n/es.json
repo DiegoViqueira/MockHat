@@ -1,0 +1,462 @@
+{
+  "user_detail": {
+    "plan": "Plan"
+  },
+  "mobile_not_supported": "Lo sentimos, pero la plataforma MockHat AI aún no es compatible con dispositivos móviles. Por favor, utiliza un ordenador de escritorio o portátil para acceder a la plataforma.",
+  "assessment": {
+    "name": "Evaluación",
+    "detail": "Detalle de la Evaluación",
+    "create": "Iniciar Evaluación",
+    "send": "Enviar",
+    "task_qtty": "Cantidad de tareas",
+    "task": "Tarea",
+    "finished": "¡Bien hecho! ¡Sigamos!",
+    "score": "Puntaje",
+    "you_are": "Estás realizando la sección "
+  },
+  "recorder": {
+    "stop": "Finalizar Grabación",
+    "start": "Iniciar Grabación"
+  },
+  "assessments": {
+    "start": "Iniciar nueva Evaluación",
+    "list": "Ver Evaluaciones"
+  },
+  "pick_date": "Escoger fecha",
+  "actions": "Acciones",
+  "expiry_date": "Fecha de Caducidad",
+  "pending": "Pendiente",
+  "Starting": "Iniciando",
+  "Started": "Iniciado",
+  "more": "Más detalles",
+  "Fault": "Falla",
+  "OK": "OK",
+  "Error": "Error",
+  "UNKNOWN_EXCEPTION": "Excepción desconocida",
+  "Timeout": "Tiempo agotado",
+  "passwordRule": "La contraseña no es válida. Debe contener al menos un carácter especial de los siguientes: $!%*._+=?&, un número, una letra mayúscula, una letra minúscula y al menos 8 caracteres.",
+  "ErrorLicence": "Error de licencia",
+  "itemsPerPage": "Ítems por página",
+  "add_confirm": "¿Está seguro de que quiere agregar?",
+  "any_trouble": "¿Algún problema?",
+  "browse_file": "Buscar Archivo",
+  "confirm_password": "Confirmar nueva Contraseña",
+  "dnr_here": "Arrastra tus imágenes aquí",
+  "email": "Correo electrónico",
+  "onlyNumbers": "Solo valores numéricos.",
+  "email_address": "Dirección de Correo Electrónico",
+  "file_size": "Tamaño",
+  "fill_form": "Rellena el formulario en este",
+  "full_name": "Nombre Completo",
+  "gender": "Género",
+  "generate": {
+    "table": "Generar Informe"
+  },
+  "id": "ID",
+  "length": "Longitud",
+  "login_wit_google": "Continua con Google",
+  "log_in": "Iniciar Sesión",
+  "log_out": "Cerrar Sesión",
+  "login_message": "¡Hola! Bienvenido a BioMaster",
+  "mail_to_contact": "o contáctenos en",
+  "max": "Máximo",
+  "subscribe": "Suscribirse Ahora",
+  "payments": {
+    "event_created_at": "Fecha",
+    "customer_email": "Correo Electrónico del Cliente",
+    "subscription_id": "ID de Suscripción",
+    "plan_description": "Descripción del Plan",
+    "period_start": "Inicio del Periodo",
+    "period_end": "Fin del Periodo",
+    "invoice_id": "ID de Factura",
+    "payment_status": "Estado del Pago",
+    "amount_paid": "Monto Pagado",
+    "currency": "Moneda",
+    "invoice_pdf_url": "URL del PDF de la Factura",
+    "free_message": "Tu plan actual es gratuito, con uso limitado."
+  },
+  "writing": {
+    "student_id": "Estudiante",
+    "student_name": "Nombre",
+    "file": "Archivo",
+    "result": "Evaluación de Escritura por IA",
+    "check": "Corregir",
+    "list": "Listar Writings",
+    "list_grammar": "Listar Grammars",
+    "text": "Recibe comentarios instantáneos sobre tu escritura. ¡Todo hecho automáticamente!",
+    "upload_assessment": "Subir Ejercicio",
+    "verify_assessment": "Verificar Ejercicio",
+    "upload_answer": "Subir Respuesta",
+    "verify_answer": "Verificar Respuesta",
+    "evaluate": "Evaluar",
+    "task": "Tarea",
+    "spell_check": "Corrección Gramatical",
+    "state": "Estado",
+    "next": "Siguiente",
+    "reset": "Reiniciar",
+    "uploaded_assessment": "Ejercicio",
+    "verified_assessment": "Respuesta",
+    "form": {
+      "submit": "Salvar",
+      "close": "Cerrar",
+      "add": "Agregar"
+    },
+    "actions": "Acciones"
+  },
+  "close": "Cerrar",
+  "menu": {
+    "administration": "Administración",
+    "dashboard": "Tablero",
+    "assessments": "Evaluaciones",
+    "profits": "Ganancias",
+    "datasets": "Conjuntos de Datos",
+    "payments": "Facturación",
+    "chatbot": "ChatBot",
+    "settings": "Ajustes",
+    "questions": "Preguntas",
+    "users": "Usuarios",
+    "section_subpart": "Subsección",
+    "writing": "Escritura",
+    "info": "Información",
+    "students": "Estudiantes"
+  },
+  "students": {
+    "name": "Estudiantes",
+    "form": {
+      "name": "Nombre",
+      "last_name": "Apellido",
+      "level": "Nivel",
+      "submit": "Guardar",
+      "close": "Cerrar"
+    },
+    "table": {
+      "name": "Nombre",
+      "last_name": "Apellido",
+      "level": "Nivel",
+      "edit": "Editar"
+    }
+  },
+  "question": {
+    "text": "Texto",
+    "exam_type": "Tipo de Examen",
+    "institution": "Institución",
+    "section": "Sección",
+    "level": "Nivel",
+    "tags": "Etiquetas",
+    "disabled": "Deshabilitado",
+    "part": "Parte",
+    "subpart": "Subparte",
+    "register": "Registrar Pregunta",
+    "section_subpart": "Subparte",
+    "response": "Tu respuesta",
+    "video": "Video",
+    "image": "Imagen",
+    "audio": "Audio",
+    "creator": "Creador",
+    "validator": "Validador",
+    "created": "Creada",
+    "updated": "Actualizada",
+    "image_description": "Descripción de la Imagen",
+    "video_description": "Descripción del Video",
+    "audio_description": "Descripción del Audio"
+  },
+  "questions": {
+    "register": "Registrar Pregunta"
+  },
+  "dashboard": {
+    "assessments": "Evaluaciones",
+    "users": "Usuarios",
+    "profits": "Ganancias",
+    "dataset": "Conjunto de Datos",
+    "progress": "Progreso",
+    "statistics": "Estadísticas por Mes",
+    "usage": "Uso del plan",
+    "writings": "Writings",
+    "grammars": "Grammars"
+  },
+  "usage": {
+    "used": "Usados",
+    "remaining": "Remanentes"
+  },
+  "min": "Mínimo",
+  "MONTH": "Mes",
+  "new": "Nuevo",
+  "new_password": "Nueva Contraseña",
+  "next": "Siguiente",
+  "no_account": "¿No tienes una cuenta?",
+  "no_data": "Sin Información para mostrar",
+  "old_password": "Contraseña Actual",
+  "or": "o",
+  "password": "Contraseña",
+  "period": "Período",
+  "pick_a_date": "Seleccione una fecha",
+  "prev": "Anterior",
+  "quantity": "Cantidad",
+  "required": "es requerido",
+  "select": "Seleccione",
+  "symbols": "Símbolos",
+  "total": "Total",
+  "user": "Usuario",
+  "WEEK": "Semana",
+  "YEAR": "Año",
+  "empty": " ",
+  "appname": "Herta - BioMaster",
+  "loading": "Cargando datos. Por favor, espere...",
+  "username": "Nombre de usuario",
+  "remember": "Recordar mis credenciales",
+  "all": "Todo",
+  "from": "Desde",
+  "faces": "Caras",
+  "to": "Hasta",
+  "dateTime": "Fecha Hora",
+  "search": "Buscar",
+  "searchPlaceholder": "Escriba algo aquí",
+  "image": "Imagen",
+  "image_size": "Tamaño máximo de imagen",
+  "firstName": "Nombre",
+  "filter": "Filtro",
+  "lastName": "Apellidos",
+  "time": "Fecha Hora",
+  "validThrough": "Válido hasta",
+  "comments": "Comentarios",
+  "type": "Tipo",
+  "timeStamp": "Fecha Hora",
+  "token": "Token",
+  "activity": "Activo",
+  "lastUpdate": "Última Actualización",
+  "general": "General",
+  "dataBase": "Base de Datos",
+  "language": "Idioma",
+  "logLevel": "Nivel de Log",
+  "days": "días",
+  "role": "Rol",
+  "usersFound": "Usuarios encontrados",
+  "newPassword": "Nueva contraseña",
+  "repeatPassword": "Repite la contraseña",
+  "color": "Color",
+  "selectColor": "Seleccionar Color",
+  "valuesOutsideRecommendedRange": "Los siguientes valores están fuera de los rangos recomendados:",
+  "unrecommendedValues": "Valores no recomendados",
+  "settingsUpdated": "Las opciones fueron actualizadas correctamente",
+  "settingsUpdateError": "No se pudo actualizar las opciones",
+  "userDeleteError": "No se pudo borrar el usuario",
+  "userUpdateError": "No se pudo actualizar el usuario",
+  "userCreateError": "No se pudo crear el usuario",
+  "userUpdated": "El usuario fue actualizado correctamente",
+  "adminDeleteError": "No se puede borrar el último administrador",
+  "userDeleted": "El usuario fue eliminado correctamente",
+  "userAdded": "El usuario fue creado correctamente",
+  "somethingWrong": "Algo no ha funcionado correctamente",
+  "version": "{version_ui} - {version_server}",
+  "userDeleteSameError": "No se puede eliminar el usuario con el que se ha conectado",
+  "confirm": "Confirmar",
+  "no": "No",
+  "yes": "Sí",
+  "modified": "Actualizado",
+  "unmodified": "No actualizado",
+  "never": "Nunca",
+  "reset": "Reiniciar",
+  "of": "de",
+  "sizeAmount": "Tamaño: {value}",
+  "timeValue": "Fecha Hora",
+  "contactSupportPre": "¿Tiene problemas con la aplicación?",
+  "contactSupport": "Contacte con soporte",
+  "startService": "Iniciar servicio",
+  "Administrator": "Administrador",
+  "logout": "Adiós",
+  "unknown": "Desconocido",
+  "congratulations": "¡Enhorabuena!",
+  "logOutMessage": "Cerrando sesión, por favor espere...",
+  "errorLogin": "El nombre de usuario o la contraseña son incorrectos. Inténtelo de nuevo.",
+  "ai_generated": "Este contenido fue generado con inteligencia artificial y puede contener errores. Verifica antes de usarlo.",
+  "header": {
+    "profile": "Perfil",
+    "logout": "Cerrar sesión",
+    "plans": "Planes"
+  },
+  "upgrade_plan": "Upgrade Plan",
+  "stripe_customer_id": "Customer Id Stripe",
+  "plans": {
+    "info": "Planes de suscripción"
+  },
+  "writing_tab": {
+    "text": "Ingrese o Valide Texto",
+    "image_preview": "Previsualización de Imagen"
+  },
+  "rate": {
+    "title": "Danos tu feedback para hacerlo mejor",
+    "subtitle": "¿Es esta respuesta adecuada?"
+  },
+  "upload_image": "Subir imagen",
+  "login": {
+    "name": "Inicio de Sesión",
+    "errorPassword": "La contraseña no puede estar vacía",
+    "errorUsername": "El nombre de usuario no puede estar vacío",
+    "with_socials": "Con una Red Social",
+    "with_account": "Con una cuenta",
+    "or": "O",
+    "no_account": "¿No tienes una cuenta? Contáctanos",
+    "with_google": "Continua con Google",
+    "with_microsoft": "Continua con Microsoft"
+  },
+  "profile": {
+    "title": "Perfil",
+    "username": "Nombre de usuario",
+    "password": "Contraseña",
+    "errorPassword": "La contraseña no puede estar vacía",
+    "newPassword": "Nueva contraseña",
+    "confirmPassword": "Vuelva a escribir la contraseña",
+    "mismatch": "Por favor, asegúrese de que sus contraseñas coinciden",
+    "passwordChanged": "La contraseña fue cambiada"
+  },
+  "users": {
+    "delete": "Eliminar usuario",
+    "deleteBody": "¿Está seguro de que desea eliminar permanentemente a este usuario?",
+    "register": "Registrar usuario",
+    "update": "Actualizar usuario",
+    "deleteDialog": "¿Está seguro de que quiere eliminar?",
+    "blocked": "Bloqueado",
+    "errorUsername": "El nombre de usuario debe tener al menos 5 caracteres",
+    "first_name": "Nombre",
+    "last_name": "Apellido",
+    "email": "Correo electrónico",
+    "level": "Nivel",
+    "gender": "Género"
+  },
+  "Male": "Masculino",
+  "Female": "Femenino",
+  "paginator": {
+    "firstPage": "Primera página",
+    "itemsPerPage": "Ítems por página",
+    "lastPage": "Última página",
+    "nextPage": "Siguiente página",
+    "previousPage": "Página anterior",
+    "of": "de"
+  },
+  "error": {
+    "backend": "Servicio no disponible, contacte con el administrador.",
+    "license": "Límite de plan alcanzado"
+  },
+  "info": {
+    "title": "MockHat - Cumplimiento de Regulaciones de la UE",
+    "introduction": "En {{company}}, nos comprometemos a cumplir con las regulaciones de la {{eu}}, incluyendo la {{aiAct}} y el {{gdpr}}. La protección de tu privacidad, la seguridad de tus datos y el uso ético de la IA son nuestras principales prioridades.",
+    "sections": {
+      "aiAct": {
+        "title": "Ley de IA",
+        "description": "Uso Ético y Seguro de la IA",
+        "content": "La {{aiAct}} de la {{eu}} regula el uso de la inteligencia artificial para garantizar la seguridad y la protección de los derechos fundamentales. Nuestra plataforma cumple con esta ley a través de:",
+        "list": {
+          "transparency": "Transparencia: Explicamos cómo funcionan nuestros sistemas de IA y los datos que utilizan.",
+          "riskManagement": "Gestión de riesgos: Realizamos auditorías rigurosas para asegurar la equidad y seguridad de nuestros sistemas de IA.",
+          "humanSupervision": "Supervisión humana: Garantizamos la intervención humana en decisiones críticas para evitar riesgos."
+        },
+        "actions": {
+          "next": "Siguiente"
+        }
+      },
+      "gdpr": {
+        "title": "GDPR",
+        "description": "Protección de tus Datos Personales",
+        "content": "El {{gdpr}} establece cómo manejamos los datos personales. Nos aseguramos de cumplir con sus principios:",
+        "list": {
+          "transparency": "Transparencia: Explicamos claramente cómo procesamos tus datos.",
+          "minimization": "Minimización: Solo recolectamos los datos esenciales.",
+          "security": "Seguridad: Utilizamos medidas avanzadas como encriptación para proteger tu información.",
+          "servicesInEU": "Servicios en la UE: Todos nuestros servicios están alojados en servidores ubicados dentro de la UE, cumpliendo con los estrictos estándares europeos de seguridad y privacidad.",
+          "userRights": "Derechos del Usuario: Puedes acceder, rectificar, borrar y portar tus datos, así como oponerte a su uso."
+        },
+        "actions": {
+          "next": "Siguiente",
+          "previous": "Anterior"
+        }
+      },
+      "ethicalIA": {
+        "title": "Uso Ético de la IA",
+        "list": {
+          "fairness": "Equidad: Eliminamos sesgos en nuestros modelos de IA para un trato justo a todos los usuarios.",
+          "anonymization": "Anonimización de Datos: Nunca enviamos datos personales a nuestros modelos de IA. Cualquier información utilizada para entrenar o mejorar el rendimiento del modelo está anonimizada para garantizar que no se pueda identificar a los usuarios."
+        },
+        "actions": {
+          "previous": "Anterior"
+        }
+      },
+      "conclusion": {
+        "title": "Manteniéndonos al Día",
+        "content": "Nos aseguramos de actualizar continuamente nuestra plataforma para cumplir con las normativas de la {{eu}} a medida que evolucionan."
+      }
+    }
+  },
+  "months": {
+    "1": "Enero",
+    "2": "Febrero",
+    "3": "Marzo",
+    "4": "Abril",
+    "5": "Mayo",
+    "6": "Junio",
+    "7": "Julio",
+    "8": "Agosto",
+    "9": "Septiembre",
+    "10": "Octubre",
+    "11": "Noviembre",
+    "12": "Diciembre"
+  },
+  "legal": {
+    "title": "Al continuar, aceptas las actualizaciones de",
+    "subtitle": "y"
+  },
+  "termsOfSale": {
+    "title": "Términos de Venta",
+    "lastUpdate": "Última actualización: 19/11/2024",
+    "content": "Estos Términos de Venta regulan las transacciones realizadas a través de la plataforma MockHat (en adelante, 'nosotros' o 'nuestro'). Al realizar una compra, aceptas los términos descritos a continuación.",
+    "sections": {
+      "services": "1. Servicios Ofrecidos",
+      "servicesDetails": "1.1. MockHat proporciona servicios de evaluación automatizada de escritura y pruebas relacionadas basadas en inteligencia artificial. 1.2. Los servicios están sujetos a disponibilidad y pueden ser modificados o suspendidos sin previo aviso.",
+      "pricing": "2. Precios y Pagos",
+      "pricingDetails": "2.1. Los precios de los servicios están indicados en la página correspondiente y pueden variar según el plan seleccionado. 2.2. Los pagos deben realizarse en su totalidad antes de acceder al servicio. 2.3. Aceptamos pagos a través de [tarjetas de crédito/débito, PayPal, etc.].",
+      "refunds": "3. Política de Reembolsos",
+      "refundsDetails": "3.1. Los reembolsos están disponibles únicamente si los servicios no se han utilizado dentro de [X días] desde la compra. 3.2. Si consideras que ha habido un error en la facturación, contáctanos en [correo de soporte].",
+      "liability": "4. Limitación de Responsabilidad",
+      "liabilityDetails": "4.1. MockHat no se responsabiliza por errores en la evaluación o resultados derivados del uso del servicio. 4.2. Nuestra responsabilidad máxima estará limitada al monto pagado por el servicio."
+    }
+  },
+  "termsOfService": {
+    "title": "Términos de Servicio",
+    "lastUpdate": "Última actualización: 19/11/2024",
+    "content": "Estos Términos de Servicio regulan el uso de la plataforma MockHat. Al acceder o utilizar nuestro sitio y servicios, aceptas los siguientes términos.",
+    "sections": {
+      "use": "1. Uso del Servicio",
+      "useDetails": "1.1. MockHat está diseñado para proporcionar evaluaciones de escritura basadas en inteligencia artificial. 1.2. Debes ser mayor de 18 años o contar con el consentimiento de un tutor legal para usar nuestros servicios.",
+      "account": "2. Cuenta de Usuario",
+      "accountDetails": "2.1. Es tu responsabilidad mantener la seguridad de tu cuenta y credenciales. 2.2. MockHat se reserva el derecho de suspender o eliminar cuentas que incumplan estos términos.",
+      "prohibitions": "3. Prohibiciones",
+      "prohibitionsDetails": "3.1. Está prohibido utilizar MockHat para actividades ilegales o no autorizadas. 3.2. No debes intentar acceder, modificar o manipular nuestros sistemas ni datos.",
+      "intellectual": "4. Propiedad Intelectual",
+      "intellectualDetails": "4.1. Todos los derechos sobre los servicios, incluidos algoritmos y evaluaciones, son propiedad exclusiva de MockHat. 4.2. Está prohibida la reproducción, distribución o uso no autorizado del contenido generado por la plataforma.",
+      "modifications": "5. Modificaciones",
+      "modificationsDetails": "5.1. MockHat puede actualizar estos términos en cualquier momento. Los cambios serán efectivos una vez publicados en nuestro sitio.",
+      "liability": "6. Limitación de Responsabilidad",
+      "liabilityDetails": "6.1. MockHat no garantiza la precisión absoluta de las evaluaciones y no se hace responsable de decisiones basadas en los resultados. 6.2. Nuestra responsabilidad máxima está limitada al costo del servicio utilizado."
+    }
+  },
+  "privacyPolicy": {
+    "title": "Política de Privacidad",
+    "lastUpdate": "Última actualización: 19/11/2024",
+    "content": "Esta Política de Privacidad explica cómo MockHat recopila, usa y protege tu información personal.",
+    "sections": {
+      "data": "1. Información Recopilada",
+      "dataDetails": "1.1. Información Personal: Recopilamos datos como tu nombre, correo electrónico y detalles de pago al registrarte o usar nuestros servicios. 1.2. Información Técnica: Recopilamos datos como tu dirección IP, tipo de navegador y actividad en nuestro sitio para mejorar la experiencia del usuario.",
+      "usage": "2. Uso de la Información",
+      "usageDetails": "2.1. Utilizamos tu información para proporcionar servicios contratados, mejorar nuestras herramientas de evaluación y enviar notificaciones importantes y contenido promocional (con tu consentimiento).",
+      "retention": "3. Retención de Datos",
+      "retentionDetails": "3.1. Retenemos tu información mientras sea necesario para cumplir con los propósitos descritos en esta política o según lo exijan las leyes aplicables.",
+      "security": "4. Seguridad",
+      "securityDetails": "4.1. Implementamos medidas técnicas y organizativas para proteger tu información personal contra accesos no autorizados. Sin embargo, ningún sistema es completamente seguro.",
+      "rights": "5. Tus Derechos",
+      "rightsDetails": "5.1. Puedes acceder, corregir o eliminar tu información personal contactándonos en [correo de soporte]. 5.2. Tienes derecho a optar por no recibir correos promocionales haciendo clic en el enlace de 'darse de baja' en nuestros correos.",
+      "cookies": "6. Cookies",
+      "cookiesDetails": "6.1. Utilizamos cookies para mejorar tu experiencia en el sitio. Puedes configurar tu navegador para deshabilitar las cookies, pero esto puede afectar algunas funcionalidades del sitio.",
+      "changes": "7. Cambios en esta Política",
+      "changesDetails": "7.1. MockHat puede actualizar esta política en cualquier momento. Los cambios significativos serán notificados publicando una actualización en nuestro sitio."
+    }
+  }
+}

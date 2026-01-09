@@ -1,0 +1,12 @@
+.nav-footer {
+  justify-content: space-between;
+  align-items: center;
+  flex: 0 0 auto; /* No crece ni se encoge */
+  position: relative; /* Asegura que esté en el flujo normal del documento */
+  z-index: 10; /* Asegura que esté por encima de otros elementos */
+}
+
+.text-link-footer {
+  color: var(--mockhat-black);
+  text-decoration: none;
+}

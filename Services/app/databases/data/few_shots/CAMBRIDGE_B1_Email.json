@@ -1,0 +1,26 @@
+{
+  "assigned_task": "Read this email from your English-speaking friend Sandy and the notes you have made.\nFrom: Sandy\nSubject: Your visit!\nBody: Hi,\nI’m so excited that you’re coming to stay with me for a week!\nOn your first evening here, there’s a rock concert in our town. Would you like to go to the concert or would you prefer us to relax at home?\nAlso, shall we go climbing in the mountains while you’re here?\nLet me know if you have any questions.\nSee you soon\nSandy\nNotes: \nNote 1:\nNote: Me too!\nEmail Part: I’m so excited that you’re coming to stay with me for a week!\nNote 2:\nNote: Say which I prefer\nEmail Part: Would you like to go to the concert or would you prefer us to relax at home?\nNote 3:\nNote: No, because …\nEmail Part: Also, shall we go climbing in the mountains while you’re here?\nNote 4:\nNote: Ask Sandy …\nEmail Part: Let me know if you have any questions.",
+  "task_answer": "Hi my dearest friend, I’m excited about that as you. Of course I can go. I don’t prefer to listen only one genre of music for too long, so, if concert will annoy me, I will go, I suppose you don’t mind. You know, I don’t depend on kinds of music, I listen what I like to, but still, I don’t mind about rock. We can go for climbing for sure, but If you’re meaning climbing by ropes and pickaxes, I’m out. I’m afraid of heights. If you have something on your mind please offer me. I’m looking forward for next week. Alex",
+  "ai_answer": [
+    {
+      "criteria": "Content",
+      "score": 4.0,
+      "feedback": "The content is relevant to the task, but the final point, which requires the candidate to ask for some information, has not been fully addressed. There is an attempt at this point, If you have something on your mind please offer me, but it is not a question that the reader needs to respond to, and it is not clearly expressed. As such, the task has not been completely fulfilled, but the target reader is on the whole informed."
+    },
+    {
+      "criteria": "Communicative Achievement",
+      "score": 3.0,
+      "feedback": "The conventions of an informal email to a friend, such as a friendly tone, a consistent register and appropriate opening and closing salutations, Hi my dearest friend; Of course; You know, I don’t; for sure; I’m out; I’m looking forward for next week, are used in generally appropriate ways to communicate straightforward ideas. There are some negative comments, so, if concert will annoy me, I will go, which could be expressed in a more polite way, but the general ideas are communicated."
+    },
+    {
+      "criteria": "Organisation",
+      "score": 2.0,
+      "feedback": "The text is connected and generally coherent. The four notes are addressed and paragraphs are used to generally good effect. The text is connected using high-frequency linking words, so; but; If and there is some good use of punctuation, for too long, so, if concert will annoy me, I will go."
+    },
+    {
+      "criteria": "Language",
+      "score": 2.0,
+      "feedback": "Everyday vocabulary is used generally appropriately, genre; annoy; don’t mind; pickaxes; afraid of heights, although there is some lifting from the input text, excited about that; I don’t prefer. Simple grammatical forms are used with some degree of control, including attempts at forming conditional clauses, if concert will annoy me, I will go; If you’re meaning … I’m out; If you have something on your mind, please offer me. There are a number of errors with prepositions and word choices, I don’t depend on kinds of music; for climbing; please offer me, which leads to a lack of clarity at times. For example, I will go is ambiguous as it could mean I will leave the concert or I will go to the concert, so meaning is unclear at times."
+    }
+  ]
+}

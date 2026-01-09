@@ -1,0 +1,69 @@
+<mat-card class="pricing-container">
+  <div class="pricing-header">
+    <img
+      width="200"
+      height="200"
+      mat-card-image
+      src="../../../../assets/images/mockhat.png" />
+    <h2>{{ 'plans.info' | translate }}</h2>
+  </div>
+  <mat-card-content>
+    <!--
+    <stripe-pricing-table
+      pricing-table-id="prctbl_1QNAC7I6DU6OIcGQN4xczfuV"
+      [attr.customer-email]="user_store.user()?.email"
+      [attr.publishable-key]="stripe_pk">
+    </stripe-pricing-table>
+    -->
+
+    <div class="pricing-card">
+      <mat-card *ngFor="let plan of plans">
+        <mat-card-title class="card-title">{{ plan.name }}</mat-card-title>
+        <mat-card-content>
+          <div class="pricing">
+            <span class="price">{{ plan.amount }}</span>
+            <span class="interval">/month</span>
+          </div>
+          <mat-divider></mat-divider>
+          <ul class="features">
+            <li>
+              <mat-icon color="primary">check_circle</mat-icon>
+              Writing/Grammar: <b>10 Credits</b>
+            </li>
+            <li>
+              <mat-icon color="secondary">cancel</mat-icon>
+              Support: <b>No</b>
+            </li>
+          </ul>
+        </mat-card-content>
+        <mat-card-actions>
+          <button
+            *ngIf="!current_subscription"
+            mat-raised-button
+            color="primary"
+            (click)="subscribeToPlan(plan.id)"
+            class="subscribe-button">
+            {{ 'plans.subscribe' | translate }}
+          </button>
+          <button
+            *ngIf="current_subscription && current_subscription.product_id !== plan.product_id"
+            mat-raised-button
+            color="primary"
+            (click)="redirectToCustomerPortal()"
+            class="subscribe-button">
+            {{ 'plans.upgrade_plan' | translate }}
+          </button>
+
+          <button
+            *ngIf="current_subscription && current_subscription.product_id === plan.product_id"
+            mat-raised-button
+            color="primary"
+            (click)="redirectToCustomerPortal()"
+            class="subscribe-button">
+            {{ 'plans.current_plan' | translate }}
+          </button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </mat-card-content>
+</mat-card>
