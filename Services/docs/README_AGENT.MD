@@ -167,7 +167,7 @@ For detailed guidelines, see [CONTRIBUTING.md](CONTRIBUTING.md)
 
 ## License
 
-This project is licensed under the MockHat License - see [LICENSE](LICENSE) file
+This project is licensed under the Apache License 2.0 - see [LICENSE](LICENSE) file
 
 ## Support
 

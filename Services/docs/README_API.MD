@@ -232,7 +232,7 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for details.
 
 ## License
 
-MockHat License - [LICENSE](LICENSE)
+Apache License 2.0 - [LICENSE](LICENSE)
 
 ## Support
 

@@ -349,7 +349,7 @@ For a product like Mockhat, where it's critical to balance performance with cost
 
 ## License
 
-This project is licensed under the MockHat License.
+This project is licensed under the Apache License 2.0.
 
 ---
 
